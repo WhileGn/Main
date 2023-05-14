@@ -1,0 +1,111 @@
+.Snavbar_Main {
+  width: 100%;
+  height: 80px;
+  background-color: hsla(24, 36%, 5%, 0.5);
+  backdrop-filter: blur(3px);
+
+  border-radius: 0px 0px 5px 5px;
+  position: fixed;
+  z-index: 10;
+  box-shadow: #130d09 0px 0px 30px 0px;
+}
+/* .Snavbar_Main_2 {
+  background-color: #362a31 !important;
+} */
+
+.Snavbar_Main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.Snavbar_btn_Maindiv {
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  justify-self: end;
+  margin-right: 70px;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+.Snavbar_btn {
+  overflow: hidden;
+  display: flex;
+  text-decoration: none;
+  color: #e9ecef;
+  /* border-radius: 20px; */
+  transition: all 0.2s;
+  text-align: center;
+  justify-content: center;
+  animation: navbtn 1.2s ease-in-out;
+  animation-iteration-count: initial;
+  font-size: 21px;
+  font-family: "Cinzel", serif;
+}
+
+@keyframes navbtn {
+  0% {
+    transform: translate(70px, 0px);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: translate();
+    opacity: 1;
+  }
+}
+
+.Snavbar_btn:hover {
+  /* box-shadow: 0px 0px 1px 1px; */
+  /* box-shadow: 0px 0px 3px 1px inset; */
+  /* background-color: hsla(210, 9%, 31%, 0.1); */
+  scale: 1.11;
+  color: white;
+  /* border-bottom: solid blue 1px; */
+}
+.Snavbar_icon_self {
+  margin-top: 17px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  padding: 10px;
+  justify-content: center;
+  font-size: 30px;
+  /* background-color: rgba(255, 255, 255, 0); */
+  color: #e9ecef;
+  margin-right: 80px;
+  transition: all 1s;
+  animation: icon 1s;
+  animation-iteration-count: initial;
+  color: #cb9067;
+  font-weight: 900;
+}
+.Snavbar_icon_self:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+@keyframes icon {
+  0% {
+    color: #cb9067;
+    opacity: 0;
+  }
+
+  50% {
+    color: #433022;
+    scale: 1.1;
+    opacity: 0.5;
+  }
+
+  100% {
+    color: #cb9067;
+    opacity: 1;
+  }
+}
+
+.SMainPage {
+  border-bottom: rgb(255, 255, 255) solid 1px;
+  border-radius: 1px;
+
+  /* box-shadow: 1px 1px 0px 0px black; */
+}

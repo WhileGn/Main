@@ -1,0 +1,127 @@
+.ChildContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ChildConten_history_Main {
+  height: 400px;
+  width: 300px;
+  padding-top: 400px;
+
+  justify-self: center;
+
+  animation: history 3.5s;
+  animation-iteration-count: initial;
+}
+@keyframes history {
+  0% {
+    opacity: 0;
+    transform: translate(1070px, -300px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.history_header {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 900;
+
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  text-align: center;
+}
+.history_text {
+  font-size: 25px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  text-align: center;
+}
+.ChildConten_Rosting_Main {
+  height: 400px;
+  width: 300px;
+  padding-top: 300px;
+
+  justify-self: center;
+
+  animation: Rosting 3s;
+  animation-iteration-count: initial;
+}
+
+@keyframes Rosting {
+  0% {
+    opacity: 0;
+    transform: translate(670px, -200px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Rosting_header {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 900;
+
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  text-align: center;
+}
+.Rosting_text {
+  font-size: 25px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.ChildConten_coffeeEstate_Main {
+  height: 400px;
+  width: 300px;
+  padding-top: 200px;
+
+  justify-self: center;
+  animation: coffeeEstate 2.5s;
+  animation-iteration-count: initial;
+}
+
+@keyframes coffeeEstate {
+  0% {
+    opacity: 0;
+    transform: translate(200px, -100px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.coffeeEstate_header {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 900;
+
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  text-align: center;
+}
+.coffeeEstate_text {
+  font-size: 25px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  text-align: center;
+}

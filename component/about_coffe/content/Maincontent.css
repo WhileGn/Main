@@ -1,0 +1,146 @@
+.MainContent {
+  transform: translate(0, 150px);
+}
+.Main_Robosta_arabika {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: auto;
+  /* max-height: 400px; */
+  min-height: 600px;
+  width: auto;
+  /* background-color: rgb(155, 148, 163);
+  box-shadow: black 0px 0px 10px 1px; */
+  border-radius: 20px;
+  overflow: hidden;
+  animation: backGG ease-in 1s;
+
+  /* z-index: 20; */
+  /* margin-bottom: -10px; */
+}
+
+.fragment_content {
+  height: auto;
+  min-height: 600px;
+  width: auto;
+}
+.Robosta_arabika_img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0)),
+    url(../../../img/coffee.jpg);
+  overflow: hidden;
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  /* width: 1000px; */
+  transform: rotateZ(-5deg) translateY(-1rem) translateX(1.5rem);
+  box-shadow: black 10px 10px 30px 12px;
+  border-radius: 40px;
+  margin-top: 90px;
+  transition: all 0.8s;
+  cursor: pointer;
+
+  margin-bottom: 50px;
+}
+.Robosta_arabika_img:hover {
+  transform: rotateZ(-1deg) translateY(-1rem) translateX(2rem);
+  scale: 1.05;
+}
+.Robosta_arabika_img:active {
+  opacity: 0;
+}
+
+.Robosta_arabika_text {
+  margin: 80px 80px;
+  margin-bottom: 120px;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  line-height: 55px;
+}
+.Robosta_arabika_textself {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+@keyframes backGG {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 50%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+/* @media (max-width: 1250px) {
+  .Main_Robosta_arabika {
+    height: auto;
+    min-height: 250px;
+  }
+} */
+
+@media (prefers-reduced-motion: no-preference) {
+  .Robosta_arabika_img {
+    animation-name: wipe-enter;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+  }
+  .Robosta_arabika_text {
+    animation-name: wipe-enter;
+    animation-duration: 1.3s;
+    animation-iteration-count: initial;
+  }
+}
+
+@keyframes wipe-enter {
+  0% {
+    transform: scale(0, 0.025);
+  }
+  50% {
+    transform: scale(1, 0.025);
+  }
+}
+
+/* 2 content */
+
+.Robosta_arabika_img_2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0)),
+    url(../../../img/Differences-Between-Arabica-and-Robusta-Coffee-Beans-1.jpg);
+  overflow: hidden;
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  /* width: 1000px; */
+  transform: rotateZ(5deg) translateY(1rem) translateX(-1.5rem);
+  box-shadow: black 10px 10px 30px 12px;
+  border-radius: 40px;
+  margin-top: 90px;
+  transition: all 0.8s;
+  cursor: pointer;
+
+  margin-bottom: 100px !important;
+}
+.Robosta_arabika_img_2:hover {
+  transform: rotateZ(1deg) translateY(1rem) translateX(-2rem);
+  scale: 1.05;
+}
+
+.hidened {
+  display: none !important;
+  transition: all 1s;
+}
+.show {
+  display: grid !important;
+  transition: all 1s;
+}
+.margins {
+  height: 20px;
+}
