@@ -11,6 +11,7 @@ export function Maincontent() {
   //   });
   // });
   const [render_0, setrender_0] = useState(false);
+
   const [render_1, setrender_1] = useState(false);
 
   const ref_0 = useRef<HTMLDivElement | null>(null);
