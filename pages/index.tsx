@@ -1,4 +1,4 @@
-import HomePage from "../component/Home";
+import HomePage from "../component/Home/Home";
 import "./index.css";
 
 function Homepages() {

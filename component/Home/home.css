@@ -1,0 +1,26 @@
+.Mainindex {
+  height: 100vh;
+  width: 100%;
+  /* background-color: red; */
+  /* z-index: -10; */
+  /* position: absolute; */
+  /* overflow: unset; */
+}
+.bodydiv {
+  /* z-index: -10; */
+  /* position: sticky; */
+  /* position: absolute; */
+  /* z-index: -10; */
+}
+.Mains {
+  /* position: relative; */
+
+  /* z-index: 30; */
+  /* transform: translate(100px, 100px); */
+}
+.Mains_buton {
+  /* width: 200px;
+  height: 200px;
+  background-color: rebeccapurple;
+  z-index: 30; */
+}

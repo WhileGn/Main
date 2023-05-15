@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.css";
 import Navbar from "./Navbar";
-import { Main } from "next/document";
+import { Html, Main } from "next/document";
 import { Canvas } from "@react-three/fiber";
 import { Box, OrbitControls, Stars, Tube, useGLTF } from "@react-three/drei";
 import "./Main.css";
@@ -31,14 +31,11 @@ const HomePage: React.FC = function () {
                 <meshLambertMaterial attach="material" color="black" />
                 {/* <primitive object={coffe3d.scene} /> */}
               </mesh>
-              <div className="Mains">
-                <h1>
-                  {" "}
-                  flkasdjfskoladjfsdkljfasklfjasldkfjsadkljfaslkdfjlksdfjlksjsdflskadfjdfjldfalsadf
-                </h1>
-              </div>
             </Canvas>
           </div>
+          {/* <div className="Mains">
+            <button className="Mains_buton"></button>
+          </div> */}
         </div>
       </div>
     </div>
