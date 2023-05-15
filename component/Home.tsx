@@ -31,6 +31,12 @@ const HomePage: React.FC = function () {
                 <meshLambertMaterial attach="material" color="black" />
                 {/* <primitive object={coffe3d.scene} /> */}
               </mesh>
+              <div className="Mains">
+                <h1>
+                  {" "}
+                  flkasdjfskoladjfsdkljfasklfjasldkfjsadkljfaslkdfjlksdfjlksjsdflskadfjdfjldfalsadf
+                </h1>
+              </div>
             </Canvas>
           </div>
         </div>

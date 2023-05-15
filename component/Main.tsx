@@ -10,32 +10,32 @@ import { Box, OrbitControls, Stars, Tube, useGLTF } from "@react-three/drei";
 
 function Main() {
   // const coffe3d = useGLTF("./../public/img/scene.gltf");
-  return (
-    <div className="Main_Main">
-      <div className="heder_Main">
-        <div className="bodydiv">
-          {/* <Navbar></Navbar> */}
-          {/* <Header></Header> */}
-          <Canvas>
-            <OrbitControls
-              enableZoom={false}
-              enablePan={false}
-              autoRotate={true}
-              autoRotateSpeed={0.5}
-            />
-            <Stars />
-            <ambientLight intensity={0.5} />
-            <spotLight position={[10, 15, 10]} angle={0.3} />
-            <mesh>
-              {/* <boxBufferGeometry attach="geometry" /> */}
-              <meshLambertMaterial attach="material" color="black" />
-              {/* <primitive object={coffe3d.scene} /> */}
-            </mesh>
-          </Canvas>
-        </div>
-      </div>
-    </div>
-  );
+  // return (
+  //   <div className="Main_Main">
+  //     <div className="heder_Main">
+  //       <div className="bodydiv">
+  //         {/* <Navbar></Navbar> */}
+  //         {/* <Header></Header> */}
+  //         <Canvas>
+  //           <OrbitControls
+  //             enableZoom={false}
+  //             enablePan={false}
+  //             autoRotate={true}
+  //             autoRotateSpeed={0.5}
+  //           />
+  //           <Stars />
+  //           <ambientLight intensity={0.5} />
+  //           <spotLight position={[10, 15, 10]} angle={0.3} />
+  //           <mesh>
+  //             {/* <boxBufferGeometry attach="geometry" /> */}
+  //             <meshLambertMaterial attach="material" color="black" />
+  //             {/* <primitive object={coffe3d.scene} /> */}
+  //           </mesh>
+  //         </Canvas>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default Main;
