@@ -2,7 +2,7 @@ import { Footer } from "./Footer/Footer";
 import "./Mainabout.css";
 import { ChildContent } from "./content/ChildContent";
 import { Maincontent } from "./content/Maincontent";
-import NavbarAboutCoffe from "./secondary/NavbarAboutCoffe";
+import NavbarAboutCoffe from "./navbarAboutCoffe/NavbarAboutCoffe";
 import { motion } from "framer-motion";
 
 export function Mainabout() {

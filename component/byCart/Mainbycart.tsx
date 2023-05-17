@@ -3,10 +3,11 @@ import { Canvas } from "@react-three/fiber";
 
 import { Box, OrbitControls, Stars, Tube, useGLTF } from "@react-three/drei";
 import Navbar from "../Home/Navbar";
+import { NavbarBycart } from "./navbarbycart/NavbarBycart";
 const Mainbycart = function () {
   return (
     <div className="MaidDivBycart">
-      <Navbar></Navbar>
+      <NavbarBycart></NavbarBycart>
 
       <div className="bodydiv">
         {/* <Navbar></Navbar> */}
