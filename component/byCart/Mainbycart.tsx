@@ -9,7 +9,7 @@ const Mainbycart = function () {
     <div className="MaidDivBycart">
       <NavbarBycart></NavbarBycart>
 
-      <div className="bodydiv">
+      <div className="divbycart">
         {/* <Navbar></Navbar> */}
         {/* <Header></Header> */}
         <Canvas>

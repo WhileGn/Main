@@ -6,13 +6,27 @@
   /* position: absolute; */
   /* overflow: unset; */
 }
-.heder_app {
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.95)), */
-  /* url(../public/img/pexels-pixabay-255464.jpg); */
+.bodydiv {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)),
+    url(../../img/Food-Safety-Guide-for-Coffee-Shops.jpg);
   height: 100vh;
   background-size: cover;
-  animation: Mainbackground 1.2s;
+  /* animation: Mainbackground 1.2s; */
   animation-iteration-count: initial;
+  animation: Mainbackgroundanimation 14s infinite;
+}
+
+@keyframes Mainbackgroundanimation {
+  0% {
+    filter: blur(0px) saturate(150%);
+  }
+  50% {
+    filter: blur(2px) saturate(10%);
+  }
+
+  100% {
+    filter: blur(0px) saturate(150%);
+  }
 }
 
 @keyframes Mainbackground {
@@ -24,6 +38,7 @@
     opacity: 1;
   }
 }
+
 .bodydiv {
   /* display: grid; */
   /* position: static; */

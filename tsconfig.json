@@ -28,7 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "component/about_coffe/Footer/Footer.tsx"
+    "component/about_coffe/Footer_aboutCoffe/FooteraboutCoffe.tsx"
   ],
   "exclude": ["node_modules"]
 }

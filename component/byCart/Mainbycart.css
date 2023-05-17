@@ -6,10 +6,10 @@
   /* position: absolute; */
   /* overflow: unset; */
 }
-.heder_app {
+.divbycart {
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.95)),
     url(../public/img/pexels-pixabay-255464.jpg); */
-  height: 100vh;
+  /* height: 100vh; */
   background-size: cover;
   animation: Mainbackground 1.2s;
   animation-iteration-count: initial;
@@ -24,7 +24,7 @@
     opacity: 1;
   }
 }
-.bodydiv {
+.divbycart {
   /* display: grid; */
   /* position: static; */
   /* grid-template-columns: 1fr; */

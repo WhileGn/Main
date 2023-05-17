@@ -1,4 +1,4 @@
-import { Footer } from "./Footer/Footer";
+import { Footer } from "./Footer_aboutCoffe/FooteraboutCoffe";
 import "./Mainabout.css";
 import { ChildContent } from "./content/ChildContent";
 import { Maincontent } from "./content/Maincontent";

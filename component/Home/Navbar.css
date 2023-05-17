@@ -30,7 +30,7 @@
   transition: all 0.2s;
   text-align: center;
   justify-content: center;
-  animation: navbtn 1.2s ease-in-out;
+  animation: navbtn 0.8s ease-in-out;
   animation-iteration-count: initial;
   font-size: 21px;
 }

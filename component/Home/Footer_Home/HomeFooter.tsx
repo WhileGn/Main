@@ -1,4 +1,4 @@
-import "./Footer.css";
+import "./HomeFooter.css";
 import "../Icon/instagram.svg";
 import Image from "next/image";
 import icoon_1 from "../Icon/instagram.svg";
@@ -11,7 +11,7 @@ import Link from "next/link";
 // import Link from "next/link";
 // import { Link } from "react-router-dom";
 
-export function Footer() {
+export function HomeFooter() {
   // const LinkGG = Link;
   // const MainImage: any = Image;
   // const withImages = require("next-images");
