@@ -1,9 +1,9 @@
-import "./SecondaryNavbar.css";
+import "./NavbarAboutCoffe.css";
 import React from "react";
 // import { Link, NavLink } from "react-router-dom";
 import Link from "next/link";
 import { useState } from "react";
-const SecondaryNavbar: React.FC = function (props) {
+const NavbarAboutCoffe: React.FC = function (props) {
   // const [mainstate, setmainstate] = useState(0);
   return (
     <div className="Snavbar_Main">
@@ -17,7 +17,7 @@ const SecondaryNavbar: React.FC = function (props) {
         <Link className="Snavbar_btn SMainPage" href={"About"}>
           AboutCoffe
         </Link>
-        <Link className="Snavbar_btn" href={""}>
+        <Link className="Snavbar_btn" href={"Bycart"}>
           Login
         </Link>
       </div>
@@ -25,4 +25,4 @@ const SecondaryNavbar: React.FC = function (props) {
   );
 };
 
-export default SecondaryNavbar;
+export default NavbarAboutCoffe;

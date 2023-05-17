@@ -1,17 +1,16 @@
-import React from "react";
-import "./home.css";
-import Navbar from "./Navbar";
-import { Html, Main } from "next/document";
+import "./Mainbycart.css";
 import { Canvas } from "@react-three/fiber";
-import { Box, OrbitControls, Stars, Tube, useGLTF } from "@react-three/drei";
-import "./Main.css";
 
-const HomePage: React.FC = function () {
+import { Box, OrbitControls, Stars, Tube, useGLTF } from "@react-three/drei";
+import Navbar from "../Home/Navbar";
+const Mainbycart = function () {
   return (
-    <div className="Mainindex">
+    <div className="MaidDivBycart">
       <Navbar></Navbar>
 
       <div className="bodydiv">
+        {/* <Navbar></Navbar> */}
+        {/* <Header></Header> */}
         <Canvas>
           <OrbitControls
             enableZoom={false}
@@ -32,4 +31,5 @@ const HomePage: React.FC = function () {
     </div>
   );
 };
-export default HomePage;
+
+export default Mainbycart;

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Mainabout } from "../component/about_coffe/Mainabout";
-import Navbar from "../component/Navbar";
+// import Navbar from "../component/Navbar";
 
 // import "./index.css";
 import "./About.css";

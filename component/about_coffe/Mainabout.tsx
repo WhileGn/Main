@@ -2,7 +2,7 @@ import { Footer } from "./Footer/Footer";
 import "./Mainabout.css";
 import { ChildContent } from "./content/ChildContent";
 import { Maincontent } from "./content/Maincontent";
-import SecondaryNavbar from "./secondary/SecondaryNavbar";
+import NavbarAboutCoffe from "./secondary/NavbarAboutCoffe";
 import { motion } from "framer-motion";
 
 export function Mainabout() {
@@ -10,7 +10,7 @@ export function Mainabout() {
     <div className="Main_about">
       <div className="Main_about_child_1">
         <div className="about">
-          <SecondaryNavbar></SecondaryNavbar>
+          <NavbarAboutCoffe></NavbarAboutCoffe>
           <Maincontent></Maincontent>
         </div>
       </div>

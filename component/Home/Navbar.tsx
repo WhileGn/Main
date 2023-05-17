@@ -9,13 +9,13 @@ const Navbar: React.FC = function (props) {
         <p className="navbar_icon_self">Coffee</p>
       </div>
       <div className="navbar_btn_Maindiv">
-        <Link className="navbar_btn SMainPage" href={""}>
+        <Link className="navbar_btn SMainPage" href={"/"}>
           Home
         </Link>
         <Link className="navbar_btn" href={"About"}>
           AboutCoffe
         </Link>
-        <Link className="navbar_btn" href={""}>
+        <Link className="navbar_btn" href={"Bycart"}>
           Login
         </Link>
       </div>
