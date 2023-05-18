@@ -7,7 +7,7 @@ const MainorderClone: React.FC = function (props) {
     <>
       <div className="Main_MainorderClone">
         <div className="MainorderClone"></div>
-        <Link href={""} className="orderLinkSelf"></Link>
+        {/* <Link href={""} className="orderLinkSelf"></Link> */}
       </div>
     </>
   );

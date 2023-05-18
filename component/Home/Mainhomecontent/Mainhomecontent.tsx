@@ -1,7 +1,19 @@
 // import  Mainfechdata  from "./../../../api/hello/Mainfechdata";
 import MainorderClone from "./MainorderClone";
 import "./Mainhomecontent.css";
-export function Mainhomecontent() {
+import Mainfechdata from "../../../api/hello/Mainfechdata";
+import React from "react";
+
+const Mainhomecontent: React.FC = function () {
+  // async function MainfunctionForHandlelingEfect() {
+  //   const MaindataVarible = await Mainfechdata();
+  //   const MainjsonData = Object.values(MaindataVarible);
+  //   console.log(MainjsonData.length);
+
+  //   // const MainjsonData = Object.values(MaindataVarible.jsonData);
+  // }
+  // MainfunctionForHandlelingEfect();
+
   // const Maindata = Mainfechdata;
   // console.log(Maindata);
 
@@ -18,4 +30,6 @@ export function Mainhomecontent() {
       </div>
     </>
   );
-}
+};
+
+export default Mainhomecontent;
