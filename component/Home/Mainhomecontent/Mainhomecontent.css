@@ -1,5 +1,5 @@
 .homeContent {
-  transform: translate(0px, 110px);
+  transform: translate(0px, 150px);
   z-index: 10;
   position: absolute;
   /* cursor: pointer; */
@@ -14,12 +14,12 @@
   grid-template-columns: 1fr 3fr;
 }
 .Main_order {
-  background-color: rgba(255, 0, 0, 0.308);
+  /* background-color: rgba(255, 0, 0, 0.308); */
   width: 100%;
   height: 100%;
 }
 .Main_list {
-  background-color: rgba(255, 255, 0, 0.316);
+  /* background-color: rgba(255, 255, 0, 0.316); */
   width: 100%;
   height: 100%;
 }

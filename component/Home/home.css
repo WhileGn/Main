@@ -21,7 +21,7 @@
     filter: blur(0px) saturate(150%);
   }
   50% {
-    filter: blur(2px) saturate(10%);
+    filter: blur(0px) saturate(50%);
   }
 
   100% {
