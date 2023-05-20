@@ -19,7 +19,7 @@ import { useFetch } from "usehooks-ts";
 
 async function Mainfechdata() {
   const SendResponse = await fetch(
-    "https://maincoffe-a99a3-default-rtdb.firebaseio.com/data.json"
+    "https://maincoffe-a99a3-default-rtdb.firebaseio.com/.json"
   );
   const jsonData = await SendResponse.json();
 
