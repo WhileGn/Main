@@ -25,7 +25,7 @@ const HomePage: React.FC = function () {
     <div className="Mainindex">
       <Navbar></Navbar>
       <Mainhomecontent></Mainhomecontent>
-      <div className="bodydiv"></div>
+      {/* <div className="bodydiv"></div> */}
     </div>
   );
 };

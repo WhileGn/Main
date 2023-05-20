@@ -9,7 +9,7 @@
 
 .navbar_Main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
 }
 .navbar_btn_Maindiv {
   display: grid;

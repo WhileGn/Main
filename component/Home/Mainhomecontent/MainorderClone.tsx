@@ -3,9 +3,10 @@ import "./MainorderClone.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const MainorderClone: React.FC = function (props: any) {
+const MainorderClone: React.FC<{ maindatas: any }> = function (props: any) {
   const router = useRouter();
-  console.log(props);
+  // console.log(props.maindatas[0]);
+  const mainorderName = props.maindatas[0];
 
   const MainorderHandler = function (e: any) {
     router.push("/");
@@ -14,7 +15,7 @@ const MainorderClone: React.FC = function (props: any) {
   return (
     <>
       <div onClick={MainorderHandler} className="Main_MainorderClone">
-        <div className="MainorderClone"> tea adn cooffe</div>
+        <div className="MainorderClone">{mainorderName}</div>
       </div>
     </>
   );
