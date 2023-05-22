@@ -18,12 +18,16 @@ import { useFetch } from "usehooks-ts";
 // }
 
 async function Mainfechdata() {
-  const SendResponse = await fetch(
-    "https://maincoffe-a99a3-default-rtdb.firebaseio.com/.json"
-  );
-  const jsonData = await SendResponse.json();
-
-  return jsonData;
+  let jsonData;
+  try {
+    const SendResponse = await fetch(
+      "https://maincoffe-a99a3-default-rtdb.firebaseio.com/.json"
+    );
+    jsonData = await SendResponse.json();
+    return jsonData;
+  } catch {
+    return "error";
+  }
 }
 
 export default Mainfechdata;
