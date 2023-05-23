@@ -28,7 +28,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "component/about_coffe/Footer_aboutCoffe/FooteraboutCoffe.tsx"
-, "api/hello/Mainfechdata.js"  ],
+    "component/about_coffe/Footer_aboutCoffe/FooteraboutCoffe.tsx",
+    "api/hello/Mainfechdata.js",
+    "component/Home/Mainhomecontent/MainlistClone.js"
+  ],
   "exclude": ["node_modules"]
 }
