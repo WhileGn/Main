@@ -17,6 +17,7 @@ const Mainhomecontent: React.FC = function () {
   const [secendrydataorder, setsecendrydataorder] = useState<undefined | any>(
     []
   );
+  const [GodListRender, setGodListRender] = useState<undefined | any>();
   const [secendrydataorder_1, setsecendrydataorder_1] = useState<
     undefined | any
   >([]);
@@ -86,16 +87,16 @@ const Mainhomecontent: React.FC = function () {
     }
 
     componentList_0 = datasList_0.map((T: any) => {
-      return <MainlistClone Maindata={T}></MainlistClone>;
+      return <MainlistClone MaindataH={T}></MainlistClone>;
     });
     componentList_1 = datasList_1.map((T: any) => {
-      return <MainlistClone Maindata={T}></MainlistClone>;
+      return <MainlistClone MaindataH={T}></MainlistClone>;
     });
     componentList_2 = datasList_2.map((T: any) => {
-      return <MainlistClone Maindata={T}></MainlistClone>;
+      return <MainlistClone MaindataH={T}></MainlistClone>;
     });
     componentList_3 = datasList_3.map((T: any) => {
-      return <MainlistClone Maindata={T}></MainlistClone>;
+      return <MainlistClone MaindataH={T}></MainlistClone>;
     });
 
     // render_1.map(() => {
@@ -105,9 +106,9 @@ const Mainhomecontent: React.FC = function () {
     // const test = render_1[1];
     // console.log(test);
 
-    const render_2 = secendrydataorder;
-    const render_3 = secendrydataorder;
-    const render_4 = secendrydataorder;
+    // const render_2 = secendrydataorder;
+    // const render_3 = secendrydataorder;
+    // const render_4 = secendrydataorder;
   };
   GODListHandler();
 
@@ -124,7 +125,7 @@ const Mainhomecontent: React.FC = function () {
   //     return <MainlistClone />;
   //   });
   // });
-  const [GodListRender, setGodListRender] = useState();
+
   const listHadlerSelf = function (event: any) {
     const targetValue = event.target.childNodes[0].data;
     let mainAPIvalue: string[] = [];
@@ -143,6 +144,7 @@ const Mainhomecontent: React.FC = function () {
       setGodListRender(componentList_0);
     } else if (mainDataFounder == "Coffee_brewing") {
       setGodListRender(componentList_1);
+      console.log("ggmens");
     } else if (mainDataFounder == "Hot_Drinks") {
       setGodListRender(componentList_2);
     } else if (mainDataFounder == "Tea_and_Herbal") {

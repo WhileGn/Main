@@ -14,6 +14,7 @@ const MainorderClone: React.FC<{ maindatas: any; listhadler: any }> = function (
   const MainorderHandler = function (e: any) {
     router.push(`/${mainorderName}`);
   };
+  // console.log(mainorderName + " YYYYYYYYYYYYYYYYYYYYY");
 
   return (
     <>
