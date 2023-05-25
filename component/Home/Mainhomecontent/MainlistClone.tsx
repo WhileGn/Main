@@ -4,7 +4,7 @@ import "./MainlistClone.css";
 import { JsxAttribute } from "typescript";
 import { URL } from "url";
 // import { url } from "inspector";
-export function MainlistClone() {
+export function MainlistClone(props: any) {
   const MainVariableimageurl = "2389954";
   const MainImage = `./../../../img/${MainVariableimageurl}.jpg`;
   console.log(MainImage);
