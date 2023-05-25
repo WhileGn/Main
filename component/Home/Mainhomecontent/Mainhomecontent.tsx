@@ -17,7 +17,6 @@ const Mainhomecontent: React.FC = function () {
   const [secendrydataorder, setsecendrydataorder] = useState<undefined | any>(
     []
   );
-  const [GodListRender, setGodListRender] = useState<undefined | any>();
   const [secendrydataorder_1, setsecendrydataorder_1] = useState<
     undefined | any
   >([]);
@@ -55,6 +54,11 @@ const Mainhomecontent: React.FC = function () {
   let componentList_2: any;
   let componentList_3: any;
 
+  let datasList_0: any = [];
+  let datasList_1: any = [];
+  let datasList_2: any = [];
+  let datasList_3: any = [];
+
   const GODListHandler = function () {
     console.log(minijsonData[0]);
     console.log(secendrydataorder);
@@ -69,10 +73,6 @@ const Mainhomecontent: React.FC = function () {
       render_data.push(g[1]);
     });
 
-    let datasList_0: any = [];
-    let datasList_1: any = [];
-    let datasList_2: any = [];
-    let datasList_3: any = [];
     try {
       datasList_0 = Object.entries(render_data[0]);
       datasList_1 = Object.entries(render_data[1]);
@@ -110,8 +110,12 @@ const Mainhomecontent: React.FC = function () {
     // const render_3 = secendrydataorder;
     // const render_4 = secendrydataorder;
   };
+
   GODListHandler();
 
+  const [GodListRender, setGodListRender] = useState<undefined | any>(
+    componentList_0
+  );
   // useEffect(() => {
   //   GODListHandler();
   // }, [Loding_Error_varible]);
@@ -139,7 +143,6 @@ const Mainhomecontent: React.FC = function () {
     }
 
     const mainDataFounder = mainAPIvalue.find(founderFunction);
-
     if (mainDataFounder == "Coffe_machine") {
       setGodListRender(componentList_0);
     } else if (mainDataFounder == "Coffee_brewing") {
