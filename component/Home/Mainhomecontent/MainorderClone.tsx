@@ -1,5 +1,5 @@
 import React from "react";
-import "./MainorderClone.css";
+import styles from "./MainorderClone.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -17,11 +17,14 @@ const MainorderClone: React.FC<{ maindatas: any; listhadler: any }> = function (
   // console.log(mainorderName + " YYYYYYYYYYYYYYYYYYYYY");
 
   return (
-    <>
-      <div onClick={props.listhadler} className="Main_MainorderClone">
-        <div className="MainorderClone">{mainorderName}</div>
-      </div>
-    </>
+    <div
+      onClick={(e) => {
+        props.listhadler(e, mainorderName);
+      }}
+      className={styles.Main_MainorderClone}
+    >
+      <div className={styles.MainorderClone}>{mainorderName}</div>
+    </div>
   );
 };
 

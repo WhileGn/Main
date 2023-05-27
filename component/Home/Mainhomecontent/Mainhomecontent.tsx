@@ -113,9 +113,19 @@ const Mainhomecontent: React.FC = function () {
 
   GODListHandler();
 
+  const firstRenderList = componentList_0;
   const [GodListRender, setGodListRender] = useState<undefined | any>(
-    componentList_0
+    firstRenderList
   );
+
+  // async function handelrListrender() {
+  //   await setGodListRender(componentList_0);
+  // }
+  // handelrListrender();
+
+  // useEffect(() => {
+  //   setGodListRender(componentList_0);
+  // }, [componentList_0]);
   // useEffect(() => {
   //   GODListHandler();
   // }, [Loding_Error_varible]);
@@ -129,9 +139,16 @@ const Mainhomecontent: React.FC = function () {
   //     return <MainlistClone />;
   //   });
   // });
+  useEffect(() => {
+    console.log({ GodListRender });
+  }, [GodListRender]);
 
-  const listHadlerSelf = function (event: any) {
-    const targetValue = event.target.childNodes[0].data;
+  // if (GodListRender == "") {
+  //   setGodListRender(<div>Cklik On Order</div>);
+  // }
+
+  const listHadlerSelf = function (event: any, value: string) {
+    // const targetValue = event.target.childNodes[0].data;
     let mainAPIvalue: string[] = [];
 
     GodjsonData.forEach((element: any) => {
@@ -139,10 +156,11 @@ const Mainhomecontent: React.FC = function () {
     });
 
     function founderFunction(event: any) {
-      return event == targetValue;
+      return event == value;
     }
 
     const mainDataFounder = mainAPIvalue.find(founderFunction);
+
     if (mainDataFounder == "Coffe_machine") {
       setGodListRender(componentList_0);
     } else if (mainDataFounder == "Coffee_brewing") {
@@ -153,11 +171,13 @@ const Mainhomecontent: React.FC = function () {
     } else if (mainDataFounder == "Tea_and_Herbal") {
       setGodListRender(componentList_3);
     }
+
     console.log(mainDataFounder);
   };
 
   const mainOrderComponent = secendrydataorder.map((g: any) => {
     return <MainorderClone listhadler={listHadlerSelf} maindatas={g} />;
+    // return <div onClick={listHadlerSelf}>GGmen</div>;
   });
 
   return (
