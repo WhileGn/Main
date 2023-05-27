@@ -3,20 +3,48 @@ import "./MainlistClone.css";
 // import { imgg } from "./../../../img/2389954.jpg";
 import { JsxAttribute } from "typescript";
 import { URL } from "url";
+import { log } from "console";
 // import { url } from "inspector";
 export function MainlistClone(props: any) {
   const MainVariableimageurl = "2389954";
   const MainImage = `./../../../img/${MainVariableimageurl}.jpg`;
+
   console.log(MainImage);
+
+  const MainData = props.MaindataH;
+
+  const Data = {
+    Name: MainData[0],
+    about: MainData[1].about,
+    amount: MainData[1].amount,
+  };
+  console.log(Data.amount);
+
+  console.log(MainData);
 
   return (
     <div className="MainlistClone">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+        rel="stylesheet"
+      />
       <div className="listClone">
         <div className="header_listClone">
           <div className="content_listClone">
-            <div className="content_listClone_name">name :</div>
-            <div className="content_listClone_about">about :</div>
-            <div className="content_listClone_amount">amount :</div>
+            <div className="content_listClone_name">
+              name :
+              <div className="child_content_listClone_name">{Data.Name}</div>
+            </div>
+            <div className="content_listClone_about">
+              about :<br />
+              <div className="child_content_listClone_about">{Data.about}</div>
+            </div>
+            <div className="content_listClone_amount">
+              amount :
+              <div className="child_content_listClone_amount">
+                {Data.amount}
+              </div>
+            </div>
           </div>
           <div className="img_listClone_div">
             {/* <img
