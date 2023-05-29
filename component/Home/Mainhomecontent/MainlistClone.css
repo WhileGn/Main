@@ -3,8 +3,17 @@
 .listClone {
   width: 300px;
   height: 200px;
-  background-color: rgba(0, 0, 255, 1);
+  background-color: #8c7f76;
+
   border-radius: 20px 30px 40px 30px;
+  transition: all 0.4s;
+}
+.listClone:hover {
+  background-color: rgba(255, 255, 255, 0);
+  /* border: solid 1px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0px 0px 12px 2px;
+  backdrop-filter: blur(3px) saturate(50%);
+  filter: blur();
 }
 .header_listClone {
   width: 100%;
@@ -25,10 +34,20 @@
   border-radius: 100%;
   transform: translate(5px, -5px);
   box-shadow: 5px -3px 12px 5px black;
+  transition: all 0.5s;
+  text-align: center;
+  /* background-size: cover; */
+}
+.img_listClone:hover {
+  scale: 1.4;
+}
+.img_listClone:active {
+  scale: 3;
 }
 .content_listClone_name {
   font-size: 20px;
-  color: white;
+
+  color: #495057;
   font-weight: 900;
   /* color: #9c4100; */
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -36,24 +55,30 @@
 
 .content_listClone_about {
   font-size: 22px;
-  color: white;
+  /* color: #3f454b; */
+  color: #495057;
+
   font-weight: 900;
   padding-top: 10px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .content_listClone_amount {
   font-size: 22px;
-  color: white;
+  /* color: #212529; */
+  color: #495057;
   font-weight: 900;
   padding-top: 10px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+.child_content_listClone_name {
+  font-size: 20px;
+  color: #f1f3f5;
+}
 .child_content_listClone_about {
   font-size: 15px;
+  color: #e9ecef;
 }
 .child_content_listClone_amount {
   font-size: 24px;
-}
-.child_content_listClone_name {
-  font-size: 10px;
+  color: white;
 }

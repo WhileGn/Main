@@ -146,37 +146,58 @@ const Mainhomecontent: React.FC = function () {
   // if (GodListRender == "") {
   //   setGodListRender(<div>Cklik On Order</div>);
   // }
+  const [actionOrederHandler, setactionOrederHandler] = useState<
+    undefined | any
+  >();
 
   const listHadlerSelf = function (event: any, value: string) {
     // const targetValue = event.target.childNodes[0].data;
+
+    console.log(event.target);
+
+    const mainOrderTarget = event.targets;
+    // mainOrderTarget.class = "GGmen";
+
     let mainAPIvalue: string[] = [];
+    console.log(value);
+    const mainvalue = value.replaceAll(" ", "_");
 
     GodjsonData.forEach((element: any) => {
       mainAPIvalue.push(element[0]);
     });
 
     function founderFunction(event: any) {
-      return event == value;
+      return event == mainvalue;
     }
 
     const mainDataFounder = mainAPIvalue.find(founderFunction);
+    console.log(mainDataFounder);
 
     if (mainDataFounder == "Coffe_machine") {
       setGodListRender(componentList_0);
+      setactionOrederHandler("Coffe_machine");
     } else if (mainDataFounder == "Coffee_brewing") {
       setGodListRender(componentList_1);
-      console.log("ggmens");
+      setactionOrederHandler("Coffee_brewing");
     } else if (mainDataFounder == "Hot_Drinks") {
       setGodListRender(componentList_2);
+      setactionOrederHandler("Hot_Drinks");
     } else if (mainDataFounder == "Tea_and_Herbal") {
       setGodListRender(componentList_3);
+      setactionOrederHandler("Tea_and_Herbal");
     }
 
     console.log(mainDataFounder);
   };
 
   const mainOrderComponent = secendrydataorder.map((g: any) => {
-    return <MainorderClone listhadler={listHadlerSelf} maindatas={g} />;
+    return (
+      <MainorderClone
+        actionOrederHandlerVarible={actionOrederHandler}
+        listhadler={listHadlerSelf}
+        maindatas={g}
+      />
+    );
     // return <div onClick={listHadlerSelf}>GGmen</div>;
   });
 

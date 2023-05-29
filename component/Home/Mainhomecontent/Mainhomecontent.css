@@ -22,10 +22,11 @@
   /* background-color: rgba(255, 255, 0, 0.316); */
   width: 90%;
   height: 100%;
-  background-color: red;
+  /* background-color: red; */
   /* margin: auto; */
-  margin-right: auto;
-  margin-left: 90px;
+  margin-right: 60px;
+  margin-left: 40px;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;

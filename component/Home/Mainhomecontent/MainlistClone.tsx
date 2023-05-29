@@ -6,21 +6,28 @@ import { URL } from "url";
 import { log } from "console";
 // import { url } from "inspector";
 export function MainlistClone(props: any) {
-  const MainVariableimageurl = "2389954";
+  const MainVariableimageurl = props.MaindataH[0];
+  console.log(MainVariableimageurl);
+
   const MainImage = `./../../../img/${MainVariableimageurl}.jpg`;
 
+  console.log(MainImage);
   console.log(MainImage);
 
   const MainData = props.MaindataH;
 
   const Data = {
-    Name: MainData[0],
+    Name: MainData[0].replace("_", " "),
     about: MainData[1].about,
     amount: MainData[1].amount,
   };
-  console.log(Data.amount);
+  console.log(Data.Name);
+  const fortest = "esperso_dabel";
 
-  console.log(MainData);
+  const final = fortest.replace("_", " ");
+
+  console.log(fortest);
+  console.log(final);
 
   return (
     <div className="MainlistClone">
@@ -53,7 +60,11 @@ export function MainlistClone(props: any) {
               alt=""
             /> */}
             {/* <Image className="img_listClone" src={imgg} /> */}
-            <img className="img_listClone" src={MainImage}></img>
+            <img
+              className="img_listClone"
+              src={MainImage}
+              alt="not have image !!!"
+            ></img>
           </div>
         </div>
       </div>
