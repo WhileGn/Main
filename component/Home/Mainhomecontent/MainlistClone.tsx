@@ -10,6 +10,7 @@ export function MainlistClone(props: any) {
   console.log(MainVariableimageurl);
 
   const MainImage = `./../../../img/${MainVariableimageurl}.jpg`;
+  console.log(MainImage);
 
   console.log(MainImage);
   console.log(MainImage);
@@ -22,12 +23,12 @@ export function MainlistClone(props: any) {
     amount: MainData[1].amount,
   };
   console.log(Data.Name);
-  const fortest = "esperso_dabel";
+  // const fortest = "esperso_dabel";
 
-  const final = fortest.replace("_", " ");
+  // const final = fortest.replace("_", " ");
 
-  console.log(fortest);
-  console.log(final);
+  // console.log(fortest);
+  // console.log(final);
 
   return (
     <div className="MainlistClone">

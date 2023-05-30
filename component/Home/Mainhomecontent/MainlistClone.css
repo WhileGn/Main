@@ -1,5 +1,19 @@
 .MainlistClone {
+  animation: 1s MainlistCloneanimation;
+  animation-iteration-count: initial;
 }
+
+@keyframes MainlistCloneanimation {
+  0% {
+    opacity: 0;
+    scale: 0.1;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
 .listClone {
   width: 300px;
   height: 200px;

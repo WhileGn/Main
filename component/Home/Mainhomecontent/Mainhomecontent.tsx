@@ -2,17 +2,23 @@
 import MainorderClone from "./MainorderClone";
 import "./Mainhomecontent.css";
 import Mainfechdata from "../../../api/hello/Mainfechdata";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { log } from "console";
 import { MainlistClone } from "./MainlistClone";
 import { list } from "postcss";
 import { List } from "postcss/lib/list";
+import { Tube } from "@react-three/drei";
 let GodjsonData: any = [];
 let minijsonData: any = [];
+let startoperationhandelr: boolean = true;
 const Mainhomecontent: React.FC = function () {
   const [lodingorder, setlodingorder] = useState(false);
   const [Loding_Error_varible, setLoding_Error_varible] =
     useState<any>("Loding ...");
+
+  // let [startoperationhandelr, setstartoperationhandelr] = useState<
+  //   undefined | any
+  // >();
   // const [Maindataorder, setMaindataorder] = useState<undefined | any>([]);
   const [secendrydataorder, setsecendrydataorder] = useState<undefined | any>(
     []
@@ -48,16 +54,21 @@ const Mainhomecontent: React.FC = function () {
   }, []);
 
   // const GodlistComponent = [];
+  let componentList_: any;
 
   let componentList_0: any;
   let componentList_1: any;
   let componentList_2: any;
   let componentList_3: any;
 
+  let datasList_: any = [];
   let datasList_0: any = [];
   let datasList_1: any = [];
   let datasList_2: any = [];
   let datasList_3: any = [];
+  let [GodListRender, setGodListRender] = useState<undefined | any>();
+
+  console.log(componentList_0);
 
   const GODListHandler = function () {
     console.log(minijsonData[0]);
@@ -85,7 +96,9 @@ const Mainhomecontent: React.FC = function () {
     } catch {
       // what up broo :)
     }
-
+    componentList_ = datasList_.map((T: any) => {
+      return <MainlistClone MaindataH={T}></MainlistClone>;
+    });
     componentList_0 = datasList_0.map((T: any) => {
       return <MainlistClone MaindataH={T}></MainlistClone>;
     });
@@ -109,14 +122,15 @@ const Mainhomecontent: React.FC = function () {
     // const render_2 = secendrydataorder;
     // const render_3 = secendrydataorder;
     // const render_4 = secendrydataorder;
+    // useEffect(() => {
+    //   startoperationhandelr = true;
+    // }, []);
   };
+  // GodListRender = componentList_0
 
   GODListHandler();
 
-  const firstRenderList = componentList_0;
-  const [GodListRender, setGodListRender] = useState<undefined | any>(
-    firstRenderList
-  );
+  // const firstRenderList = componentList_0;
 
   // async function handelrListrender() {
   //   await setGodListRender(componentList_0);
@@ -139,9 +153,8 @@ const Mainhomecontent: React.FC = function () {
   //     return <MainlistClone />;
   //   });
   // });
-  useEffect(() => {
-    console.log({ GodListRender });
-  }, [GodListRender]);
+
+  // useEffect(() => {}, [GODListHandler]);
 
   // if (GodListRender == "") {
   //   setGodListRender(<div>Cklik On Order</div>);
@@ -152,6 +165,9 @@ const Mainhomecontent: React.FC = function () {
 
   const listHadlerSelf = function (event: any, value: string) {
     // const targetValue = event.target.childNodes[0].data;
+    console.log(componentList_);
+
+    // setGodListRender(componentList_);
 
     console.log(event.target);
 
@@ -200,6 +216,24 @@ const Mainhomecontent: React.FC = function () {
     );
     // return <div onClick={listHadlerSelf}>GGmen</div>;
   });
+  // useEffect(() => {
+
+  // });
+
+  // if (startoperationhandelr == true) {
+  //   setGodListRender(componentList_0);
+  //   console.log("im here mather fucker !!!");
+
+  //   startoperationhandelr = false;
+  // }
+  // let Maindata;
+  // useEffect(() => {
+  //   async function renderFirstTimeListHandler() {
+  //     Maindata = await componentList_0;
+  //     setGodListRender(Maindata);
+  //   }
+  //   renderFirstTimeListHandler();
+  // }, [Maindata]);
 
   return (
     <>
