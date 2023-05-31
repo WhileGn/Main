@@ -2,6 +2,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+.Main_ChildContent {
+  height: 700px;
+  width: 100%;
+}
 
 .ChildConten_history_Main {
   height: 400px;
@@ -15,8 +19,9 @@
 }
 @keyframes history {
   0% {
+    position: relative;
     opacity: 0;
-    transform: translate(1070px, -300px);
+    transform: translate(470px, -300px);
   }
   100% {
     opacity: 1;
@@ -56,8 +61,9 @@
 
 @keyframes Rosting {
   0% {
+    position: relative;
     opacity: 0;
-    transform: translate(670px, -200px);
+    transform: translate(270px, -200px);
   }
   100% {
     opacity: 1;
@@ -97,8 +103,9 @@
 
 @keyframes coffeeEstate {
   0% {
+    position: relative;
     opacity: 0;
-    transform: translate(200px, -100px);
+    transform: translate(0px, -100px);
   }
   100% {
     opacity: 1;

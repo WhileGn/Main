@@ -2,13 +2,16 @@
   height: 100px;
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)); */
 }
+.Main_about {
+  width: auto;
+}
 
 .Main_about_child_1 {
   box-shadow: inset 0px 0px 70px 8px black;
   background-image: linear-gradient(rgba(0, 0, 0, 0) 200px, rgba(0, 0, 0, 0.7)),
     url(./../../img/2389954.jpg);
 
-  height: 185 vh !important;
+  height: 185vh !important;
   width: 100% !important;
   background-size: cover;
   object-fit: cover;
