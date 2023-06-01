@@ -16,7 +16,7 @@ export function NavbarBycart() {
             AboutCoffe
           </Link>
           <Link className="navbar_btn SMainPage" href={"Bycart"}>
-            Login
+            Bying
           </Link>
         </div>
       </div>

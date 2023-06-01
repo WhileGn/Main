@@ -18,7 +18,7 @@ const NavbarAboutCoffe: React.FC = function (props) {
           AboutCoffe
         </Link>
         <Link className="Snavbar_btn" href={"Bycart"}>
-          Login
+          Bying
         </Link>
       </div>
     </div>
