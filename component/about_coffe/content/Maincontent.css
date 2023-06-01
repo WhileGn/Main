@@ -41,7 +41,9 @@
 
   margin-bottom: 50px;
 
-  transition: width 2s ease-in;
+  transition: 0.5s;
+  height: 400px;
+  /* transition: width 2s ease-in; */
 }
 .Robosta_arabika_img:hover {
   transform: rotateZ(-1deg) translateY(-1rem) translateX(2rem);
@@ -67,7 +69,7 @@
   align-items: center;
   align-self: center;
   align-content: center;
-  transition: width 2s ease-in;
+  /* transition: width 2s ease-in; */
 }
 
 @keyframes backGG {
@@ -96,47 +98,104 @@
   } */
 
   .Main_Robosta_arabika {
+    /* min-height: 100px !important; */
+    /* background-color: red; */
   }
+  .fragment_content {
+    min-height: 400px;
+    height: 400px;
+  }
+
   .Robosta_arabika_img {
     /* scale: 0.6; */
+
     height: 300px;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 0.5s;
-    animation-name: Robosta_arabika_img__animation;
+    animation-name: Robosta_arabika_img__animation_0;
+    /* transform: translate(100px, 100px); */
   }
-  .Robosta_arabika_img_2 {
-    /* height: 300px; */
-  }
-  .Robosta_arabika_textself {
-    font-size: 30px;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.5s;
-    animation-name: Robosta_arabika_textself__animation;
-  }
-  @keyframes Robosta_arabika_textself__animation {
-    0% {
-      font-size: 40px;
-      opacity: 0;
-    }
-
-    100% {
-      font-size: 30px;
-      opacity: 1;
-    }
-  }
-  @keyframes Robosta_arabika_img__animation {
+  @keyframes Robosta_arabika_img__animation_0 {
     0% {
       height: 500px;
+      scale: 3;
+      transform: translate(100px, 100px);
     }
 
     100% {
       height: 300px;
+      /* opacity: 1; */
+    }
+  }
+
+  .Robosta_arabika_img_2 {
+    /* height: 300px; */
+  }
+  .Robosta_arabika_textself {
+    margin-bottom: 180px;
+
+    font-size: 30px;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+    animation-name: Robosta_arabika_textself__animation_0;
+  }
+  @keyframes Robosta_arabika_textself__animation_0 {
+    0% {
+      font-size: 40px;
+      /* opacity: 0; */
+    }
+
+    100% {
+      font-size: 30px;
+      /* opacity: 1; */
+    }
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .Robosta_arabika_textself {
+    font-size: 40px;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+    animation-name: Robosta_arabika_textself__animation_1;
+  }
+  @keyframes Robosta_arabika_textself__animation_1 {
+    0% {
+      font-size: 30px;
+      /* opacity: 0; */
+    }
+
+    100% {
+      font-size: 40px;
+      /* opacity: 1; */
     }
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .Robosta_arabika_textself {
+    margin-bottom: 180px;
+
+    font-size: 23px;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+    animation-name: Robosta_arabika_textself__animation_0_;
+  }
+  @keyframes Robosta_arabika_textself__animation_0_ {
+    0% {
+      font-size: 30px;
+      /* opacity: 0; */
+    }
+
+    100% {
+      font-size: 23px;
+      /* opacity: 1; */
+    }
+  }
+}
 /* @media (prefers-reduced-motion: no-preference) {
 } */
 .Robosta_arabika_img {
