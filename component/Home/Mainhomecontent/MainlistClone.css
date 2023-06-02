@@ -96,3 +96,35 @@
   font-size: 24px;
   color: white;
 }
+.content_ading_side {
+  display: grid;
+  justify-content: end;
+}
+
+.content_ading_side_but {
+  border-radius: 8px;
+  border: none;
+  background-color: #f1f3f5;
+  color: #495057;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  height: 40px;
+  width: 70px;
+  /* align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: center; */
+  /* margin: auto 0px; */
+  transform: translate(50px, -30px);
+  font-size: 15px;
+}
+
+.content_ading_side_but:hover {
+  scale: 1.05;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 0px 1px 4px;
+  font-size: 18px;
+}

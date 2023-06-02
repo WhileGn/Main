@@ -53,6 +53,9 @@ export function MainlistClone(props: any) {
                 {Data.amount}
               </div>
             </div>
+            <div className="content_ading_side">
+              <button className="content_ading_side_but">add</button>
+            </div>
           </div>
           <div className="img_listClone_div">
             {/* <img
