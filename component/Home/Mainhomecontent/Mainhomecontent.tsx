@@ -34,6 +34,7 @@ const Mainhomecontent: React.FC = function () {
     setlodingorder(true);
 
     MaindataVarible = await Mainfechdata();
+
     if (MaindataVarible == "error") {
       setLoding_Error_varible("Error when loding plase chek your network !!!");
     } else {
@@ -239,7 +240,7 @@ const Mainhomecontent: React.FC = function () {
     <>
       <div className="MainhomeContent">
         <div className="homeContent">
-          <div className="Main_order">
+          <div className="  ">
             {lodingorder && (
               <div className="Main_order_loding ">{Loding_Error_varible}</div>
             )}

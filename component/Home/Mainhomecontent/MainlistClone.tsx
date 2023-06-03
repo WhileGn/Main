@@ -5,6 +5,8 @@ import { JsxAttribute } from "typescript";
 import { URL } from "url";
 import { log } from "console";
 // import { url } from "inspector";
+import Mainfechdata from "../../../api/hello/Mainfechdata";
+
 export function MainlistClone(props: any) {
   const MainVariableimageurl = props.MaindataH[0];
   console.log(MainVariableimageurl);
@@ -29,6 +31,9 @@ export function MainlistClone(props: any) {
 
   // console.log(fortest);
   // console.log(final);
+  const mainaddlisthandler = function () {
+    // const MainsendData = Main;
+  };
 
   return (
     <div className="MainlistClone">
@@ -53,8 +58,13 @@ export function MainlistClone(props: any) {
                 {Data.amount}
               </div>
             </div>
-            <div className="content_ading_side">
-              <button className="content_ading_side_but">add</button>
+            <div className="content_ading_side_MainDiv">
+              <button
+                onClick={mainaddlisthandler}
+                className="content_ading_side_but"
+              >
+                add
+              </button>
             </div>
           </div>
           <div className="img_listClone_div">

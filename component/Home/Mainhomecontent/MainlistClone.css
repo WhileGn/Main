@@ -96,9 +96,10 @@
   font-size: 24px;
   color: white;
 }
-.content_ading_side {
+.content_ading_side_MainDiv {
   display: grid;
   justify-content: end;
+  /* background-color: red;  */
 }
 
 .content_ading_side_but {
