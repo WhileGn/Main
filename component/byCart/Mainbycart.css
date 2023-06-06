@@ -5,7 +5,9 @@
   /* z-index: -10; */
   /* position: absolute; */
   /* overflow: unset; */
+  position: relative;
 }
+
 .divbycart {
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.95)),
     url(../public/img/pexels-pixabay-255464.jpg); */
