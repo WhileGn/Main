@@ -10,6 +10,11 @@ const MainOrderBycard = function () {
           <Bycard></Bycard>
           <Bycard></Bycard>
           <Bycard></Bycard>
+          <Bycard></Bycard>
+          <Bycard></Bycard>
+          <Bycard></Bycard>
+          <Bycard></Bycard>
+          <Bycard></Bycard>
         </div>
       </div>
     </>

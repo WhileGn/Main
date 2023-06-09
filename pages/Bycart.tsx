@@ -12,7 +12,7 @@ function Bycartpage() {
 
   return (
     <React.Fragment>
-      <Mainbycart></Mainbycart>;
+      <Mainbycart></Mainbycart>
     </React.Fragment>
   );
 }
