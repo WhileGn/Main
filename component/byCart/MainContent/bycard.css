@@ -11,6 +11,7 @@
 .byCard {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  user-select: none;
 }
 .byCard_leftSide {
   display: grid;
