@@ -1,7 +1,43 @@
 .MainOrderBycardDiv {
-  width: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  /* position: fixed;
+  z-index: 100; */
+  /* margin: 200px auto; */
+  /* transform: translate(50%, 25%); */
+  /* cursor: pointer; */
+  /* margin: auto auto; */
+  border-radius: 50px;
+  border: white 3px solid;
+  /* box-shadow: 0px 0px 10px 10px white; */
+  box-shadow: 0px 0px 50px 10px rgb(0, 0, 0) inset;
+  /* overflow-y: scroll; */
+  padding-top: 10px;
+  margin-right: 5px;
+  /* margin: 2px; */
+}
+.secendery_OrderBycardDiv {
+  /* width: 50%;
   height: 580px;
   background-color: rgba(255, 255, 255, 0.25);
+  position: fixed;
+  z-index: 100;
+  transform: translate(50%, 25%);
+ 
+  border-radius: 50px;
+  border: white 3px solid;
+  box-shadow: 0px 0px 50px 10px rgb(0, 0, 0) inset;
+  overflow-y: scroll;
+  padding-top: 10px; */
+
+  /* width: 50%; */
+  /* height: 580px; */
+}
+
+.GodOrderBycardDiv {
+  /* padding: 100px; */
+  width: 50%;
+  height: 580px;
+  /* background-color: rgba(255, 255, 255, 0.25); */
   position: fixed;
   z-index: 100;
   /* margin: 200px auto; */
@@ -9,28 +45,29 @@
   /* cursor: pointer; */
   /* margin: auto auto; */
   border-radius: 50px;
-  border: white 3px solid;
+  /* border: white 3px solid; */
   /* box-shadow: 0px 0px 10px 10px white; */
-  box-shadow: 0px 0px 50px 10px rgb(0, 0, 0) inset;
+  /* box-shadow: 0px 0px 50px 10px rgb(0, 0, 0) inset; */
   overflow-y: scroll;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
+
 .OrderBycardDiv {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.MainOrderBycardDiv::-webkit-scrollbar {
+.GodOrderBycardDiv::-webkit-scrollbar {
   width: 16px;
   background-color: #00000000;
-  transform: translate(100px, 100px);
+  /* transform: translate(100px, 100px); */
 
-  direction: rtl;
+  /* direction: rtl; */
 
   /* margin-top: 100px; */
   /* height: 100px; */
 }
-.MainOrderBycardDiv::-webkit-scrollbar-thumb {
+.GodOrderBycardDiv::-webkit-scrollbar-thumb {
   width: 10px;
   border-radius: 13px;
   background-clip: padding-box;
@@ -39,7 +76,7 @@
   background-color: #ffffff;
   /* transform: translate(100px, 100px);
   position: absolute; */
-  left: 100px;
+  /* left: 100px; */
 }
 
 *::-webkit-scrollbar {
@@ -49,8 +86,65 @@
 *::-webkit-scrollbar-thumb {
   /* width: 10px;
   border-radius: 13px;
-  background-clip: padding-box; */
-  /* border: 4px solid black; */
-  /* border: 6px solid #00000000;
+  background-clip: padding-box;
+  border: 4px solid black;
+  border: 6px solid #00000000;
   background-color: #ffffff; */
+}
+.Main_by_bution {
+  display: grid;
+  justify-content: end;
+  grid-template-columns: 2fr 1fr;
+  /* padding-right: 100px; */
+  padding: 20px 100px;
+}
+
+.byBtn {
+  cursor: pointer;
+
+  width: 120px;
+  height: 60px;
+
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  border: solid 5px white;
+
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  transition: all 0.2s;
+
+  user-select: none;
+}
+.byBtn:hover {
+  /* background-color: rgba(236, 236, 236, 0.8); */
+  background-color: rgba(194, 193, 193, 0.7);
+  border: solid 5px rgb(0, 0, 0);
+  color: black;
+  scale: 1.15;
+  font-size: 21px;
+}
+.byBtn:active {
+  scale: 1.2;
+}
+
+.NumBtn {
+  /* cursor: pointer; */
+
+  width: 120px;
+  height: 60px;
+
+  border-radius: 12px;
+  background-color: rgba(227, 225, 225, 0.9);
+
+  border: solid 2px white;
+
+  font-size: 26px;
+  font-weight: 900;
+  color: black;
+  border: 5px solid black;
+  box-shadow: 0px 0px 12px 3px black;
+
+  user-select: none;
 }

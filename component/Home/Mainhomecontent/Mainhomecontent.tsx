@@ -189,7 +189,7 @@ const Mainhomecontent: React.FC = function () {
 
     const mainDataFounder = mainAPIvalue.find(founderFunction);
     console.log(mainDataFounder);
-
+    GodListRender = componentList_1;
     if (mainDataFounder == "Coffe_machine") {
       setGodListRender(componentList_0);
       setactionOrederHandler("Coffe_machine");
