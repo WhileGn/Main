@@ -10,7 +10,7 @@ const MainorderClone: React.FC<{
   actionOrederHandlerVarible: any;
 }> = function (props: any) {
   const refrens: any = useRef<HTMLDivElement>();
-  const router = useRouter();
+  // const router = useRouter();
 
   const [isActive, setisActive] = useState(false);
   // console.log(props.maindatas[0]);
@@ -18,9 +18,9 @@ const MainorderClone: React.FC<{
   const mainorderName = props.maindatas[0].replaceAll("_", " ");
   // console.log(mainorderName);
 
-  const MainorderHandler = function (e: any) {
-    router.push(`/${mainorderName}`);
-  };
+  // const MainorderHandler = function (e: any) {
+  //   router.push(`/${mainorderName}`);
+  // };
 
   const Main_actionOrederHandlerVarible = props.actionOrederHandlerVarible;
   const Main_Name_Main_actionOrederHandlerVarible = props.maindatas[0];

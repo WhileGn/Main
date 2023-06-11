@@ -1,17 +1,37 @@
+"use client";
 // import  Mainfechdata  from "./../../../api/hello/Mainfechdata";
 import MainorderClone from "./MainorderClone";
 import "./Mainhomecontent.css";
-import Mainfechdata from "../../../api/hello/Mainfechdata";
+// import Mainfechdata from "../../../api/hello/Mainfechdata";
 import React, { useCallback, useEffect, useState } from "react";
 import { log } from "console";
 import { MainlistClone } from "./MainlistClone";
 import { list } from "postcss";
 import { List } from "postcss/lib/list";
 import { Tube } from "@react-three/drei";
+import Mainfechdata from "../../../api/Mainrespons";
+
 let GodjsonData: any = [];
 let minijsonData: any = [];
 let startoperationhandelr: boolean = true;
-const Mainhomecontent: React.FC = function () {
+
+// export default function Page({ data }) {
+//   // Render data...
+// }
+
+// This gets called on every request
+// export async function getServerSideProps() {
+//   // Fetch data from external API
+//   const res = await fetch(`https://.../data`);
+//   const data = await res.json();
+
+//   // Pass data to the page via props
+//   return { props: { data } };
+// }
+
+// export default getServerSideProps;
+
+const Mainhomecontent = function () {
   const [lodingorder, setlodingorder] = useState(false);
   const [Loding_Error_varible, setLoding_Error_varible] =
     useState<any>("Loding ...");
@@ -34,6 +54,7 @@ const Mainhomecontent: React.FC = function () {
     setlodingorder(true);
 
     MaindataVarible = await Mainfechdata();
+    console.log(MaindataVarible);
 
     if (MaindataVarible == "error") {
       setLoding_Error_varible("Error when loding plase chek your network !!!");

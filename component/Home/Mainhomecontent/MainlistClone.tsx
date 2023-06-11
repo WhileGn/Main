@@ -5,7 +5,7 @@ import { JsxAttribute } from "typescript";
 import { URL } from "url";
 import { log } from "console";
 // import { url } from "inspector";
-import Mainfechdata from "../../../api/hello/Mainfechdata";
+import Mainfechdata from "../../../api/Mainfechdata";
 
 export function MainlistClone(props: any) {
   const MainVariableimageurl = props.MaindataH[0];
