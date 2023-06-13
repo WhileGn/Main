@@ -22,7 +22,7 @@ async function Mainfechdata() {
     console.log(jsonData);
     return jsonData;
   } catch {
-    return jsonData;
+    return "error";
   }
 }
 

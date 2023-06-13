@@ -8,6 +8,7 @@ const MainorderClone: React.FC<{
   maindatas: any;
   listhadler: any;
   actionOrederHandlerVarible: any;
+  listhadler_1: any;
 }> = function (props: any) {
   const refrens: any = useRef<HTMLDivElement>();
   // const router = useRouter();
@@ -65,9 +66,10 @@ const MainorderClone: React.FC<{
   return (
     <div
       onClick={(e) => {
-        props.listhadler(e, mainorderName), orderClickHandler();
+        // props.listhadler(e, mainorderName),
+        orderClickHandler(), props.listhadler_1(e, mainorderName);
       }}
-      className="Main_MainorderClone"
+      className="Main_MainorderClone Main_MainorderClone_animation"
       ref={refrens}
     >
       <div

@@ -3,7 +3,7 @@
 import MainorderClone from "./MainorderClone";
 import "./Mainhomecontent.css";
 // import Mainfechdata from "../../../api/hello/Mainfechdata";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useRef } from "react";
 import { log } from "console";
 import { MainlistClone } from "./MainlistClone";
 import { list } from "postcss";
@@ -30,6 +30,8 @@ let startoperationhandelr: boolean = true;
 // }
 
 // export default getServerSideProps;
+
+let Bolian = false;
 
 const Mainhomecontent = function () {
   const [lodingorder, setlodingorder] = useState(false);
@@ -184,8 +186,22 @@ const Mainhomecontent = function () {
   const [actionOrederHandler, setactionOrederHandler] = useState<
     undefined | any
   >();
-
+  const refDiv: any = useRef<HTMLDivElement | undefined>();
   const listHadlerSelf = function (event: any, value: string) {
+    console.log(refDiv.current);
+
+    // MainlistChildDivElement.innerHTML = "";
+
+    // console.log(MainlistDivElement.children);
+    // console.log(MainlistDivElement.children.length);
+    // // MainlistDivElement.children()
+    // MainlistDivElement.removeChild(MainlistChildDivElement);
+    // if (MainlistDivElement.children.length != 0) {
+    //   console.log(MainlistDivElement.children.length);
+    //   MainlistChildDivElement;
+    //   MainlistDivElement.removeChild(MainlistDivElement.children);
+    // }
+
     // const targetValue = event.target.childNodes[0].data;
     console.log(componentList_);
 
@@ -227,47 +243,57 @@ const Mainhomecontent = function () {
 
     console.log(mainDataFounder);
   };
+  const listHadlerSelf_1 = async function (event: any, value: string) {
+    const HandelrFunction = function () {
+      setGodListRender([]);
+    };
+    await HandelrFunction();
+    listHadlerSelf(event, value);
+    Bolian = true;
+  };
 
   const mainOrderComponent = secendrydataorder.map((g: any) => {
     return (
       <MainorderClone
         actionOrederHandlerVarible={actionOrederHandler}
         listhadler={listHadlerSelf}
+        listhadler_1={listHadlerSelf_1}
         maindatas={g}
       />
     );
     // return <div onClick={listHadlerSelf}>GGmen</div>;
   });
-  // useEffect(() => {
 
+  // useEffect(() => {
+  //   if (Bolian == false) {
+  //     setGodListRender(<div className="GodListRender_ety">Chose in order</div>);
+  //   }
   // });
 
-  // if (startoperationhandelr == true) {
-  //   setGodListRender(componentList_0);
-  //   console.log("im here mather fucker !!!");
-
-  //   startoperationhandelr = false;
-  // }
-  // let Maindata;
-  // useEffect(() => {
-  //   async function renderFirstTimeListHandler() {
-  //     Maindata = await componentList_0;
-  //     setGodListRender(Maindata);
-  //   }
-  //   renderFirstTimeListHandler();
-  // }, [Maindata]);
+  if (GodListRender != undefined) {
+    if (GodListRender.length == 0) {
+      const selectDCinDOM = document.querySelector(".GodListRender_ety");
+      selectDCinDOM?.remove();
+      setGodListRender(
+        <div className="GodListRender_emty">... its emty ...</div>
+      );
+    }
+    console.log(GodListRender.length);
+  }
 
   return (
     <>
       <div className="MainhomeContent">
         <div className="homeContent">
-          <div className="  ">
+          <div className="">
             {lodingorder && (
               <div className="Main_order_loding ">{Loding_Error_varible}</div>
             )}
             {mainOrderComponent}
           </div>
-          <div className="Main_list">{GodListRender}</div>
+          <div ref={refDiv} className="Main_list">
+            {GodListRender}
+          </div>
         </div>
       </div>
     </>
