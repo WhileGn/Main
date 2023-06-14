@@ -270,6 +270,14 @@ const Mainhomecontent = function () {
   //   }
   // });
 
+  // const firstListHandler = async function () {
+  //   await GODListHandler();
+  //   setGodListRender(componentList_0);
+  // };
+  // useEffect(() => {
+  //   firstListHandler();
+  // }, []);
+
   if (GodListRender != undefined) {
     if (GodListRender.length == 0) {
       const selectDCinDOM = document.querySelector(".GodListRender_ety");

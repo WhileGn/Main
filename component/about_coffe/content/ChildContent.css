@@ -132,3 +132,9 @@
   justify-items: center;
   text-align: center;
 }
+
+@media only screen and (max-width: 1300px) {
+  .Main_ChildContent {
+    /* transform: translate(0px, -300px); */
+  }
+}

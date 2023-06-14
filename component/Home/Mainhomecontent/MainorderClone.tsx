@@ -69,7 +69,7 @@ const MainorderClone: React.FC<{
         // props.listhadler(e, mainorderName),
         orderClickHandler(), props.listhadler_1(e, mainorderName);
       }}
-      className="Main_MainorderClone Main_MainorderClone_animation"
+      className="Main_MainorderClone "
       ref={refrens}
     >
       <div
