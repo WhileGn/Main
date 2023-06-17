@@ -56,3 +56,9 @@
   color: #9c4100;
   font-size: 28px;
 }
+
+.orderAction {
+  scale: 1.15 !important;
+  background-color: #f9e6db;
+  color: #361701;
+}

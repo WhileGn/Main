@@ -1,6 +1,9 @@
 .ChildContent {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  height: auto;
+  min-height: 600px;
+  width: auto;
 }
 .Main_ChildContent {
   height: 700px;
@@ -10,7 +13,7 @@
 .ChildConten_history_Main {
   height: 400px;
   width: 300px;
-  padding-top: 400px;
+  margin-top: 400px;
 
   justify-self: center;
 
@@ -19,7 +22,7 @@
 }
 @keyframes history {
   0% {
-    position: relative;
+    /* position: relative; */
     opacity: 0;
     transform: translate(470px, -300px);
   }

@@ -56,37 +56,40 @@ export function Maincontent() {
   // console.log(test_2);
 
   return (
-    <div className="MainContent">
-      <div className="fragment_content" ref={ref_0}>
-        {render_0 && (
-          <div className="Main_Robosta_arabika">
-            <div className="Robosta_arabika_img"></div>
-            <div className="Robosta_arabika_text">
-              <p className="Robosta_arabika_textself">
-                Coffee is a beverage prepared from roasted coffee beans. Darkly
-                colored, bitter, and slightly acidic, coffee has a stimulating
-                effect on humans.
-              </p>
+    <>
+      <div className="MainContent">
+        <div className="fragment_content" ref={ref_0}>
+          {render_0 && (
+            <div className="Main_Robosta_arabika">
+              <div className="Robosta_arabika_img"></div>
+              <div className="Robosta_arabika_text">
+                <p className="Robosta_arabika_textself">
+                  Coffee is a beverage prepared from roasted coffee beans.
+                  Darkly colored, bitter, and slightly acidic, coffee has a
+                  stimulating effect on humans.
+                </p>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
 
-      <div className="margins"></div>
-      <div className="fragment_content" ref={ref_1}>
-        {render_1 && (
-          <div className="Main_Robosta_arabika">
-            <div className="Robosta_arabika_text">
-              <p className="Robosta_arabika_textself">
-                The two most popular coffee species in the world, Arabica vs
-                Robusta Coffee, have specific characteristics that set them
-                apart.
-              </p>
+        <div className="margins"></div>
+        <div className="fragment_content" ref={ref_1}>
+          {render_1 && (
+            <div className="Main_Robosta_arabika">
+              <div className="Robosta_arabika_text">
+                <p className="Robosta_arabika_textself">
+                  The two most popular coffee species in the world, Arabica vs
+                  Robusta Coffee, have specific characteristics that set them
+                  apart.
+                </p>
+              </div>
+              <div className="Robosta_arabika_img_2 Robosta_arabika_img"></div>
             </div>
-            <div className="Robosta_arabika_img_2 Robosta_arabika_img"></div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
-    </div>
+      <div className="margins"></div>
+    </>
   );
 }

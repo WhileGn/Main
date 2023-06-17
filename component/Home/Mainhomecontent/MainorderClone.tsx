@@ -57,6 +57,12 @@ const MainorderClone: React.FC<{
     );
 
     // console.log(isActive);
+
+    const MainorderAction = document.querySelectorAll(".MainorderClone");
+    console.log(MainorderAction);
+    MainorderAction.forEach((orderAction) => {
+      orderAction.classList.remove("orderAction");
+    });
   };
 
   const targetDiv = refrens.current;
@@ -69,7 +75,7 @@ const MainorderClone: React.FC<{
         // props.listhadler(e, mainorderName),
         orderClickHandler(), props.listhadler_1(e, mainorderName);
       }}
-      className="Main_MainorderClone "
+      className="Main_MainorderClone  "
       ref={refrens}
     >
       <div

@@ -4,10 +4,16 @@
 }
 .Main_about {
   width: auto;
+  box-shadow: inset 0px 0px 70px 8px black;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0) 200px, rgba(0, 0, 0, 0.7)),
+    url(./../../img/2389954.jpg);
+
+  height: 800% !important;
+  width: 100% !important; */
 }
 
 .Main_about_child_1 {
-  box-shadow: inset 0px 0px 70px 8px black;
+  /* box-shadow: inset 0px 0px 70px 8px black;
   background-image: linear-gradient(rgba(0, 0, 0, 0) 200px, rgba(0, 0, 0, 0.7)),
     url(./../../img/2389954.jpg);
 
@@ -18,19 +24,17 @@
   background-repeat: no-repeat;
   animation: Mainbackaboutcoffe 1s;
 
-  animation-iteration-count: initial;
+  animation-iteration-count: initial; */
 }
 .Main_about_child_2 {
-  box-shadow: inset 0px 0px 70px 8px black;
+  /* box-shadow: inset 0px 0px 70px 8px black;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
     url(./../../img/From-Finca-to-Flat-White-The-Best-Coffee-Farm-Tour-in-Medellin-scaled.jpg);
   height: 180vh !important;
   width: 100% !important;
   background-size: cover;
   object-fit: cover;
-  background-repeat: no-repeat;
-  /* animation: about_child 10s;
-  animation-iteration-count: initial; */
+  background-repeat: no-repeat; */
 }
 
 @keyframes Mainbackaboutcoffe {

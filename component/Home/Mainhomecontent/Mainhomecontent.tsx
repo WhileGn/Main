@@ -210,6 +210,7 @@ const Mainhomecontent = function () {
     console.log(event.target);
 
     const mainOrderTarget = event.targets;
+    // mainOrderTarget.classList.add(".orderAction");
     // mainOrderTarget.class = "GGmen";
 
     let mainAPIvalue: string[] = [];
@@ -223,22 +224,40 @@ const Mainhomecontent = function () {
     function founderFunction(event: any) {
       return event == mainvalue;
     }
+    const MainorderAction = document.querySelectorAll(".MainorderClone");
 
-    const mainDataFounder = mainAPIvalue.find(founderFunction);
+    const mainDataFounder: any = mainAPIvalue.find(founderFunction);
+    const DataFounder = mainDataFounder.replaceAll("_", " ");
+    // const mainDataFounder_2 = mainAPIvalue.find(founderFunction);
+
     console.log(mainDataFounder);
-    GodListRender = componentList_1;
-    if (mainDataFounder == "Coffe_machine") {
+    console.log(DataFounder);
+
+    // GodListRender = componentList_1;
+
+    MainorderAction.forEach((OrderAction) => {
+      const OrderActionvalue = OrderAction.textContent;
+
+      if (OrderActionvalue == DataFounder) {
+        OrderAction.classList.add("orderAction");
+        console.log(OrderActionvalue == DataFounder);
+        console.log(OrderAction);
+      }
+      console.log(OrderActionvalue);
+    });
+
+    if (DataFounder == "Coffe machine") {
       setGodListRender(componentList_0);
-      setactionOrederHandler("Coffe_machine");
-    } else if (mainDataFounder == "Coffee_brewing") {
+      setactionOrederHandler("Coffe machine");
+    } else if (DataFounder == "Coffee brewing") {
       setGodListRender(componentList_1);
-      setactionOrederHandler("Coffee_brewing");
-    } else if (mainDataFounder == "Hot_Drinks") {
+      setactionOrederHandler("Coffee brewing");
+    } else if (DataFounder == "Hot Drinks") {
       setGodListRender(componentList_2);
-      setactionOrederHandler("Hot_Drinks");
-    } else if (mainDataFounder == "Tea_and_Herbal") {
+      setactionOrederHandler("Hot Drinks");
+    } else if (DataFounder == "Tea and Herbal") {
       setGodListRender(componentList_3);
-      setactionOrederHandler("Tea_and_Herbal");
+      setactionOrederHandler("Tea and Herbal");
     }
 
     console.log(mainDataFounder);
