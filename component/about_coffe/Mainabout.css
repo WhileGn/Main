@@ -4,12 +4,21 @@
 }
 .Main_about {
   width: auto;
-  box-shadow: inset 0px 0px 70px 8px black;
+  /* box-shadow: inset 0px 0px 70px 8px black; */
+  /* background-image: linear-gradient(#261000, #210f02); */
+  height: 100%;
   /* background-image: linear-gradient(rgba(0, 0, 0, 0) 200px, rgba(0, 0, 0, 0.7)),
     url(./../../img/2389954.jpg);
 
   height: 800% !important;
   width: 100% !important; */
+}
+.FoterAbout {
+  /* margin-bottom: 100px; */
+}
+.abouts {
+  background-image: linear-gradient(#8c3f07, #1d0d02);
+  /* height: 280vh; */
 }
 
 .Main_about_child_1 {
