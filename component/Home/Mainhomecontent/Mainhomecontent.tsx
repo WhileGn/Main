@@ -9,7 +9,7 @@ import { MainlistClone } from "./MainlistClone";
 import { list } from "postcss";
 import { List } from "postcss/lib/list";
 import { Tube } from "@react-three/drei";
-import Mainfechdata from "../../../api/Mainrespons";
+import Mainfechdata from "../../../api/Mainfechdata";
 
 let GodjsonData: any = [];
 let minijsonData: any = [];
@@ -65,9 +65,9 @@ const Mainhomecontent = function () {
       // console.log(MaindataVarible);
       // const MainjsonData: any = Object.values(MaindataVarible);
       // const secenderyjsonData: any = Object(MaindataVarible.data);
-      GodjsonData = Object.entries(MaindataVarible.data);
+      GodjsonData = Object.entries(MaindataVarible);
 
-      minijsonData = Object.entries(MaindataVarible.data);
+      minijsonData = Object.entries(MaindataVarible);
       setsecendrydataorder_1(minijsonData);
       setsecendrydataorder(GodjsonData);
       setlodingorder(false);

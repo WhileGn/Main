@@ -1,31 +1,18 @@
 "use client";
 
-// import ApiHandler from "./Mainfechdata";
-async function Mainfechdata() {
-  let jsonData;
+const Mainrespons = async function (DataBody) {
+  const MainData = await DataBody;
+  console.log(MainData);
+  const ResponsOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ MainData }),
+  };
+  const response = await fetch(
+    "https://maincoffe-a99a3-default-rtdb.firebaseio.com/dynamicSide.json",
+    ResponsOptions
+  );
+  // const data = await response.json();
+};
 
-  // const SendResponse = await fetch(
-  //   "https://jsonplaceholder.typicode.com/todos/1"
-  // );
-
-  // jsonData = await SendResponse.json();
-  // console.log(jsonData);
-  try {
-    // const SendResponse = await fetch(
-    //   "https://maincoffe-a99a3-default-rtdb.firebaseio.com/.json"
-    // );
-    const SendResponse = await fetch(
-      "https://maincoffe-a99a3-default-rtdb.firebaseio.com/.json"
-    );
-
-    jsonData = await SendResponse.json();
-    console.log(jsonData);
-    return jsonData;
-  } catch {
-    return "error";
-  }
-}
-
-export default Mainfechdata;
-
-// "https://jsonplaceholder.typicode.com/todos/1"
+export default Mainrespons;

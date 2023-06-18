@@ -4,6 +4,7 @@ import "./MainlistClone.css";
 import { JsxAttribute } from "typescript";
 import { URL } from "url";
 import { log } from "console";
+import Mainrespons from "./../../../api/Mainrespons";
 // import { url } from "inspector";
 // import Mainfechdata from "../../../api/Mainfechdata";
 
@@ -32,6 +33,7 @@ export function MainlistClone(props: any) {
   // console.log(fortest);
   // console.log(final);
   const mainaddlisthandler = function () {
+    Mainrespons(Data);
     // const MainsendData = Main;
   };
 

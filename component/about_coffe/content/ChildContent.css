@@ -19,6 +19,7 @@
 
   animation: history 3.5s;
   animation-iteration-count: initial;
+  margin-bottom: 130px;
 }
 @keyframes history {
   0% {

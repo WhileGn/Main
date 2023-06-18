@@ -15,9 +15,17 @@
 }
 .FoterAbout {
   /* margin-bottom: 100px; */
+  /* url(./../../img/b26bcdcf-blog_coffee-shop-equipment-list_1200x628.jpg);
+  background-size: cover; */
+  /* height: 900px; */
+  height: 610px;
+  background-image: linear-gradient(#000000, rgba(0, 0, 0, 0.1)),
+    url(./../../img/b26bcdcf-blog_coffee-shop-equipment-list_1200x628.jpg);
+  /* backdrop-filter: saturate(300%); */
+  background-size: cover;
 }
 .abouts {
-  background-image: linear-gradient(#8c3f07, #1d0d02);
+  background-image: linear-gradient(#8c3f07, #000000);
   /* height: 280vh; */
 }
 
