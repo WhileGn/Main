@@ -55,7 +55,7 @@
 .ChildConten_Rosting_Main {
   height: 400px;
   width: 300px;
-  padding-top: 300px;
+  margin-top: 300px;
 
   justify-self: center;
 
@@ -139,6 +139,113 @@
 
 @media only screen and (max-width: 1300px) {
   .Main_ChildContent {
-    /* transform: translate(0px, -300px); */
+  }
+
+  .history_text {
+    font-size: 23px;
+  }
+  .Rosting_text {
+    font-size: 23px;
+  }
+  .coffeeEstate_text {
+    font-size: 23px;
+  }
+  .history_header {
+    font-size: 30px;
+  }
+  .Rosting_header {
+    font-size: 30px;
+  }
+  .coffeeEstate_header {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .ChildConten_Rosting_Main {
+  }
+
+  .history_text {
+    margin: 0px auto;
+    font-size: 18px;
+    width: 250px;
+  }
+  .Rosting_text {
+    font-size: 18px;
+    width: 250px;
+    margin: 0px auto;
+  }
+  .coffeeEstate_text {
+    font-size: 18px;
+    width: 250px;
+    margin: 0px auto;
+  }
+  .history_header {
+    font-size: 25px;
+  }
+  .Rosting_header {
+    font-size: 25px;
+  }
+  .coffeeEstate_header {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .ChildConten_Rosting_Main {
+  }
+
+  .history_text {
+    margin: 0px auto;
+    font-size: 14px;
+    line-height: 30px;
+    width: 250px;
+  }
+  .Rosting_text {
+    font-size: 14px;
+    line-height: 30px;
+    width: 250px;
+    text-align: center;
+    margin: 0px auto;
+  }
+  .coffeeEstate_text {
+    font-size: 14px;
+    line-height: 30px;
+    width: 250px;
+    text-align: center;
+    margin: 0px auto;
+  }
+  .history_header {
+    font-size: 20px;
+  }
+  .Rosting_header {
+    font-size: 20px;
+  }
+  .coffeeEstate_header {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .ChildContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-row: 2/2;
+    grid-columns: 2/2;
+    /* height: 100px; */
+    /* min-height: 600px; */
+    width: auto;
+    margin-top: 130px;
+  }
+  .ChildConten_history_Main {
+    margin: 0px;
+    height: 100px;
+  }
+  .ChildConten_Rosting_Main {
+    margin: 0px;
+    height: 100px;
+  }
+  .ChildConten_coffeeEstate_Main {
+    margin: 0px;
+    height: 100px;
   }
 }
