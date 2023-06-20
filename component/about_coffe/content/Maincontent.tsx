@@ -58,12 +58,12 @@ export function Maincontent() {
   return (
     <>
       <div className="MainContent">
-        <div className="fragment_content" ref={ref_0}>
-          {render_0 && (
-            <div className="Main_Robosta_arabika">
+        <div className="fragment_content fragment_content_0" ref={ref_0}>
+          {true && (
+            <div className="Main_Robosta_arabika Main_Robosta_arabika_0">
               <div className="Robosta_arabika_img"></div>
-              <div className="Robosta_arabika_text">
-                <p className="Robosta_arabika_textself">
+              <div className="Robosta_arabika_text Robosta_arabika_text_first">
+                <p className="Robosta_arabika_textself Robosta_arabika_textself_first">
                   Coffee is a beverage prepared from roasted coffee beans.
                   Darkly colored, bitter, and slightly acidic, coffee has a
                   stimulating effect on humans.
@@ -74,10 +74,10 @@ export function Maincontent() {
         </div>
 
         <div className="margins"></div>
-        <div className="fragment_content" ref={ref_1}>
-          {render_1 && (
-            <div className="Main_Robosta_arabika Main_Robosta_arabika_2">
-              <div className="Robosta_arabika_text">
+        <div className="fragment_content fragment_content_1" ref={ref_1}>
+          {true && (
+            <div className="Main_Robosta_arabika Main_Robosta_arabika_1">
+              <div className="Robosta_arabika_text Robosta_arabika_text_secend">
                 <p className="Robosta_arabika_textself Robosta_vs_arabika_textself">
                   The two most popular coffee species in the world, Arabica vs
                   Robusta Coffee, have specific characteristics that set them
