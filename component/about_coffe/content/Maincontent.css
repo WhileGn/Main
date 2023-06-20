@@ -259,7 +259,7 @@
     }
 
     100% {
-      font-size: 23px;
+      font-size: 20px;
       /* opacity: 1; */
     }
   }
@@ -272,5 +272,48 @@
       height: 200px;
       /* opacity: 1; */
     }
+  }
+  .Robosta_vs_arabika_textself {
+    /* margin-top: 300px; */
+    transform: translate(0px, -20px);
+  }
+}
+@media only screen and (max-width: 900px) {
+  .Robosta_arabika_textself {
+    /* margin-bottom: 180px; */
+    /* transform: translate(0px, -90px); */
+    font-size: 16px;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+    animation-name: Robosta_arabika_textself__animation_0_1;
+
+    margin-top: 80px;
+
+    line-height: 30px;
+  }
+  @keyframes Robosta_arabika_textself__animation_0_1 {
+    0% {
+      font-size: 23px;
+      /* opacity: 0; */
+    }
+
+    100% {
+      font-size: 16px;
+      /* opacity: 1; */
+    }
+  }
+  .Main_Robosta_arabika_2 {
+    margin-top: 0px;
+  }
+  .Main_Robosta_arabika {
+  }
+
+  .fragment_content {
+    min-height: 200px;
+    height: 250px;
+  }
+  .margins {
+    height: 80px;
   }
 }

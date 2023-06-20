@@ -76,9 +76,9 @@ export function Maincontent() {
         <div className="margins"></div>
         <div className="fragment_content" ref={ref_1}>
           {render_1 && (
-            <div className="Main_Robosta_arabika">
+            <div className="Main_Robosta_arabika Main_Robosta_arabika_2">
               <div className="Robosta_arabika_text">
-                <p className="Robosta_arabika_textself">
+                <p className="Robosta_arabika_textself Robosta_vs_arabika_textself">
                   The two most popular coffee species in the world, Arabica vs
                   Robusta Coffee, have specific characteristics that set them
                   apart.
