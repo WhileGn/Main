@@ -233,7 +233,7 @@
     /* height: 100px; */
     /* min-height: 600px; */
     width: auto;
-    margin-top: 130px;
+    margin-top: 300px;
   }
   .ChildConten_history_Main {
     margin: 0px;
@@ -260,21 +260,30 @@
     /* height: 100px; */
     /* min-height: 600px; */
     width: auto;
-    margin-top: 130px;
+    margin-top: 330px;
   }
   .ChildConten_history_Main {
     margin: 0px;
     height: 100px;
     padding-bottom: 200px;
+    margin-bottom: 30px;
   }
   .ChildConten_Rosting_Main {
     margin: 0px;
     height: 100px;
   }
   .ChildConten_coffeeEstate_Main {
-    padding: 0px;
-    margin: 0px;
+    /* margin-top: -20px; */
     height: 100px;
     grid-column: span 1;
+  }
+  .history_header {
+    margin-bottom: 20px;
+  }
+  .Rosting_header {
+    margin-bottom: 20px;
+  }
+  .coffeeEstate_header {
+    margin-bottom: 20px;
   }
 }

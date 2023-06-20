@@ -304,16 +304,33 @@
     }
   }
   .Main_Robosta_arabika_2 {
-    margin-top: 0px;
+    /* margin-top: 0px; */
   }
   .Main_Robosta_arabika {
   }
 
   .fragment_content {
-    min-height: 200px;
+    min-height: 250px;
     height: 250px;
   }
-  .margins {
+  /* .margins {
     height: 80px;
+  } */
+}
+@media only screen and (max-width: 700px) {
+  .MainContent {
+    /* padding-top: 100px; */
+  }
+  .Main_Robosta_arabika {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .Robosta_arabika_img {
+    /* margin-top: 100px; */
+    transform: translate(0px, 100px);
+    min-width: 500px;
+    max-width: 500px;
+    margin: 0px auto;
+    pointer-events: none;
   }
 }
