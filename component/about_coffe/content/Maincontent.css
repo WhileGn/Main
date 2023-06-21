@@ -20,9 +20,12 @@
 }
 
 .fragment_content {
+  /* display: flex; */
   height: auto;
   min-height: 600px;
-  width: auto;
+  width: 96%;
+  /* justify-content: center; */
+  margin: 0px auto;
 }
 .Robosta_arabika_img {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 0)),
@@ -43,7 +46,13 @@
 
   transition: 0.5s;
   height: 400px;
+  /* max-width: 1000px; */
   /* transition: width 2s ease-in; */
+}
+@media only screen and (min-width: 1920px) {
+  .Robosta_arabika_img {
+    height: 750px;
+  }
 }
 .Robosta_arabika_img:hover {
   transform: rotateZ(-1deg) translateY(-1rem) translateX(2rem);
@@ -357,7 +366,7 @@
     margin: 0px auto;
     pointer-events: none;
   }
-  .Robosta_arabika_textself_first {
+  .Robosta_arabika_textself {
     border-bottom: 3px solid rgba(0, 0, 0, 0.6);
 
     /* padding-bottom: 100px; */
