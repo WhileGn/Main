@@ -18,7 +18,7 @@ const NavbarAboutCoffe: React.FC = function (props) {
       <div className="Snavbar_icon">
         <p className="Snavbar_icon_self">Coffee</p>
       </div>
-      <div ref={ref_0} id="navbar_mobileresponsve_icon" className="hiden">
+      <div ref={ref_0} id="navbar_mobileresponsve_icon" className="hidden">
         <GoListUnordered></GoListUnordered>
       </div>
       <div ref={ref_1} className="Snavbar_btn_Maindiv">
