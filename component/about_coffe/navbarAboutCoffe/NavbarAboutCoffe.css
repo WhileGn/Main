@@ -119,3 +119,40 @@
 .hidden {
   display: none;
 }
+
+@media only screen and (max-width: 700px) {
+  .Snavbar_Main {
+    display: grid;
+    grid-template-columns: 1fr 1000fr 1fr;
+  }
+  /* #navbar_mobileresponsve_icon {
+    display: block;
+    padding: 20px;
+    padding-top: 30px;
+  }  */
+
+  .Snavbar_icon_self {
+    font-size: 17px;
+  }
+  .Snavbar_icon {
+    display: grid;
+    width: 80px;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+  }
+  .Snavbar_icon_self {
+    margin: 0px;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+  }
+  .Snavbar_btn_Maindiv {
+    margin-right: 0px;
+    gap: 0px;
+  }
+  .Snavbar_btn {
+    font-size: 15px;
+  }
+}

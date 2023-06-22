@@ -36,7 +36,7 @@ export function Footer() {
         <div className="Footer_header">
           <div className="Footer">
             <div className="header_fotehr_content">
-              <h1 className="header_fotehr_content_h1">Hire Us</h1>
+              <div className="header_fotehr_content_h1">Hire Us</div>
               <p className="header_fotehr_content_p">
                 Do you like coffee <br></br>follow us
               </p>
