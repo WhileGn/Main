@@ -17,7 +17,7 @@
 
   justify-self: center;
 
-  animation: history 3.5s;
+  animation: history 2.5s;
   animation-iteration-count: initial;
   margin-bottom: 130px;
 }
@@ -59,7 +59,7 @@
 
   justify-self: center;
 
-  animation: Rosting 3s;
+  animation: Rosting 2s;
   animation-iteration-count: initial;
 }
 
@@ -101,7 +101,7 @@
   padding-top: 200px;
 
   justify-self: center;
-  animation: coffeeEstate 2.5s;
+  animation: coffeeEstate 1.5s;
   animation-iteration-count: initial;
 }
 
@@ -109,7 +109,7 @@
   0% {
     position: relative;
     opacity: 0;
-    transform: translate(0px, -100px);
+    transform: translate(50px, -150px);
   }
   100% {
     opacity: 1;
@@ -285,5 +285,8 @@
   }
   .coffeeEstate_header {
     margin-bottom: 20px;
+  }
+  .Main_ChildContent {
+    height: 990px;
   }
 }

@@ -59,7 +59,7 @@ export function Maincontent() {
     <>
       <div className="MainContent">
         <div className="fragment_content fragment_content_0" ref={ref_0}>
-          {true && (
+          {render_0 && (
             <div className="Main_Robosta_arabika Main_Robosta_arabika_0">
               <div className="Robosta_arabika_img"></div>
               <div className="Robosta_arabika_text Robosta_arabika_text_first">
@@ -75,7 +75,7 @@ export function Maincontent() {
 
         <div className="margins"></div>
         <div className="fragment_content fragment_content_1" ref={ref_1}>
-          {true && (
+          {render_1 && (
             <div className="Main_Robosta_arabika Main_Robosta_arabika_1">
               <div className="Robosta_arabika_text Robosta_arabika_text_secend">
                 <p className="Robosta_arabika_textself Robosta_vs_arabika_textself">

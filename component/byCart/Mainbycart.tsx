@@ -24,9 +24,7 @@ const Mainbycart = function () {
           <ambientLight intensity={0.5} />
           <spotLight position={[10, 15, 10]} angle={0.3} />
           <mesh>
-            {/* <boxBufferGeometry attach="geometry" /> */}
             <meshLambertMaterial attach="material" color="black" />
-            {/* <primitive object={coffe3d.scene} /> */}
           </mesh>
         </Canvas>
       </div>
@@ -35,3 +33,20 @@ const Mainbycart = function () {
 };
 
 export default Mainbycart;
+
+{
+  /* <Canvas>
+<OrbitControls
+  enableZoom={false}
+  enablePan={false}
+  autoRotate={true}
+  autoRotateSpeed={0.5}
+/>
+<Stars />
+<ambientLight intensity={0.5} />
+<spotLight position={[10, 15, 10]} angle={0.3} />
+<mesh>
+  <meshLambertMaterial attach="material" color="black" />
+</mesh>
+</Canvas> */
+}

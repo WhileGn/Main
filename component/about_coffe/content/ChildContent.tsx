@@ -15,7 +15,7 @@ export function ChildContent() {
 
   return (
     <div ref={ref_} className="Main_ChildContent">
-      {
+      {visible && (
         <div className="ChildContent">
           <div className="ChildConten_history_Main">
             <div className="history_header">History of coffee</div>
@@ -44,7 +44,7 @@ export function ChildContent() {
             </div>
           </div>
         </div>
-      }
+      )}
     </div>
   );
 }
