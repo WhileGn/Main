@@ -1,7 +1,7 @@
 import "./Mainbycart.css";
 import { Canvas } from "@react-three/fiber";
 
-import { Box, OrbitControls, Stars, Tube, useGLTF } from "@react-three/drei";
+import { OrbitControls, Stars } from "@react-three/drei";
 import Navbar from "../Home/Navbar";
 import { NavbarBycart } from "./navbarbycart/NavbarBycart";
 import MainOrderBycard from "./MainContent/MainOrderBycard";
