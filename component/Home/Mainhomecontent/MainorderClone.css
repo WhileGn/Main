@@ -62,3 +62,14 @@
   background-color: #f9e6db;
   color: #361701;
 }
+
+@media only screen and (max-width: 1100px) {
+  .MainorderClone {
+    width: 160px;
+    height: 80%;
+    border-radius: 10px 50px 10px 50px;
+
+    font-weight: 900;
+    font-size: 20px;
+  }
+}

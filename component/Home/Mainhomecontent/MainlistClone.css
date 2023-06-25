@@ -1,6 +1,7 @@
 .MainlistClone {
   animation: 1s MainlistCloneanimation;
   animation-iteration-count: initial;
+  height: 200px;
 }
 
 @keyframes MainlistCloneanimation {
