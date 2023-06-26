@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { stat } from "fs";
 
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+
 const MainorderClone: React.FC<{
   maindatas: any;
   listhadler: any;
@@ -75,7 +77,7 @@ const MainorderClone: React.FC<{
         // props.listhadler(e, mainorderName),
         orderClickHandler(), props.listhadler_1(e, mainorderName);
       }}
-      className="Main_MainorderClone  "
+      className="Main_MainorderClone"
       ref={refrens}
     >
       <div

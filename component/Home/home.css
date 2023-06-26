@@ -1,7 +1,7 @@
 .Mainindex {
   height: 120vh;
-  min-height: auto;
-  width: 100%;
+
+  /* width: 100%; */
   /* background-color: red; */
   /* z-index: -10; */
   /* position: absolute; */
@@ -49,4 +49,23 @@
   color: rgb(53, 49, 49);
   background-color: black; */
   /* z-index: -100; */
+}
+
+@media only screen and (max-width: 800px) {
+  .Mainindex {
+    height: 300vh;
+    animation: responsive_Mainindex_01 1s;
+    animation-iteration-count: inherit;
+  }
+  @keyframes responsive_Mainindex_01 {
+    0% {
+      /* opacity: 0.8; */
+      /* scale: 3; */
+      height: 100vh;
+    }
+    100% {
+      opacity: 1;
+      scale: 1;
+    }
+  }
 }

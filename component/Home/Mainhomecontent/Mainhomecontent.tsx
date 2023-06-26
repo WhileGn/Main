@@ -11,6 +11,8 @@ import { List } from "postcss/lib/list";
 import { Tube } from "@react-three/drei";
 import Mainfechdata from "../../../api/Mainfechdata";
 
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+
 let GodjsonData: any = [];
 let minijsonData: any = [];
 let startoperationhandelr: boolean = true;
@@ -270,8 +272,8 @@ const Mainhomecontent = function () {
     listHadlerSelf(event, value);
     Bolian = true;
   };
-
-  const mainOrderComponent = secendrydataorder.map((g: any) => {
+  let [mainOrderComponent, setmainOrderComponent] = useState();
+  mainOrderComponent = secendrydataorder.map((g: any) => {
     return (
       <MainorderClone
         actionOrederHandlerVarible={actionOrederHandler}
@@ -312,7 +314,10 @@ const Mainhomecontent = function () {
     <>
       <div className="MainhomeContent">
         <div className="homeContent">
-          <div className="">
+          <div className="GodOrderComponent">
+            {/* <div className="responsive_btn">
+              <AiOutlineMenu size={40} color="#361701"></AiOutlineMenu>
+            </div> */}
             {lodingorder && (
               <div className="Main_order_loding ">{Loding_Error_varible}</div>
             )}
