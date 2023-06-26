@@ -1,6 +1,30 @@
 html,
 body {
+}
+
+.GodHome {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
+  height: 100vh;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)),
+    url(../../../img/Food-Safety-Guide-for-Coffee-Shops.jpg);
+  background-size: cover;
   /* background-color: black !important; */
+  animation-iteration-count: initial;
+  animation: Mainbackgroundanimation 9s infinite;
+}
+
+@keyframes Mainbackgroundanimation {
+  0% {
+    filter: blur(0px) saturate(140%);
+  }
+  50% {
+    filter: blur(0px) saturate(100%);
+  }
+
+  100% {
+    filter: blur(0px) saturate(140%);
+  }
 }

@@ -9,12 +9,12 @@ import { Provider } from "react-redux";
 
 const HomeP = function () {
   return (
-    <>
+    <div className="GodHome">
       <Mainhomecontent></Mainhomecontent>
       <HomePage></HomePage>
 
       {/* <Provider store={store}></Provider> */}
-    </>
+    </div>
   );
 };
 

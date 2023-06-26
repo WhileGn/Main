@@ -157,7 +157,7 @@
   }
   .GodOrderComponent {
     /* overflow-y: scroll; */
-    overflow: visible;
+    /* overflow: visible; */
   }
 }
 
