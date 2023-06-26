@@ -1,11 +1,12 @@
 html,
 body {
-}
-
-.GodHome {
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
+}
+
+body {
+  /* overflow-x: hidden; */
+  width: 100%;
   height: 100vh;
   background-attachment: fixed;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)),
@@ -13,7 +14,7 @@ body {
   background-size: cover;
   /* background-color: black !important; */
   animation-iteration-count: initial;
-  animation: Mainbackgroundanimation 9s infinite;
+  animation: Mainbackgroundanimation 8s infinite;
 }
 
 @keyframes Mainbackgroundanimation {
@@ -21,7 +22,7 @@ body {
     filter: blur(0px) saturate(140%);
   }
   50% {
-    filter: blur(0px) saturate(100%);
+    filter: blur(0px) saturate(80%);
   }
 
   100% {

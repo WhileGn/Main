@@ -90,11 +90,13 @@
     margin-left: 100px;
 
     grid-template-columns: 1fr 1fr;
-    animation: Main_list_responsive_0 0.5s;
+    animation: Main_list_responsive_0001 0.5s;
     animation-iteration-count: initial;
   }
-  @keyframes Main_list_responsive_0 {
+  @keyframes Main_list_responsive_0001 {
     0% {
+      transform: rotate(90deg);
+
       opacity: 0;
       scale: 0.2;
     }
@@ -126,11 +128,45 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    animation: MainOrder_responsive_0 0.5s;
+    animation-iteration-count: initial;
   }
   .GodOrderComponent {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @keyframes MainOrder_responsive_0 {
+    0% {
+      transform: rotate(90deg);
+      opacity: 0;
+      scale: 0.2;
+    }
+    100% {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  .Main_list {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .homeContent {
+    animation: MainOrder_responsive_00 0.5s;
+    animation-iteration-count: initial;
+  }
+  @keyframes MainOrder_responsive_00 {
+    0% {
+      transform: rotate(-90deg);
+      opacity: 0;
+      scale: 0.2;
+    }
+    100% {
+      opacity: 1;
+      scale: 1;
+    }
   }
 }
 
@@ -175,5 +211,19 @@
       opacity: 1;
       scale: 1;
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .GodOrderComponent {
+    /* width: 650px; */
+    /* justify-self: center; */
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .GodOrderComponent {
+    /* overflow: scroll; */
+    scroll-behavior: auto;
   }
 }
