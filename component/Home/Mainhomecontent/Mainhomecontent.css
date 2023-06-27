@@ -220,10 +220,13 @@
     /* justify-self: center; */
   }
 }
-
+.Main_ResponsiveOrderIcons {
+}
 @media only screen and (max-width: 650px) {
   .GodOrderComponent {
+    /* width: 600px;
+    overflow-x: scroll; */
     /* overflow: scroll; */
-    scroll-behavior: auto;
+    /* scroll-behavior: auto; */
   }
 }
