@@ -54,24 +54,22 @@ const Mainhomecontent = function () {
   const [secendrydataorder_1, setsecendrydataorder_1] = useState<
     undefined | any
   >([]);
-
-  const ResponsiveOrderIcons = (
-    <div className="Main_ResponsiveOrderIcons">
-      Menu
-      <AiFillCaretRight
-        size={20}
-        className="self_ResponsiveOrderIcons"
-      ></AiFillCaretRight>
-    </div>
-  );
-  const ResponsiveOrderIcons__Handlers = function () {
-    const targetDiv = document.querySelector(".GodOrderComponent");
-    targetDiv?.classList.toggle("show");
-    // console.log(targetDiv?.classList.toggle("show"));
-    // targetDiv?.classList.add("show");
-  };
-
   const [showListData, setshowListData] = useState<undefined | any>();
+  // const ResponsiveOrderIcons = (
+  //   <div className="Main_ResponsiveOrderIcons">
+  //     Menu
+  //     <AiFillCaretRight
+  //       size={20}
+  //       className="self_ResponsiveOrderIcons"
+  //     ></AiFillCaretRight>
+  //   </div>
+  // );
+  // const ResponsiveOrderIcons__Handlers = function () {
+  //   const targetDiv = document.querySelector(".GodOrderComponent");
+  //   targetDiv?.classList.toggle("show__");
+
+  // };
+
   let MaindataVarible;
 
   async function MainfunctionForHandlelingEfect() {
@@ -335,12 +333,6 @@ const Mainhomecontent = function () {
       <div className="MainhomeContent">
         <div className="homeContent">
           <div className="OrderComponent">
-            <div
-              onClick={ResponsiveOrderIcons__Handlers}
-              className="Main_div_ResponsiveOrderIcons"
-            >
-              {ResponsiveOrderIcons}
-            </div>
             <div className="GodOrderComponent">
               {/* <div className="responsive_btn">
               <AiOutlineMenu size={40} color="#361701"></AiOutlineMenu>
