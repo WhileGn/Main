@@ -13,7 +13,7 @@ const Mainbycart = function () {
       <div className="divbycart">
         {/* <Navbar></Navbar> */}
         {/* <Header></Header> */}
-        <Canvas>
+        {/* <Canvas>
           <OrbitControls
             enableZoom={false}
             enablePan={false}
@@ -26,7 +26,7 @@ const Mainbycart = function () {
           <mesh>
             <meshLambertMaterial attach="material" color="black" />
           </mesh>
-        </Canvas>
+        </Canvas> */}
       </div>
     </div>
   );

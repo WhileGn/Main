@@ -12,6 +12,9 @@ const Mainrespons = async function (DataBody) {
     "https://maincoffe-a99a3-default-rtdb.firebaseio.com/dynamicSide.json",
     ResponsOptions
   );
+  // console.log(response.ok);
+  const DataResponse = await response.ok;
+  return DataResponse;
   // const data = await response.json();
 };
 

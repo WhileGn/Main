@@ -5,10 +5,22 @@ import { JsxAttribute } from "typescript";
 import { URL } from "url";
 import { log } from "console";
 import Mainrespons from "./../../../api/Mainrespons";
+// import { Button, Alert } from "rsuite";
+import { ToastContainer, toast } from "react-toastify";
 // import { url } from "inspector";
 // import Mainfechdata from "../../../api/Mainfechdata";
+import { Button } from "rsuite";
+import Notification from "rc-notification";
+// import { Alert } from "react-alert";
+import { Alert } from "@mui/material";
+import { useState } from "react";
+import { Turret_Road } from "next/font/google";
 
 export function MainlistClone(props: any) {
+  const [alertState, setalertState] = useState(Boolean);
+  const [IsShow, setIsShow] = useState(true);
+  let [LodingContent, setLodingContent] = useState<any>();
+  LodingContent = <div className="Loding-MainlistClone">Loding ... </div>;
   const MainVariableimageurl = props.MaindataH[0];
   console.log(MainVariableimageurl);
 
@@ -32,58 +44,75 @@ export function MainlistClone(props: any) {
 
   // console.log(fortest);
   // console.log(final);
-  const mainaddlisthandler = function () {
-    Mainrespons(Data);
-    // const MainsendData = Main;
+
+  const mainaddlisthandler = async function () {
+    setIsShow(false);
+    const MainSendDataToServerside = await Mainrespons(Data);
+    await MainSendDataToServerside;
+    console.log(MainSendDataToServerside);
+
+    if (MainSendDataToServerside == true) {
+      setLodingContent(<div className="Loding-MainlistClone">sucsec</div>);
+      console.log(LodingContent);
+    } else {
+    }
+    setTimeout(() => {}, 2000);
   };
 
   return (
     <div className="MainlistClone">
-      <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
-        rel="stylesheet"
-      />
+      {/* <Alert>"foikashfoiusdafioasdfosjadoij"</Alert> */}
+
       <div className="listClone">
-        <div className="header_listClone">
-          <div className="content_listClone">
-            <div className="content_listClone_name">
-              name :
-              <div className="child_content_listClone_name">{Data.Name}</div>
-            </div>
-            <div className="content_listClone_about">
-              about :<br />
-              <div className="child_content_listClone_about">{Data.about}</div>
-            </div>
-            <div className="content_listClone_amount">
-              amount :
-              <div className="child_content_listClone_amount">
-                {Data.amount}
+        {!IsShow && LodingContent}
+        {IsShow && (
+          <div className="header_listClone">
+            <div className="content_listClone">
+              <div className="content_listClone_name">
+                name :
+                <div className="child_content_listClone_name">{Data.Name}</div>
+              </div>
+              <div className="content_listClone_about">
+                about :<br />
+                <div className="child_content_listClone_about">
+                  {Data.about}
+                </div>
+              </div>
+              <div className="content_listClone_amount">
+                amount :
+                <div className="child_content_listClone_amount">
+                  {Data.amount}
+                </div>
+              </div>
+              <div className="content_ading_side_MainDiv">
+                <button
+                  onClick={mainaddlisthandler}
+                  className="content_ading_side_but"
+                >
+                  add
+                </button>
               </div>
             </div>
-            <div className="content_ading_side_MainDiv">
-              <button
-                onClick={mainaddlisthandler}
-                className="content_ading_side_but"
-              >
-                add
-              </button>
-            </div>
-          </div>
-          <div className="img_listClone_div">
-            {/* <img
+            <div className="img_listClone_div">
+              {/* <img
               className=""
               src={require("./../../../img/Differences-Between-Arabica-and-Robusta-Coffee-Beans-1.jpg")}
               alt=""
             /> */}
-            {/* <Image className="img_listClone" src={imgg} /> */}
-            <img
-              className="img_listClone"
-              src={MainImage}
-              alt="not have image !!!"
-            ></img>
+              {/* <Image className="img_listClone" src={imgg} /> */}
+              <img
+                className="img_listClone"
+                src={MainImage}
+                alt="not have image !!!"
+              ></img>
+            </div>
           </div>
-        </div>
+        )}
       </div>
+      {/* <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+        rel="stylesheet"
+      /> */}
     </div>
   );
 }
