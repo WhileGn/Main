@@ -137,7 +137,20 @@
   .listClone {
   }
 }
-
+.Loding-MainlistClone-Successful {
+  transform: translate(70px, 90px);
+  font-size: 20px;
+  font-weight: 900;
+  color: green;
+}
 .Loding-MainlistClone {
-  transform: translate(110px, 90px);
+  transform: translate(105px, 90px);
+  font-size: 20px;
+  font-weight: 900;
+}
+.Loding-MainlistClone-error {
+  transform: translate(20px, 90px);
+  font-size: 20px;
+  font-weight: 500;
+  color: red;
 }

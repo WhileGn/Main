@@ -19,8 +19,11 @@ import { Turret_Road } from "next/font/google";
 export function MainlistClone(props: any) {
   const [alertState, setalertState] = useState(Boolean);
   const [IsShow, setIsShow] = useState(true);
-  let [LodingContent, setLodingContent] = useState<any>();
-  LodingContent = <div className="Loding-MainlistClone">Loding ... </div>;
+  const [LodingContent, setLodingContent] = useState<any>(
+    <div className="Loding-MainlistClone">Loding ... </div>
+  );
+
+  // LodingContent = ;
   const MainVariableimageurl = props.MaindataH[0];
   console.log(MainVariableimageurl);
 
@@ -46,17 +49,27 @@ export function MainlistClone(props: any) {
   // console.log(final);
 
   const mainaddlisthandler = async function () {
+    setLodingContent(<div className="Loding-MainlistClone">Loding ... </div>);
     setIsShow(false);
     const MainSendDataToServerside = await Mainrespons(Data);
     await MainSendDataToServerside;
     console.log(MainSendDataToServerside);
 
     if (MainSendDataToServerside == true) {
-      setLodingContent(<div className="Loding-MainlistClone">sucsec</div>);
+      setLodingContent(
+        <div className="Loding-MainlistClone-Successful">Successful add</div>
+      );
       console.log(LodingContent);
-    } else {
+    } else if (MainSendDataToServerside == "error") {
+      setLodingContent(
+        <div className="Loding-MainlistClone-error">
+          some thing went wrong ...
+        </div>
+      );
     }
-    setTimeout(() => {}, 2000);
+    setTimeout(() => {
+      setIsShow(true);
+    }, 2000);
   };
 
   return (
