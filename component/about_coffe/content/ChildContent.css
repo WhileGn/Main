@@ -6,7 +6,7 @@
   width: auto;
 }
 .Main_ChildContent {
-  height: auto;
+  height: 930px;
   width: 100%;
 }
 
@@ -107,9 +107,9 @@
 
 @keyframes coffeeEstate {
   0% {
-    position: relative;
+    /* position: relative; */
     opacity: 0;
-    transform: translate(50px, -150px);
+    transform: translate(50px, -50px);
   }
   100% {
     opacity: 1;
@@ -161,6 +161,9 @@
   }
 }
 @media only screen and (max-width: 1000px) {
+  .Main_ChildContent {
+    height: 800px;
+  }
   .ChildConten_Rosting_Main {
   }
 
@@ -225,6 +228,9 @@
   }
 }
 @media only screen and (max-width: 900px) {
+  .Main_ChildContent {
+    height: 600px;
+  }
   .ChildContent {
     display: grid;
     grid-template-columns: 1fr 1fr;

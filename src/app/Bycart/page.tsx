@@ -14,7 +14,9 @@ function Bycartpage() {
 
   return (
     <React.Fragment>
-      <Mainbycart></Mainbycart>
+      <div className="Bycard_selfDiv">
+        <Mainbycart></Mainbycart>
+      </div>
     </React.Fragment>
   );
 }
