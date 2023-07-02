@@ -143,9 +143,11 @@ const Mainhomecontent = function () {
     componentList_ = datasList_.map((T: any) => {
       return <MainlistClone MaindataH={T}></MainlistClone>;
     });
+
     componentList_0 = datasList_0.map((T: any) => {
       return <MainlistClone MaindataH={T}></MainlistClone>;
     });
+    console.log(componentList_0);
     componentList_1 = datasList_1.map((T: any) => {
       return <MainlistClone MaindataH={T}></MainlistClone>;
     });
