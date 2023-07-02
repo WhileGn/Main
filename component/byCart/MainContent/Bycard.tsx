@@ -1,7 +1,10 @@
 import React, { useRef, useState } from "react";
 import "./bycard.css";
-
-const Bycard: React.FC<{ data: any }> = function (props: any) {
+import { types } from "util";
+type data = {
+  data: any;
+};
+const Bycard: React.FC<data> = function (props: any) {
   const MainDivElement = useRef<any>();
   const TargetDiv = MainDivElement.current;
 

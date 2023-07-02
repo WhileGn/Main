@@ -9,30 +9,48 @@ const MainOrderBycard = function () {
   let [data, setData] = useState();
   const [Loding, setLoding] = useState(false);
 
-  async function MainfetchdataFunction() {
-    const MainFetchData = await Fetchbydata();
-    const convertTypeToObject: any = Object.entries(MainFetchData);
-    // console.log(convertTypeToObject);
-    // targetData.push();
-    // let childMainData: any;
-    convertTypeToObject.map((Datas: any) => {
-      // console.log(Datas[1]);
-      targetData.push(Datas[1]);
-    });
-    // setMainData(targetData);
-    const finalValue = targetData.map((Datas: any) => {
-      // console.log(targetData);
+  // async function MainfetchdataFunction() {
+  //   const MainFetchData = await Fetchbydata();
+  //   const convertTypeToObject: any = Object.entries(MainFetchData);
+  //   // console.log(convertTypeToObject);
+  //   // targetData.push();
+  //   // let childMainData: any;
+  //   convertTypeToObject.map((Datas: any) => {
+  //     // console.log(Datas[1]);
+  //     targetData.push(Datas[1]);
+  //   });
+  //   // setMainData(targetData);
+  //   const finalValue = targetData.map((Datas: any) => {
+  //     // console.log(targetData);
 
-      return <Bycard data={Datas}></Bycard>;
-    });
-    setData(finalValue);
+  //     return <Bycard data={Datas}></Bycard>;
+  //   });
+  //   setData(finalValue);
 
-    console.log(finalValue);
+  //   console.log(finalValue);
+  // }
+  // useEffect(() => {
+  //   MainfetchdataFunction();
+  // }, []);
+  // console.log(targetData);
+  function MainfetchdataFunction() {
+    const MainFetchDataFromLocalStorage: any = localStorage;
+    const datas = MainFetchDataFromLocalStorage;
+    const data = JSON.parse(datas);
+    const MainData = Object.entries(MainFetchDataFromLocalStorage);
+    console.log(MainData);
+    console.log(data);
+
+    // MainFetchDataFromLocalStorage.foreach(() => {
+    //   console.log("GGMWEs");
+    // });
+
+    console.log(MainFetchDataFromLocalStorage);
+    // console.log(MainData);
   }
   useEffect(() => {
     MainfetchdataFunction();
   }, []);
-  console.log(targetData);
 
   return (
     <>

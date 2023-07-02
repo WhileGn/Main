@@ -15,61 +15,63 @@ import Notification from "rc-notification";
 import { Alert } from "@mui/material";
 import { useState } from "react";
 import { Turret_Road } from "next/font/google";
+import { type } from "os";
 
 export function MainlistClone(props: any) {
   const [alertState, setalertState] = useState(Boolean);
+  const [MainNumselection, setMainNumselection] = useState(1);
   const [IsShow, setIsShow] = useState(true);
   const [LodingContent, setLodingContent] = useState<any>(
     <div className="Loding-MainlistClone">Loding ... </div>
   );
 
-  // LodingContent = ;
   const MainVariableimageurl = props.MaindataH[0];
-  console.log(MainVariableimageurl);
 
   const MainImage = `./../../../img/${MainVariableimageurl}.jpg`;
-  console.log(MainImage);
-
-  console.log(MainImage);
-  console.log(MainImage);
 
   const MainData = props.MaindataH;
 
-  const Data = {
+  type typeMainData = {
+    Name: string;
+    about: string;
+    amount: number;
+    MainNumselection: number;
+  };
+  const Data: typeMainData = {
     Name: MainData[0].replace("_", " "),
     about: MainData[1].about,
     amount: MainData[1].amount,
+    MainNumselection,
   };
-  console.log(Data.Name);
-  // const fortest = "esperso_dabel";
 
-  // const final = fortest.replace("_", " ");
-
-  // console.log(fortest);
-  // console.log(final);
-
-  const mainaddlisthandler = async function () {
-    setLodingContent(<div className="Loding-MainlistClone">Loding ... </div>);
-    setIsShow(false);
-    const MainSendDataToServerside = await Mainrespons(Data);
-    await MainSendDataToServerside;
-    console.log(MainSendDataToServerside);
-
-    if (MainSendDataToServerside == true) {
-      setLodingContent(
-        <div className="Loding-MainlistClone-Successful">Successful add</div>
-      );
-      console.log(LodingContent);
-    } else if (MainSendDataToServerside == "error") {
-      setLodingContent(
-        <div className="Loding-MainlistClone-error">
-          some thing went wrong ...
-        </div>
-      );
-    }
-    setTimeout(() => {
-      setIsShow(true);
-    }, 2000);
+  const mainaddlisthandler = function () {
+    setMainNumselection(MainNumselection + 1);
+    localStorage.setItem(Data.Name, JSON.stringify(Data));
+    // localStorage.setItem("hefdasfdasllo", "hdfash");
+  };
+  const Work_With_API = {
+    // const mainaddlisthandler = async function () {
+    //   setLodingContent(<div className="Loding-MainlistClone">Loding ... </div>);
+    //   setIsShow(false);
+    //   const MainSendDataToServerside = await Mainrespons(Data);
+    //   await MainSendDataToServerside;
+    //   console.log(MainSendDataToServerside);
+    //   if (MainSendDataToServerside == true) {
+    //     setLodingContent(
+    //       <div className="Loding-MainlistClone-Successful">Successful add</div>
+    //     );
+    //     console.log(LodingContent);
+    //   } else if (MainSendDataToServerside == "error") {
+    //     setLodingContent(
+    //       <div className="Loding-MainlistClone-error">
+    //         some thing went wrong ...
+    //       </div>
+    //     );
+    //   }
+    //   setTimeout(() => {
+    //     setIsShow(true);
+    //   }, 2000);
+    // }
   };
 
   return (
