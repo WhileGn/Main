@@ -3,10 +3,12 @@ import "./MainOrderBycard.css";
 import Fetchbydata from "./../../../api/Fetchbydata";
 import { data } from "autoprefixer";
 import { useEffect, useState } from "react";
+import { log } from "console";
+import { jsx } from "@emotion/react";
 const MainOrderBycard = function () {
   const targetData: any = [];
   // let Maindata: any;
-  let [data, setData] = useState();
+  const [data, setData] = useState<JSX.Element[]>();
   const [Loding, setLoding] = useState(false);
 
   // async function MainfetchdataFunction() {
@@ -35,11 +37,21 @@ const MainOrderBycard = function () {
   // console.log(targetData);
   function MainfetchdataFunction() {
     const MainFetchDataFromLocalStorage: any = localStorage;
-    const datas = MainFetchDataFromLocalStorage;
-    const data = JSON.parse(datas);
+    // const datas = MainFetchDataFromLocalStorage;
+
+    // const arr: any = JSON.parse(MainFetchDataFromLocalStorage.key(""));
     const MainData = Object.entries(MainFetchDataFromLocalStorage);
     console.log(MainData);
-    console.log(data);
+    const finalData = MainData.map((childData: any) => {
+      console.log(childData);
+      // const stringfyreverser = [];
+      // console.log(stringfyreverser);
+
+      return <Bycard data={childData[1]}></Bycard>;
+    });
+    setData(finalData);
+
+    console.log(finalData);
 
     // MainFetchDataFromLocalStorage.foreach(() => {
     //   console.log("GGMWEs");
@@ -59,6 +71,7 @@ const MainOrderBycard = function () {
           <div className="MainOrderBycardDiv_Emty"></div>
           <div className="OrderBycardDiv">
             {data}
+            {/* <Bycard data={"childData"}></Bycard> */}
             <div className="Main_by_bution">
               <button className="NumBtn">$200.3</button>
               <button className="byBtn">Finish</button>

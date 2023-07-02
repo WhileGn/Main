@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./bycard.css";
 import { types } from "util";
 type data = {
@@ -8,23 +8,31 @@ const Bycard: React.FC<data> = function (props: any) {
   const MainDivElement = useRef<any>();
   const TargetDiv = MainDivElement.current;
 
-  const Maindata = props.data.MainData;
+  const Maindata = props.data;
 
-  const [MainNumber, setMainNumber] = useState(1);
+  const datas = JSON.parse(Maindata);
+  console.log(datas);
+
+  const [MainNumber, setMainNumber] = useState<number>(0);
   const data = {
-    Name: Maindata.Name,
-    // about: Maindata.about,
-    amount: Maindata.amount,
+    Name: datas.Name,
+    // about: datas.about,
+    amount: datas.amount,
+    number: datas.MainNumselection,
   };
-  console.log(Maindata);
+  useEffect(() => {
+    setMainNumber(data.number);
+  }, []);
 
   const MaindeletHandler = function () {
     // TargetDiv.add.ClassName = "Display_none";
     TargetDiv.remove();
     // console.log(TargetDiv);
   };
-  if (MainNumber == 0 || MainNumber < 0) {
-    TargetDiv.remove();
+  if (TargetDiv != undefined) {
+    if (MainNumber == 0 || MainNumber < 0) {
+      TargetDiv.remove();
+    }
   }
 
   return (
