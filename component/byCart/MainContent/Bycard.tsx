@@ -3,6 +3,7 @@ import "./bycard.css";
 import { types } from "util";
 type data = {
   data: any;
+  state: any;
 };
 const Bycard: React.FC<data> = function (props: any) {
   const MainDivElement = useRef<any>();
@@ -20,6 +21,12 @@ const Bycard: React.FC<data> = function (props: any) {
     amount: datas.amount,
     number: datas.MainNumselection,
   };
+  // console.log(props.state("GG"));
+
+  useEffect(() => {
+    const bynum_child = data.amount * MainNumber;
+    props.state(bynum_child);
+  }, [MainNumber]);
   useEffect(() => {
     setMainNumber(data.number);
   }, []);

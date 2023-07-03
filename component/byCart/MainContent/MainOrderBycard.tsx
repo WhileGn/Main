@@ -35,6 +35,20 @@ const MainOrderBycard = function () {
   //   MainfetchdataFunction();
   // }, []);
   // console.log(targetData);
+  localStorage.removeItem("ally-supports-cache");
+  const numHandlers_varible = [];
+  const [mainByNumber, setmainByNumber] = useState(0);
+  const numHandlers = function (Nums: number) {
+    // setmainNum()
+    // console.log(Nums);
+    // numHandlers_varible.push(Nums);
+
+    // setmainByNumber(mainByNumber + Nums);
+    // console.log(mainByNumber);
+    console.log(Nums);
+  };
+  console.log(mainByNumber);
+
   function MainfetchdataFunction() {
     const MainFetchDataFromLocalStorage: any = localStorage;
     // const datas = MainFetchDataFromLocalStorage;
@@ -47,7 +61,7 @@ const MainOrderBycard = function () {
       // const stringfyreverser = [];
       // console.log(stringfyreverser);
 
-      return <Bycard data={childData[1]}></Bycard>;
+      return <Bycard data={childData[1]} state={numHandlers}></Bycard>;
     });
     setData(finalData);
 
