@@ -48,7 +48,7 @@ const Bycard: React.FC<data> = function (props: any) {
         <div className="byCard">
           <div className="byCard_leftSide">
             <div className="byCard_atribiute byCard_name">{data.Name} </div>
-            <div className="byCard_atribiute byCard_amount">{data.amount} </div>
+            <div className="byCard_atribiute byCard_amount">{data.amount}$</div>
             <div className="byCard_atribiute byCard_num">{MainNumber} </div>
           </div>
           <div className="byCard_rightSide">
