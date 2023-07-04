@@ -36,7 +36,7 @@
 .GodOrderBycardDiv {
   /* padding: 100px; */
   width: 50%;
-  height: 580px;
+  height: 70%;
   /* background-color: rgba(255, 255, 255, 0.25); */
   position: fixed;
   z-index: 100;
@@ -161,7 +161,8 @@
   }
   .GodOrderBycardDiv {
     width: 60%;
-    height: 580px;
+    /* height: 580px; */
+    height: 70%;
 
     transform: translate(36%, 25%);
   }
@@ -180,7 +181,8 @@
   }
   .GodOrderBycardDiv {
     width: 80%;
-    height: 580px;
+    /* height: 580px; */
+    height: 75%;
 
     transform: translate(14%, 25%);
   }
@@ -201,20 +203,30 @@
   }
   .GodOrderBycardDiv {
     width: 94%;
-    height: 580px;
+    height: 80%;
     overflow-x: hidden;
 
     transform: translate(5%, 19%);
   }
 }
 @media only screen and (max-width: 430px) {
-  /* .GodOrderBycardDiv {
-    width: 94%;
-    height: 580px;
+  .GodOrderBycardDiv {
+    /* width: max(315px, 100%); */
+    /* min-width: 315px; */
+
+    /* width: 300px; */
+    /* min-width: 315px; */
+    /* margin: auto; */
+    /* align-items: center; */
 
     transform: translate(5%, 19%);
-  } */
+    /* transform: translate(20%, 19%); */
+  }
   .OrderBycardDiv {
     /* width: 200px  */
+    display: grid;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
   }
 }
