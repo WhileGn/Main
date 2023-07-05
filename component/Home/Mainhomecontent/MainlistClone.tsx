@@ -17,7 +17,17 @@ import { useState } from "react";
 import { Turret_Road } from "next/font/google";
 import { type } from "os";
 
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "@/app/GolobalRedux/store";
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+} from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
 export function MainlistClone(props: any) {
+  //  redux
+  const count = useSelector((state: RootState) => state.counter.value);
+  const dispatch = useDispatch();
   const [alertState, setalertState] = useState(Boolean);
   const [MainNumselection, setMainNumselection] = useState(1);
   const [IsShow, setIsShow] = useState(true);
