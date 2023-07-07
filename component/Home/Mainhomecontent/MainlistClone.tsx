@@ -26,8 +26,8 @@ import {
 } from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
 export function MainlistClone(props: any) {
   //  redux
-  const count = useSelector((state: RootState) => state.counter.value);
-  const dispatch = useDispatch();
+  // const count = useSelector((state: RootState) => state.counter.value);
+  // const dispatch = useDispatch();
   const [alertState, setalertState] = useState(Boolean);
   const [MainNumselection, setMainNumselection] = useState(1);
   const [IsShow, setIsShow] = useState(true);
