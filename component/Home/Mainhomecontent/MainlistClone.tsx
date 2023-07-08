@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import "./MainlistClone.css";
 // import { imgg } from "./../../../img/2389954.jpg";
@@ -19,15 +21,15 @@ import { type } from "os";
 
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/app/GolobalRedux/store";
-import {
-  decrement,
-  increment,
-  incrementByAmount,
-} from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
+import { MainState } from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
 export function MainlistClone(props: any) {
   //  redux
-  // const count = useSelector((state: RootState) => state.counter.value);
-  // const dispatch = useDispatch();
+
+  const count = useSelector((state: any) => state.counter.value);
+  const dispatch = useDispatch();
+  dispatch(MainState);
+  console.log(count);
+
   const [alertState, setalertState] = useState(Boolean);
   const [MainNumselection, setMainNumselection] = useState(1);
   const [IsShow, setIsShow] = useState(true);
