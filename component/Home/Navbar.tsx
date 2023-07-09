@@ -11,6 +11,25 @@ const Navbar: React.FC = function (props) {
 
   const clickanimatingTarget = document.querySelector(".navbar_btn_bying");
   // clickanimatingTarget?.classList.add("navbar_btn_animating_click");
+  let LocalstorageData: String;
+  useEffect(() => {
+    const mainFetchLocalStorage = localStorage;
+    console.log(mainFetchLocalStorage);
+
+    // let FetchLocalStorage = localStorage;
+    // LocalstorageData.
+    // let MainData = JSON.parse(mainFetchLocalStorage);
+    // console.log(MainData);String
+    // const newSchool = (): any | undefined => {
+    //   const value: Storage = localStorage;
+    //   if (!value) {
+    //     return undefined;
+    //   }
+    //   return JSON.parse(value);
+    // };
+    // const targetLocalstorage = newSchool();
+    // console.log(targetLocalstorage);
+  }, [count]);
 
   useEffect(() => {
     // console.log(count);
