@@ -27,14 +27,12 @@ export function MainlistClone(props: any) {
 
   const count = useSelector((state: any) => state.counter.value);
   const dispatch = useDispatch();
-  dispatch(MainState);
-  console.log(count);
 
   const [alertState, setalertState] = useState(Boolean);
   const [MainNumselection, setMainNumselection] = useState(1);
   const [IsShow, setIsShow] = useState(true);
   const [LodingContent, setLodingContent] = useState<any>(
-    <div className="Loding-MainlistClone">Loding ... </div>
+    <div className="Loding-MainlistClone-Successful">Successful add</div>
   );
 
   const MainVariableimageurl = props.MaindataH[0];
@@ -59,8 +57,19 @@ export function MainlistClone(props: any) {
   const mainaddlisthandler = function () {
     setMainNumselection(MainNumselection + 1);
     localStorage.setItem(Data.Name, JSON.stringify(Data));
+    dispatch(MainState(true));
+    console.log(count);
+    setTimeout(() => {
+      dispatch(MainState(false));
+    }, 200);
+
     // localStorage.setItem("hefdasfdasllo", "hdfash");
+    setIsShow(false);
+    setTimeout(() => {
+      setIsShow(true);
+    }, 800);
   };
+
   const Work_With_API = {
     // const mainaddlisthandler = async function () {
     //   setLodingContent(<div className="Loding-MainlistClone">Loding ... </div>);

@@ -1,6 +1,6 @@
 "use client";
 
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import exp from "constants";
 
 export interface CounterState {
@@ -23,9 +23,11 @@ export const counterSlice = createSlice({
     // incrementByAmount: (state, action) => {
     //   state.value += action.payload;
     // },
-    MainState: (state) => {
+    MainState: (state, action) => {
       // state.value = state.value ? false : true;
-      state.value = true;
+      state.value = action.payload;
+      if (state.value == true) {
+      }
       // state.value = !state.value;
       console.log(state.value);
     },

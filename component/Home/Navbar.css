@@ -145,3 +145,13 @@
     font-size: 15px;
   }
 }
+
+.navbar_btn_animating_click {
+  /* animation: navbar_btn_animating_click__self 0.5s;
+  animation-iteration-count: infinite; */
+  scale: 2.3 !important;
+  transition: all 0.2;
+}
+
+/* @keyframes navbar_btn_animating_click__self {
+} */
