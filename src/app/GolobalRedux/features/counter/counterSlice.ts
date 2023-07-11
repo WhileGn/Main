@@ -4,11 +4,13 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import exp from "constants";
 
 export interface CounterState {
-  value: any;
+  value: boolean;
+  numvalue: number;
 }
 
 const initialState: CounterState = {
   value: false,
+  numvalue: 0,
 };
 export const counterSlice = createSlice({
   name: "counter",
@@ -30,6 +32,10 @@ export const counterSlice = createSlice({
       }
       // state.value = !state.value;
       console.log(state.value);
+    },
+    MainStateNumber: (state, action) => {
+      // state.value = state.value ? false : true;
+      state.value = action.payload;
     },
   },
 });

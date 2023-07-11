@@ -15,7 +15,7 @@ import { Button } from "rsuite";
 import Notification from "rc-notification";
 // import { Alert } from "react-alert";
 import { Alert } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Turret_Road } from "next/font/google";
 import { type } from "os";
 
@@ -34,6 +34,11 @@ export function MainlistClone(props: any) {
   const [LodingContent, setLodingContent] = useState<any>(
     <div className="Loding-MainlistClone-Successful">Successful add</div>
   );
+
+  const NumberinsideLocalStorage = useSelector(
+    (state: any) => state.counter.numvalue
+  );
+  console.log(NumberinsideLocalStorage);
 
   const MainVariableimageurl = props.MaindataH[0];
 
@@ -54,7 +59,20 @@ export function MainlistClone(props: any) {
     MainNumselection,
   };
 
+  const localStorageData = [];
+  const localstorageSelf = localStorage;
+  const fetchFromLocalStorage = localStorage.getItem(Data.Name);
+  console.log(fetchFromLocalStorage);
+
+  // localstorageSelf.foreach((datas: any) => {
+  //   console.log(datas);
+  // });
+
   const mainaddlisthandler = function () {
+    const mainlocalStorageNumbersHadlers = function () {};
+    mainlocalStorageNumbersHadlers();
+    console.log(Data.Name);
+
     setMainNumselection(MainNumselection + 1);
     localStorage.setItem(Data.Name, JSON.stringify(Data));
     dispatch(MainState(true));
