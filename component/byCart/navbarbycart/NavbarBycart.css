@@ -145,3 +145,25 @@
     font-size: 15px;
   }
 }
+
+.SMainPage_ {
+  display: flex;
+  align-items: center;
+}
+
+.byingnumber {
+  margin-left: 10px;
+  /* border: 1px black solid; */
+  border-radius: 10px;
+  padding: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* box-shadow: 0px 0px 2px 0px black; */
+  transition: all 0.2s;
+}
+.navbar_btn_animating_click {
+  /* animation: navbar_btn_animating_click__self 0.5s;
+  animation-iteration-count: infinite; */
+  scale: 2.3 !important;
+  transition: all 0.2;
+}

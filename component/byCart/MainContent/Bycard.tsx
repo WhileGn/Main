@@ -5,7 +5,19 @@ type data = {
   data: any;
   state: any;
 };
+
+import { useSelector, useDispatch } from "react-redux";
+import {
+  MainState,
+  MainStateNumber,
+} from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
+
 const Bycard: React.FC<data> = function (props: any) {
+  const dispatch = useDispatch();
+  const NumberinsideLocalStorage = useSelector(
+    (state: any) => state.counter.numvalue
+  );
+
   const MainDivElement = useRef<any>();
   const TargetDiv = MainDivElement.current;
 
@@ -41,6 +53,12 @@ const Bycard: React.FC<data> = function (props: any) {
       TargetDiv.remove();
     }
   }
+  const clickHandlers = function () {
+    dispatch(MainState(true));
+    setTimeout(() => {
+      dispatch(MainState(false));
+    }, 200);
+  };
 
   return (
     <>
@@ -54,7 +72,9 @@ const Bycard: React.FC<data> = function (props: any) {
           <div className="byCard_rightSide">
             <button
               onClick={() => {
+                clickHandlers();
                 setMainNumber(MainNumber + 1);
+                dispatch(MainStateNumber(NumberinsideLocalStorage + 1));
               }}
               className="ByCardBution ByCardBution_Add"
             >
@@ -62,7 +82,9 @@ const Bycard: React.FC<data> = function (props: any) {
             </button>
             <button
               onClick={() => {
+                clickHandlers();
                 setMainNumber(MainNumber - 1);
+                dispatch(MainStateNumber(NumberinsideLocalStorage - 1));
               }}
               className="ByCardBution ByCardBution_Rem"
             >

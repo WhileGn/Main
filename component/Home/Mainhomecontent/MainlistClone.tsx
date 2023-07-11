@@ -21,7 +21,10 @@ import { type } from "os";
 
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/app/GolobalRedux/store";
-import { MainState } from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
+import {
+  MainState,
+  MainStateNumber,
+} from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
 export function MainlistClone(props: any) {
   //  redux
 
@@ -63,12 +66,14 @@ export function MainlistClone(props: any) {
   const localstorageSelf = localStorage;
   const fetchFromLocalStorage = localStorage.getItem(Data.Name);
   console.log(fetchFromLocalStorage);
+  // fetchFromLocalStorage.
 
   // localstorageSelf.foreach((datas: any) => {
   //   console.log(datas);
   // });
 
   const mainaddlisthandler = function () {
+    dispatch(MainStateNumber(NumberinsideLocalStorage + 1));
     const mainlocalStorageNumbersHadlers = function () {};
     mainlocalStorageNumbersHadlers();
     console.log(Data.Name);

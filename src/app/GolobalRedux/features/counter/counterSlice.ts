@@ -31,15 +31,14 @@ export const counterSlice = createSlice({
       if (state.value == true) {
       }
       // state.value = !state.value;
-      console.log(state.value);
     },
     MainStateNumber: (state, action) => {
       // state.value = state.value ? false : true;
-      state.value = action.payload;
+      state.numvalue = action.payload;
     },
   },
 });
 
-export const { MainState } = counterSlice.actions;
+export const { MainState, MainStateNumber } = counterSlice.actions;
 
 export default counterSlice.reducer;

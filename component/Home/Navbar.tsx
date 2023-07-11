@@ -6,10 +6,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { MainState } from "@/app/GolobalRedux/features/counter/counterSlice";
 const Navbar: React.FC = function (props) {
   const count = useSelector((state: any) => state.counter.value);
+  const numberRedux = useSelector((state: any) => state.counter.numvalue);
   // const dispatch = useDispatch();
   let clickAnimetion;
 
-  const clickanimatingTarget = document.querySelector(".navbar_btn_bying");
+  const clickanimatingTarget = document.querySelector(".byingnumber");
   // clickanimatingTarget?.classList.add("navbar_btn_animating_click");
   let LocalstorageData: String;
   useEffect(() => {
@@ -36,10 +37,8 @@ const Navbar: React.FC = function (props) {
 
     if (count) {
       clickanimatingTarget?.classList.add("navbar_btn_animating_click");
-      console.log("im in");
     } else if (!count) {
       clickanimatingTarget?.classList.remove("navbar_btn_animating_click");
-      console.log("im outs");
     }
   }, [count]);
 
@@ -57,6 +56,7 @@ const Navbar: React.FC = function (props) {
         </Link>
         <Link className="navbar_btn navbar_btn_bying" href={"Bycart"}>
           Bying
+          <div className="byingnumber">{numberRedux}</div>
         </Link>
       </div>
     </div>
