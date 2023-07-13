@@ -13,6 +13,11 @@ const HomeP = function () {
   useEffect(() => {
     setState(true);
   }, []);
+  // useEffect(() => {
+  //   localStorage.clear();
+  // }, []);
+  // console.log(location.reload);
+
   return (
     <div className="GodHome">
       <Mainhomecontent></Mainhomecontent>

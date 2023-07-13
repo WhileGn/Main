@@ -34,6 +34,7 @@ export const counterSlice = createSlice({
     },
     MainStateNumber: (state, action) => {
       // state.value = state.value ? false : true;
+
       state.numvalue = action.payload;
     },
   },

@@ -13,6 +13,13 @@ import {
 } from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
 
 const Bycard: React.FC<data> = function (props: any) {
+  const ref = useRef<any>();
+
+  // const targetRef = ref.current.vpp
+  useEffect(() => {
+    MainNumber;
+  }, []);
+
   const dispatch = useDispatch();
   const NumberinsideLocalStorage = useSelector(
     (state: any) => state.counter.numvalue
@@ -67,13 +74,16 @@ const Bycard: React.FC<data> = function (props: any) {
           <div className="byCard_leftSide">
             <div className="byCard_atribiute byCard_name">{data.Name} </div>
             <div className="byCard_atribiute byCard_amount">{data.amount}$</div>
-            <div className="byCard_atribiute byCard_num">{MainNumber} </div>
+            <div ref={ref} className="byCard_atribiute byCard_num">
+              {MainNumber}{" "}
+            </div>
           </div>
           <div className="byCard_rightSide">
             <button
               onClick={() => {
                 clickHandlers();
                 setMainNumber(MainNumber + 1);
+
                 dispatch(MainStateNumber(NumberinsideLocalStorage + 1));
               }}
               className="ByCardBution ByCardBution_Add"
@@ -84,7 +94,9 @@ const Bycard: React.FC<data> = function (props: any) {
               onClick={() => {
                 clickHandlers();
                 setMainNumber(MainNumber - 1);
-                dispatch(MainStateNumber(NumberinsideLocalStorage - 1));
+                if (NumberinsideLocalStorage > 0) {
+                  dispatch(MainStateNumber(NumberinsideLocalStorage - 1));
+                }
               }}
               className="ByCardBution ByCardBution_Rem"
             >
