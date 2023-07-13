@@ -16,6 +16,7 @@ const Bycard: React.FC<data> = function (props: any) {
   const ref = useRef<any>();
 
   // const targetRef = ref.current.vpp
+
   useEffect(() => {
     MainNumber;
   }, []);
@@ -41,22 +42,34 @@ const Bycard: React.FC<data> = function (props: any) {
     number: datas.MainNumselection,
   };
   // console.log(props.state("GG"));
-
-  useEffect(() => {
-    const bynum_child = data.amount * MainNumber;
-    props.state(bynum_child);
-  }, [MainNumber]);
+  const numberhandlers = props.state();
+  const numberHandlersFunction = function () {};
+  // useEffect(() => {
+  //   const bynum_child = data.amount * MainNumber;
+  //   props.state(bynum_child);
+  // }, [MainNumber]);
   useEffect(() => {
     setMainNumber(data.number);
   }, []);
+  useEffect(() => {
+    const bynum_child = data.amount * MainNumber;
+    console.log(MainNumber);
+    props.state(MainNumber);
+
+    // setMainNumber(MainNumber);
+  }, []);
 
   const MaindeletHandler = function () {
+    const nameFood = data.Name;
+    localStorage.removeItem(nameFood);
     // TargetDiv.add.ClassName = "Display_none";
     TargetDiv.remove();
     // console.log(TargetDiv);
   };
   if (TargetDiv != undefined) {
     if (MainNumber == 0 || MainNumber < 0) {
+      const nameFood = data.Name;
+      localStorage.removeItem(nameFood);
       TargetDiv.remove();
     }
   }
@@ -103,7 +116,16 @@ const Bycard: React.FC<data> = function (props: any) {
               -
             </button>
             <button
-              onClick={MaindeletHandler}
+              onClick={() => {
+                clickHandlers();
+                MaindeletHandler();
+                // setMainNumber(MainNumber - 1);
+                if (NumberinsideLocalStorage > 0) {
+                  dispatch(
+                    MainStateNumber(NumberinsideLocalStorage - MainNumber)
+                  );
+                }
+              }}
               className="ByCardBution ByCardBution_Delete"
             >
               Delete

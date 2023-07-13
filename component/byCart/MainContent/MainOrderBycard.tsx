@@ -1,3 +1,4 @@
+"use client";
 import Bycard from "./Bycard";
 import "./MainOrderBycard.css";
 import Fetchbydata from "./../../../api/Fetchbydata";
@@ -5,7 +6,16 @@ import { data } from "autoprefixer";
 import { useEffect, useState } from "react";
 import { log } from "console";
 import { jsx } from "@emotion/react";
+
+import { useSelector, useDispatch } from "react-redux";
+import {
+  MainState,
+  MainStateNumber,
+} from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
+
 const MainOrderBycard = function () {
+  const dispatch = useDispatch();
+  const numberRedux = useSelector((state: any) => state.counter.numvalue);
   const targetData: any = [];
   // let Maindata: any;
   const [data, setData] = useState<JSX.Element[]>();
@@ -36,17 +46,22 @@ const MainOrderBycard = function () {
   // }, []);
   // console.log(targetData);
   localStorage.removeItem("ally-supports-cache");
-  const numHandlers_varible = [];
+  const [numHandlers_varible, setnumHandlers_varible] = useState<any>(0);
   const [mainByNumber, setmainByNumber] = useState(0);
   const numHandlers = function (Nums: number) {
     // setmainNum()
     // console.log(Nums);
-    // numHandlers_varible.push(Nums);
+    setnumHandlers_varible(numHandlers_varible + Nums);
 
     // setmainByNumber(mainByNumber + Nums);
     // console.log(mainByNumber);
     console.log(Nums);
   };
+  if (numHandlers_varible == Number) {
+    dispatch(MainStateNumber(numHandlers_varible));
+  }
+
+  numHandlers_varible;
   console.log(mainByNumber);
 
   function MainfetchdataFunction() {

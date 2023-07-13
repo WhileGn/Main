@@ -14,6 +14,9 @@ const Navbar: React.FC = function (props) {
   // clickanimatingTarget?.classList.add("navbar_btn_animating_click");
   let LocalstorageData: String;
   useEffect(() => {
+    const localStorageBugHandlers = localStorage;
+  });
+  useEffect(() => {
     const mainFetchLocalStorage = localStorage;
     console.log(mainFetchLocalStorage);
 
