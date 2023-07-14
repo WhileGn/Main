@@ -13,6 +13,8 @@ export function NavbarBycart() {
   const numberRedux = useSelector((state: any) => state.counter.numvalue);
   const valueRedux = useSelector((state: any) => state.counter.value);
   const clickanimatingTarget = document.querySelector(".byingnumber");
+  var mainLocalStorage = localStorage;
+  console.log(mainLocalStorage);
 
   // useEffect(() => {
   //   dispatch(MainStateNumber(10));

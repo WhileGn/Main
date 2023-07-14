@@ -42,7 +42,7 @@ const Bycard: React.FC<data> = function (props: any) {
     number: datas.MainNumselection,
   };
   // console.log(props.state("GG"));
-  const numberhandlers = props.state();
+  // const numberhandlers = props.state();
   const numberHandlersFunction = function () {};
   // useEffect(() => {
   //   const bynum_child = data.amount * MainNumber;
@@ -54,7 +54,7 @@ const Bycard: React.FC<data> = function (props: any) {
   useEffect(() => {
     const bynum_child = data.amount * MainNumber;
     console.log(MainNumber);
-    props.state(MainNumber);
+    props.state(datas.MainNumselection);
 
     // setMainNumber(MainNumber);
   }, []);

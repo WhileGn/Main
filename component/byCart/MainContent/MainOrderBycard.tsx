@@ -48,21 +48,34 @@ const MainOrderBycard = function () {
   localStorage.removeItem("ally-supports-cache");
   const [numHandlers_varible, setnumHandlers_varible] = useState<any>(0);
   const [mainByNumber, setmainByNumber] = useState(0);
+  let [numHandlersFixbugsBoolian, setnumHandlersFixbugsBoolian] =
+    useState<Boolean>(true);
   const numHandlers = function (Nums: number) {
+    console.log(Nums);
+    setnumHandlers_varible(numHandlers_varible + Nums);
+
     // setmainNum()
     // console.log(Nums);
-    setnumHandlers_varible(numHandlers_varible + Nums);
 
     // setmainByNumber(mainByNumber + Nums);
     // console.log(mainByNumber);
-    console.log(Nums);
   };
-  if (numHandlers_varible == Number) {
-    dispatch(MainStateNumber(numHandlers_varible));
-  }
+  // useEffect(() => {
+  //   if (numHandlersFixbugsBoolian == true) {
+  //     console.log(numHandlers_varible);
+
+  //     // dispatch(MainStateNumber(numHandlers_varible));
+  //     console.log("madarkose___1111");
+  //     // setnumHandlersFixbugsBoolian(false);
+  //   }
+  //   // numHandlersFixbugsBoolian = false;
+  // }, [numHandlers]);
+  // if (numHandlers_varible == Number) {
+  //   // dispatch(MainStateNumber(numHandlers_varible));
+  //   console.log("madarkose___2222");
+  // }
 
   numHandlers_varible;
-  console.log(mainByNumber);
 
   function MainfetchdataFunction() {
     const MainFetchDataFromLocalStorage: any = localStorage;
