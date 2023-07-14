@@ -12,7 +12,7 @@ import {
   MainState,
   MainStateNumber,
 } from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
-
+let numberReduxVarible: number = 0;
 const MainOrderBycard = function () {
   const dispatch = useDispatch();
   const numberRedux = useSelector((state: any) => state.counter.numvalue);
@@ -47,12 +47,16 @@ const MainOrderBycard = function () {
   // console.log(targetData);
   localStorage.removeItem("ally-supports-cache");
   const [numHandlers_varible, setnumHandlers_varible] = useState<any>(0);
+
   const [mainByNumber, setmainByNumber] = useState(0);
   let [numHandlersFixbugsBoolian, setnumHandlersFixbugsBoolian] =
     useState<Boolean>(true);
   const numHandlers = function (Nums: number) {
-    console.log(Nums);
-    setnumHandlers_varible(numHandlers_varible + Nums);
+    numberReduxVarible += Nums;
+    // console.log(numberReduxVarible);
+    setmainByNumber(numberReduxVarible);
+    // setnumHandlers_varible(numHandlers_varible + Nums);
+    // console.log(numHandlers_varible);
 
     // setmainNum()
     // console.log(Nums);
@@ -60,6 +64,16 @@ const MainOrderBycard = function () {
     // setmainByNumber(mainByNumber + Nums);
     // console.log(mainByNumber);
   };
+  const mainnumberReduxBugHandlers = async function () {
+    await numHandlers;
+
+    // console.log(numHandlers_varible);
+    console.log(numberReduxVarible);
+
+    dispatch(MainStateNumber(mainByNumber));
+  };
+  mainnumberReduxBugHandlers();
+  // useEffect(() => {}, [numHandlers.name]);
   // useEffect(() => {
   //   if (numHandlersFixbugsBoolian == true) {
   //     console.log(numHandlers_varible);
