@@ -13,6 +13,7 @@ import {
   MainStateNumber,
 } from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
 let numberReduxVarible: number = 0;
+let BoolianVarible = false;
 const MainOrderBycard = function () {
   const dispatch = useDispatch();
   const numberRedux = useSelector((state: any) => state.counter.numvalue);
@@ -72,7 +73,10 @@ const MainOrderBycard = function () {
 
     dispatch(MainStateNumber(mainByNumber));
   };
-  mainnumberReduxBugHandlers();
+  if (BoolianVarible == true) {
+    mainnumberReduxBugHandlers();
+  }
+  useEffect(() => {}, []);
   // useEffect(() => {}, [numHandlers.name]);
   // useEffect(() => {
   //   if (numHandlersFixbugsBoolian == true) {
