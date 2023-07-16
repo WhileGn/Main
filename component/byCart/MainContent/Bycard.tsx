@@ -48,9 +48,14 @@ const Bycard: React.FC<data> = function (props: any) {
   //   const bynum_child = data.amount * MainNumber;
   //   props.state(bynum_child);
   // }, [MainNumber]);
-  useEffect(() => {
-    setMainNumber(data.number);
-  }, []);
+  // const [boolianState, setboolianState] = useState<boolean>(true);
+  // useEffect(() => {
+  //   if (boolianState == true) {
+  //     setMainNumber(data.number);
+  //   }
+  //   setboolianState(false);
+  // }, []);
+  setMainNumber(data.number);
   useEffect(() => {
     const bynum_child = data.amount * MainNumber;
     console.log(MainNumber);

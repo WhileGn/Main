@@ -66,18 +66,21 @@ const MainOrderBycard = function () {
     // setmainByNumber(mainByNumber + Nums);
     // console.log(mainByNumber);
   };
-  const mainnumberReduxBugHandlers = async function () {
-    await numHandlers;
-
+  const [stateBoolan, setstateBoolan] = useState(false);
+  const mainnumberReduxBugHandlers = function () {
     // console.log(numHandlers_varible);
     console.log(numberReduxVarible);
+    if (stateBoolan == true) {
+      console.log("hello world");
 
-    dispatch(MainStateNumber(mainByNumber));
+      dispatch(MainStateNumber(mainByNumber));
+      setstateBoolan(false);
+    }
   };
-  if (BoolianVarible == true) {
+
+  useEffect(() => {
     mainnumberReduxBugHandlers();
-  }
-  useEffect(() => {}, []);
+  }, [numHandlers]);
   // useEffect(() => {}, [numHandlers.name]);
   // useEffect(() => {
   //   if (numHandlersFixbugsBoolian == true) {

@@ -14,6 +14,9 @@ export function NavbarBycart() {
   const valueRedux = useSelector((state: any) => state.counter.value);
   const clickanimatingTarget = document.querySelector(".byingnumber");
 
+  // useEffect(()=>{
+
+  // },[numberRedux])
   useEffect(() => {
     // console.log(count);
 
