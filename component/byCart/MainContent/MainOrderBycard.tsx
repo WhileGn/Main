@@ -52,6 +52,7 @@ const MainOrderBycard = function () {
   const [mainByNumber, setmainByNumber] = useState(0);
   let [numHandlersFixbugsBoolian, setnumHandlersFixbugsBoolian] =
     useState<Boolean>(true);
+
   const numHandlers = function (Nums: number) {
     numberReduxVarible += Nums;
     // console.log(numberReduxVarible);

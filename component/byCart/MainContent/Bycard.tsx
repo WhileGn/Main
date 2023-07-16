@@ -79,6 +79,7 @@ const Bycard: React.FC<data> = function (props: any) {
       dispatch(MainState(false));
     }, 200);
   };
+  onchange;
 
   return (
     <>
