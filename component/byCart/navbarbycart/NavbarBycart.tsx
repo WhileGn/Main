@@ -41,9 +41,9 @@ export function NavbarBycart() {
           <Link className="navbar_btn_" href={"About"}>
             AboutCoffe
           </Link>
-          <Link className="navbar_btn_ SMainPage_" href={"Bycart"}>
+          <Link className="navbar_btn_ SMainPage_ " href={"Bycart"}>
             Bying
-            <div className="byingnumber">{numberRedux}</div>
+            {/* <div className="byingnumber">{numberRedux}</div> */}
           </Link>
         </div>
       </div>

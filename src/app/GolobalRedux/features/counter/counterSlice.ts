@@ -6,11 +6,13 @@ import exp from "constants";
 export interface CounterState {
   value: boolean;
   numvalue: number;
+  numhandlers: number;
 }
 
 const initialState: CounterState = {
   value: false,
   numvalue: 0,
+  numhandlers: 0,
 };
 export const counterSlice = createSlice({
   name: "counter",
@@ -37,9 +39,14 @@ export const counterSlice = createSlice({
 
       state.numvalue = action.payload;
     },
+    numberStateHandlers: (state, action) => {
+      // state.value = state.value ? false : true;
+      state.numhandlers += action.payload;
+    },
   },
 });
 
-export const { MainState, MainStateNumber } = counterSlice.actions;
+export const { MainState, MainStateNumber, numberStateHandlers } =
+  counterSlice.actions;
 
 export default counterSlice.reducer;

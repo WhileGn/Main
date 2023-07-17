@@ -59,7 +59,10 @@ const Navbar: React.FC = function (props) {
         </Link>
         <Link className="navbar_btn navbar_btn_bying" href={"Bycart"}>
           Bying
-          <div className="byingnumber">{numberRedux}</div>
+          <div className="parent__byingnumber__div">
+            <div className="byingnumber">{numberRedux}</div>
+            <div className="bying-new-show">new</div>
+          </div>
         </Link>
       </div>
     </div>

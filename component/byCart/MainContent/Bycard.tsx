@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   MainState,
   MainStateNumber,
+  numberStateHandlers,
 } from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
 
 const Bycard: React.FC<data> = function (props: any) {
@@ -17,13 +18,12 @@ const Bycard: React.FC<data> = function (props: any) {
 
   // const targetRef = ref.current.vpp
 
-  useEffect(() => {
-    MainNumber;
-  }, []);
-
   const dispatch = useDispatch();
   const NumberinsideLocalStorage = useSelector(
     (state: any) => state.counter.numvalue
+  );
+  const numberHandlersRedux = useSelector(
+    (state: any) => state.counter.numhandlers
   );
 
   const MainDivElement = useRef<any>();
@@ -55,13 +55,13 @@ const Bycard: React.FC<data> = function (props: any) {
   //   }
   //   setboolianState(false);
   // }, []);
-  setMainNumber(data.number);
+  // setMainNumber(data.number);
   useEffect(() => {
     const bynum_child = data.amount * MainNumber;
     console.log(MainNumber);
     props.state(datas.MainNumselection);
 
-    // setMainNumber(MainNumber);
+    setMainNumber(data.number);
   }, []);
 
   const MaindeletHandler = function () {
@@ -71,6 +71,10 @@ const Bycard: React.FC<data> = function (props: any) {
     TargetDiv.remove();
     // console.log(TargetDiv);
   };
+  // useEffect(() => {
+  //   dispatch(numberStateHandlers())
+  // }, [MainNumber]);
+
   if (TargetDiv != undefined) {
     if (MainNumber == 0 || MainNumber < 0) {
       const nameFood = data.Name;
@@ -84,7 +88,7 @@ const Bycard: React.FC<data> = function (props: any) {
       dispatch(MainState(false));
     }, 200);
   };
-  onchange;
+  // onchange;
 
   return (
     <>
@@ -103,7 +107,7 @@ const Bycard: React.FC<data> = function (props: any) {
                 clickHandlers();
                 setMainNumber(MainNumber + 1);
 
-                dispatch(MainStateNumber(NumberinsideLocalStorage + 1));
+                // dispatch(MainStateNumber(NumberinsideLocalStorage + 1));
               }}
               className="ByCardBution ByCardBution_Add"
             >
@@ -114,7 +118,7 @@ const Bycard: React.FC<data> = function (props: any) {
                 clickHandlers();
                 setMainNumber(MainNumber - 1);
                 if (NumberinsideLocalStorage > 0) {
-                  dispatch(MainStateNumber(NumberinsideLocalStorage - 1));
+                  // dispatch(MainStateNumber(NumberinsideLocalStorage - 1));
                 }
               }}
               className="ByCardBution ByCardBution_Rem"
