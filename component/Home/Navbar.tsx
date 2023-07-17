@@ -46,7 +46,7 @@ const Navbar: React.FC = function (props) {
   }, [count]);
 
   return (
-    <div className="navbar_Main">
+    <div className="navbar_Main navbar_Main_01">
       <div className="navbar_icon">
         <p className="navbar_icon_self">Coffee</p>
       </div>

@@ -4,6 +4,7 @@ import { types } from "util";
 type data = {
   data: any;
   state: any;
+  firstState: any;
 };
 
 import { useSelector, useDispatch } from "react-redux";
@@ -14,6 +15,7 @@ import {
 } from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
 
 const Bycard: React.FC<data> = function (props: any) {
+  const [finalAmountState, setfinalAmountState] = useState<any>();
   const ref = useRef<any>();
 
   // const targetRef = ref.current.vpp
@@ -59,7 +61,6 @@ const Bycard: React.FC<data> = function (props: any) {
   useEffect(() => {
     const bynum_child = data.amount * MainNumber;
     console.log(MainNumber);
-    props.state(datas.MainNumselection);
 
     setMainNumber(data.number);
   }, []);
@@ -82,13 +83,35 @@ const Bycard: React.FC<data> = function (props: any) {
       TargetDiv.remove();
     }
   }
-  const clickHandlers = function () {
-    dispatch(MainState(true));
-    setTimeout(() => {
-      dispatch(MainState(false));
-    }, 200);
+  useEffect(() => {
+    // const props_varible = prop;
+    const finalAmounts = data.amount * data.number;
+    console.log(MainNumber);
+    props.firstState(finalAmounts);
+  }, []);
+
+  const clickHandlers = function (prop: string) {
+    const props_varible = prop;
+    const finalAmount = data.amount * MainNumber;
+    const Amount = data.amount;
+    console.log(finalAmount);
+
+    // props.state("ggmens");
+    props.state(props_varible, Amount, finalAmount);
+    // setfinalAmountState(finalAmount);
+
+    // console.log(finalAmountState);
+
+    // dispatch(MainState(true));
+    // setTimeout(() => {
+    //   dispatch(MainState(false));
+    // }, 200);
   };
   // onchange;
+  // useEffect(() => {
+  //   console.log("im change ...");
+  //   const idAmount = datas.Name;
+  // }, [MainNumber]);
 
   return (
     <>
@@ -104,8 +127,8 @@ const Bycard: React.FC<data> = function (props: any) {
           <div className="byCard_rightSide">
             <button
               onClick={() => {
-                clickHandlers();
                 setMainNumber(MainNumber + 1);
+                clickHandlers("add");
 
                 // dispatch(MainStateNumber(NumberinsideLocalStorage + 1));
               }}
@@ -115,8 +138,8 @@ const Bycard: React.FC<data> = function (props: any) {
             </button>
             <button
               onClick={() => {
-                clickHandlers();
                 setMainNumber(MainNumber - 1);
+                clickHandlers("rem");
                 if (NumberinsideLocalStorage > 0) {
                   // dispatch(MainStateNumber(NumberinsideLocalStorage - 1));
                 }
@@ -127,7 +150,7 @@ const Bycard: React.FC<data> = function (props: any) {
             </button>
             <button
               onClick={() => {
-                clickHandlers();
+                clickHandlers("del");
                 MaindeletHandler();
                 // setMainNumber(MainNumber - 1);
                 if (NumberinsideLocalStorage > 0) {

@@ -21,6 +21,8 @@ const MainOrderBycard = function () {
   // let Maindata: any;
   const [data, setData] = useState<JSX.Element[]>();
   const [Loding, setLoding] = useState(false);
+  const [firstStateHadlersVarible, setfirstStateHadlersVarible] =
+    useState<number>(0);
 
   // async function MainfetchdataFunction() {
   //   const MainFetchData = await Fetchbydata();
@@ -52,9 +54,24 @@ const MainOrderBycard = function () {
   const [mainByNumber, setmainByNumber] = useState(0);
   let [numHandlersFixbugsBoolian, setnumHandlersFixbugsBoolian] =
     useState<Boolean>(true);
+  const [finalAmount, setfinalAmount] = useState<number>(0);
+  const numHandlers = function (id: any, amount: any, finalAmount: any) {
+    console.log(id);
+    console.log(amount);
 
-  const numHandlers = function (Nums: number) {
-    numberReduxVarible += Nums;
+    const id_Varible = id;
+    const amount_Varible = amount;
+
+    if (id_Varible == "add") {
+      // setfinalAmount(id_Varible)
+      setfirstStateHadlersVarible((preveValue) => preveValue + amount);
+    } else if (id_Varible == "rem") {
+      setfirstStateHadlersVarible((preveValue) => preveValue - amount);
+    } else if (id_Varible == "del") {
+      setfirstStateHadlersVarible((preveValue) => preveValue - finalAmount);
+    }
+
+    // numberReduxVarible += Nums;
     // console.log(numberReduxVarible);
     setmainByNumber(numberReduxVarible);
     // setnumHandlers_varible(numHandlers_varible + Nums);
@@ -78,9 +95,9 @@ const MainOrderBycard = function () {
     }
   };
 
-  useEffect(() => {
-    mainnumberReduxBugHandlers();
-  }, [numHandlers]);
+  // useEffect(() => {
+  //   mainnumberReduxBugHandlers();
+  // }, [numHandlers]);
   // useEffect(() => {}, [numHandlers.name]);
   // useEffect(() => {
   //   if (numHandlersFixbugsBoolian == true) {
@@ -97,7 +114,13 @@ const MainOrderBycard = function () {
   //   console.log("madarkose___2222");
   // }
 
-  numHandlers_varible;
+  // numHandlers_varible;
+
+  const firstStateHadlers = function (firstRenderAmount: number) {
+    console.log(firstRenderAmount);
+    setfirstStateHadlersVarible((preveValue) => preveValue + firstRenderAmount);
+    // setfirstStateHadlersVarible(firstStateHadlersVarible + firstRenderAmount);
+  };
 
   function MainfetchdataFunction() {
     const MainFetchDataFromLocalStorage: any = localStorage;
@@ -111,7 +134,13 @@ const MainOrderBycard = function () {
       // const stringfyreverser = [];
       // console.log(stringfyreverser);
 
-      return <Bycard data={childData[1]} state={numHandlers}></Bycard>;
+      return (
+        <Bycard
+          data={childData[1]}
+          state={numHandlers}
+          firstState={firstStateHadlers}
+        ></Bycard>
+      );
     });
     setData(finalData);
 
@@ -137,7 +166,7 @@ const MainOrderBycard = function () {
             {data}
             {/* <Bycard data={"childData"}></Bycard> */}
             <div className="Main_by_bution">
-              <button className="NumBtn">$200.3</button>
+              <button className="NumBtn">${firstStateHadlersVarible}</button>
               <button className="byBtn">Finish</button>
             </div>
           </div>

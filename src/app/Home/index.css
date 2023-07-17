@@ -21,13 +21,13 @@ body {
 
 @keyframes Mainbackgroundanimation {
   0% {
-    filter: blur(0px) saturate(140%);
+    filter: blur(0px) saturate(150%);
   }
   50% {
-    filter: blur(0px) saturate(80%);
+    filter: blur(0px) saturate(70%);
   }
 
   100% {
-    filter: blur(0px) saturate(140%);
+    filter: blur(0px) saturate(150%);
   }
 }

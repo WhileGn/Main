@@ -4,7 +4,7 @@
   background-color: hsla(210, 9%, 31%, 0.05);
   border-radius: 0px 0px 5px 5px;
   position: fixed !important;
-  z-index: 10;
+  z-index: 100;
 }
 .navbar_Main_01 {
   /* position: fixed !important; */
