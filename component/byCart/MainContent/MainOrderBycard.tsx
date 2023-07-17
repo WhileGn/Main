@@ -48,6 +48,7 @@ const MainOrderBycard = function () {
   //   MainfetchdataFunction();
   // }, []);
   // console.log(targetData);
+  // localStorage.clear;
   localStorage.removeItem("ally-supports-cache");
   const [numHandlers_varible, setnumHandlers_varible] = useState<any>(0);
 
@@ -167,7 +168,16 @@ const MainOrderBycard = function () {
             {/* <Bycard data={"childData"}></Bycard> */}
             <div className="Main_by_bution">
               <button className="NumBtn">${firstStateHadlersVarible}</button>
-              <button className="byBtn">Finish</button>
+              <button
+                className="byBtn"
+                onClick={() => {
+                  localStorage.clear();
+                  setfirstStateHadlersVarible(0);
+                  MainfetchdataFunction();
+                }}
+              >
+                Finish
+              </button>
             </div>
           </div>
         </div>
