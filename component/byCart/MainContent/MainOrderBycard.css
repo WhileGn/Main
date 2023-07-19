@@ -1,55 +1,27 @@
 .MainOrderBycardDiv {
   background-color: rgba(255, 255, 255, 0.25);
-  /* position: fixed;
-  z-index: 100; */
-  /* margin: 200px auto; */
-  /* transform: translate(50%, 25%); */
-  /* cursor: pointer; */
-  /* margin: auto auto; */
+
   border-radius: 50px;
   border: white 3px solid;
-  /* box-shadow: 0px 0px 10px 10px white; */
+
   box-shadow: 0px 0px 50px 10px rgb(0, 0, 0) inset;
-  /* overflow-y: scroll; */
+
   padding-top: 10px;
   margin-right: 5px;
-  /* margin: 2px; */
-}
-.secendery_OrderBycardDiv {
-  /* width: 50%;
-  height: 580px;
-  background-color: rgba(255, 255, 255, 0.25);
-  position: fixed;
-  z-index: 100;
-  transform: translate(50%, 25%);
- 
-  border-radius: 50px;
-  border: white 3px solid;
-  box-shadow: 0px 0px 50px 10px rgb(0, 0, 0) inset;
-  overflow-y: scroll;
-  padding-top: 10px; */
-
-  /* width: 50%; */
-  /* height: 580px; */
 }
 
 .GodOrderBycardDiv {
-  /* padding: 100px; */
   width: 50%;
   height: 70%;
-  /* background-color: rgba(255, 255, 255, 0.25); */
+
   position: fixed;
   z-index: 100;
-  /* margin: 200px auto; */
+
   transform: translate(50%, 28%);
-  /* cursor: pointer; */
-  /* margin: auto auto; */
+
   border-radius: 50px;
-  /* border: white 3px solid; */
-  /* box-shadow: 0px 0px 10px 10px white; */
-  /* box-shadow: 0px 0px 50px 10px rgb(0, 0, 0) inset; */
+
   overflow-y: scroll;
-  /* padding-top: 10px; */
 }
 
 .OrderBycardDiv {
@@ -60,12 +32,6 @@
 .GodOrderBycardDiv::-webkit-scrollbar {
   width: 16px;
   background-color: #00000000;
-  /* transform: translate(100px, 100px); */
-
-  /* direction: rtl; */
-
-  /* margin-top: 100px; */
-  /* height: 100px; */
 }
 .GodOrderBycardDiv::-webkit-scrollbar-thumb {
   width: 10px;
@@ -74,28 +40,13 @@
   border: 4px solid black;
   border: 6px solid #00000000;
   background-color: #ffffff;
-  /* transform: translate(100px, 100px);
-  position: absolute; */
-  /* left: 100px; */
 }
 
-*::-webkit-scrollbar {
-  /* width: 16px;
-  background-color: #00000000; */
-}
-*::-webkit-scrollbar-thumb {
-  /* width: 10px;
-  border-radius: 13px;
-  background-clip: padding-box;
-  border: 4px solid black;
-  border: 6px solid #00000000;
-  background-color: #ffffff; */
-}
 .Main_by_bution {
   display: grid;
   justify-content: end;
   grid-template-columns: 2fr 1fr;
-  /* padding-right: 100px; */
+
   padding: 20px 100px;
 }
 
@@ -118,7 +69,6 @@
   user-select: none;
 }
 .byBtn:hover {
-  /* background-color: rgba(236, 236, 236, 0.8); */
   background-color: rgba(194, 193, 193, 0.7);
   border: solid 5px rgb(0, 0, 0);
   color: black;
@@ -130,11 +80,9 @@
 }
 
 .NumBtn {
-  /* cursor: pointer; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
-  /* align-items: center; */
   align-content: center;
 
   width: 150px;
@@ -166,7 +114,6 @@
   }
   .GodOrderBycardDiv {
     width: 60%;
-    /* height: 580px; */
     height: 70%;
 
     transform: translate(36%, 25%);
@@ -186,7 +133,6 @@
   }
   .GodOrderBycardDiv {
     width: 80%;
-    /* height: 580px; */
     height: 75%;
 
     transform: translate(14%, 25%);
@@ -216,19 +162,9 @@
 }
 @media only screen and (max-width: 430px) {
   .GodOrderBycardDiv {
-    /* width: max(315px, 100%); */
-    /* min-width: 315px; */
-
-    /* width: 300px; */
-    /* min-width: 315px; */
-    /* margin: auto; */
-    /* align-items: center; */
-
     transform: translate(5%, 19%);
-    /* transform: translate(20%, 19%); */
   }
   .OrderBycardDiv {
-    /* width: 200px  */
     display: grid;
     justify-content: center;
     justify-self: center;

@@ -2,34 +2,30 @@
   transform: translate(0px, 150px);
   z-index: 10;
   position: absolute;
-  /* cursor: pointer; */
-  /* background-color: blue; */
+
   width: 100%;
-  /* max-width: 10%; */
+
   height: 600px;
   margin-right: auto;
   margin-left: auto;
-  /* display: flex; */
+
   display: grid;
   grid-template-columns: 1fr 4fr;
 }
 .Main_order {
-  /* background-color: rgba(255, 0, 0, 0.308); */
   width: 100%;
   height: 100%;
 }
 .Main_list {
-  /* background-color: rgba(255, 255, 0, 0.316); */
   width: 90%;
   height: 100%;
-  /* background-color: red; */
-  /* margin: auto; */
+
   margin-right: 60px;
   margin-left: 40px;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* grid-template-rows: auto; */
+
   gap: 50px;
   grid-template-rows: 200px;
 }
@@ -40,9 +36,8 @@
   color: white;
   margin-left: 80px;
   margin-top: 100px;
-  /* color: red; */
+
   font-weight: 900;
-  /* background-color: red; */
 }
 
 .GodListRender_emty {
@@ -64,9 +59,6 @@
   }
 }
 
-/* .orderAction {
-  scale: 2 !important;
-} */
 @media only screen and (min-width: 1400px) {
   .Main_list {
     animation: revers_Main_list_responsive_0 0.5s;
@@ -117,14 +109,13 @@
     transform: translate(0px, 150px);
     z-index: 10;
     position: absolute;
-    /* cursor: pointer; */
-    /* background-color: blue; */
+
     width: 100%;
-    /* max-width: 10%; */
+
     height: 600px;
     margin-right: auto;
     margin-left: auto;
-    /* display: flex; */
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -162,11 +153,9 @@
   @keyframes GodListRender_emty__animating {
     0% {
       opacity: 0;
-      /* transform: translate(100px, 100px); */
     }
     100% {
       opacity: 1;
-      /* transform: translate(10px, 150px); */
     }
   }
 }
@@ -191,9 +180,6 @@
 
 @media only screen and (max-width: 800px) {
   .Main_list {
-    /* margin-right: 60px;
-    margin-left: 100px; */
-
     grid-template-columns: 1fr;
     animation: Main_list_responsive_0 0.5s;
     animation-iteration-count: initial;
@@ -211,8 +197,6 @@
     }
   }
   .GodOrderComponent {
-    /* overflow-y: scroll; */
-    /* overflow: visible; */
   }
   .GodListRender_emty {
     font-size: 50px;
@@ -225,11 +209,9 @@
   @keyframes GodListRender_emty__animating {
     0% {
       opacity: 0;
-      /* transform: translate(100px, 100px); */
     }
     100% {
       opacity: 1;
-      /* transform: translate(10px, 150px); */
     }
   }
 }
@@ -252,10 +234,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .GodOrderComponent {
-    /* width: 650px; */
-    /* justify-self: center; */
-  }
 }
 .Main_div_ResponsiveOrderIcons {
   width: 100px;
@@ -274,40 +252,18 @@
 
   display: none;
   width: 100px;
-
-  /* transform: rotate(10deg); */
 }
 .Main_ResponsiveOrderIcons:hover {
-  /* scale: 1.1; */
   background-color: rgba(237, 237, 237, 0.6);
 }
 .Main_ResponsiveOrderIcons:active {
-  /* scale: 1.1; */
   background-color: rgba(237, 237, 237, 0.9);
 }
 
 .self_ResponsiveOrderIcons {
   padding-top: 8px;
-  /* animation: ResponsiveOrderIconsSelf_animation_01 2s;
-  animation-iteration-count: infinite; */
 }
-/* @keyframes ResponsiveOrderIconsSelf_animation_01 {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-10deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-} */
+
 @keyframes Main_ResponsiveOrderIcons_animation_01 {
   0% {
     transform: rotate(0deg);
@@ -326,19 +282,6 @@
   }
 }
 @media only screen and (max-width: 650px) {
-  .GodOrderComponent {
-    /* pointer-events: painted; */
-    /* opacity: 0; */
-    /* transform: translate(20px, 0px); */
-    /* position: absolute; */
-    /* width: 600px;
-    overflow-x: scroll; */
-    /* overflow: scroll; */
-    /* scroll-behavior: auto; */
-    /* visibility: hidden; */
-    /* z-index: 100000; */
-    /* display: none; */
-  }
   .Main_ResponsiveOrderIcons {
     margin-left: 10px;
     display: grid;
@@ -352,21 +295,8 @@
     padding-bottom: 10px;
   }
 }
-/* .hidden {
-  display: none;
-  pointer-events: none;
-  opacity: 0;
-} */
+
 @media only screen and (max-width: 650px) {
-  .show__ {
-    /* display: grid !important;
-    margin: 0px; */
-    /* pointer-events: all !important; */
-    /* transform: translate(0px, 0px) !important; */
-    /* opacity: 1 !important; */
-    /* position: relative !important; */
-    /* display: grid !important; */
-  }
 }
 
 @media only screen and (max-width: 500px) {

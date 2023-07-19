@@ -23,7 +23,6 @@
 }
 @keyframes history {
   0% {
-    /* position: relative; */
     opacity: 0;
     transform: translate(470px, -300px);
   }
@@ -107,7 +106,6 @@
 
 @keyframes coffeeEstate {
   0% {
-    /* position: relative; */
     opacity: 0;
     transform: translate(50px, -50px);
   }
@@ -236,8 +234,6 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 300px;
 
-    /* height: 100px; */
-    /* min-height: 600px; */
     width: auto;
     margin-top: 300px;
   }
@@ -261,10 +257,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    /* grid-template-rows: 300px; */
 
-    /* height: 100px; */
-    /* min-height: 600px; */
     width: auto;
     margin-top: 330px;
   }
@@ -279,7 +272,6 @@
     height: 100px;
   }
   .ChildConten_coffeeEstate_Main {
-    /* margin-top: -20px; */
     height: 100px;
     grid-column: span 1;
   }

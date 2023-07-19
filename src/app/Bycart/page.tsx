@@ -2,10 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import "./Bycart.css";
-// import { Mainbycart } from "../component/byCart/Mainbycart";
-import HomePage from "./../../../component/Home/Home";
 import Mainbycart from "./../../../component/byCart/Mainbycart";
-// import { useDispatch } from "react-redux";
 
 import { useSelector, useDispatch } from "react-redux";
 import {

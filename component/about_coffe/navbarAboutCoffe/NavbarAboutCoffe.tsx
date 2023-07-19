@@ -9,20 +9,8 @@ import { Root } from "postcss";
 import { log } from "console";
 
 const NavbarAboutCoffe: React.FC = function (props) {
-  // const [mainstate, setmainstate] = useState(0);
-
-  // let options = {
-  //   root: document.querySelector("#scrollArea"),
-  //   rootMargin: "0px",
-  //   threshold: 1.0,
-  // };
-
-  // let observer = new IntersectionObserver(callback, options);
-
   const ref_0: any = useRef();
-  // const ref_1: any = useRef().current;
   const entry_1: any = useIntersectionObserver(ref_0, {});
-  console.log(ref_0);
 
   return (
     <div ref={ref_0} className="Snavbar_Main">
@@ -44,9 +32,6 @@ const NavbarAboutCoffe: React.FC = function (props) {
           Bying
         </Link>
       </div>
-      {/* <div id="navbar_mobileresponsve_icon" className="">
-        <GoListUnordered size={30} color="red"></GoListUnordered>
-      </div> */}
     </div>
   );
 };

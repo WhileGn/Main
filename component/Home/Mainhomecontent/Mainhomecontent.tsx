@@ -4,38 +4,12 @@ import MainorderClone from "./MainorderClone";
 import "./Mainhomecontent.css";
 // import Mainfechdata from "../../../api/hello/Mainfechdata";
 import React, { useCallback, useEffect, useState, useRef } from "react";
-import { log } from "console";
 import { MainlistClone } from "./MainlistClone";
-import { list } from "postcss";
-import { List } from "postcss/lib/list";
-import { Tube } from "@react-three/drei";
-import Mainfechdata from "../../../api/Mainfechdata";
 
-import {
-  AiOutlineClose,
-  AiOutlineMenu,
-  AiFillCaretRight,
-} from "react-icons/ai";
+import Mainfechdata from "../../../api/Mainfechdata";
 
 let GodjsonData: any = [];
 let minijsonData: any = [];
-let startoperationhandelr: boolean = true;
-
-// export default function Page({ data }) {
-//   // Render data...
-// }
-
-// This gets called on every request
-// export async function getServerSideProps() {
-//   // Fetch data from external API
-//   const res = await fetch(`https://.../data`);
-//   const data = await res.json();
-
-//   // Pass data to the page via props
-//   return { props: { data } };
-// }
-
-// export default getServerSideProps;
 
 let Bolian = false;
 
@@ -44,31 +18,12 @@ const Mainhomecontent = function () {
   const [Loding_Error_varible, setLoding_Error_varible] =
     useState<any>("Loding ...");
 
-  // let [startoperationhandelr, setstartoperationhandelr] = useState<
-  //   undefined | any
-  // >();
-  // const [Maindataorder, setMaindataorder] = useState<undefined | any>([]);
   const [secendrydataorder, setsecendrydataorder] = useState<undefined | any>(
     []
   );
   const [secendrydataorder_1, setsecendrydataorder_1] = useState<
     undefined | any
   >([]);
-  const [showListData, setshowListData] = useState<undefined | any>();
-  // const ResponsiveOrderIcons = (
-  //   <div className="Main_ResponsiveOrderIcons">
-  //     Menu
-  //     <AiFillCaretRight
-  //       size={20}
-  //       className="self_ResponsiveOrderIcons"
-  //     ></AiFillCaretRight>
-  //   </div>
-  // );
-  // const ResponsiveOrderIcons__Handlers = function () {
-  //   const targetDiv = document.querySelector(".GodOrderComponent");
-  //   targetDiv?.classList.toggle("show__");
-
-  // };
 
   let MaindataVarible;
 
@@ -76,16 +31,11 @@ const Mainhomecontent = function () {
     setlodingorder(true);
 
     MaindataVarible = await Mainfechdata();
-    console.log(MaindataVarible);
 
     if (MaindataVarible == "error") {
       setLoding_Error_varible("Error when loding plase chek your network !!!");
       alert("i use firebase for my database please use VPN");
     } else {
-      // setLoding_Error_varible("Loding...");
-      // console.log(MaindataVarible);
-      // const MainjsonData: any = Object.values(MaindataVarible);
-      // const secenderyjsonData: any = Object(MaindataVarible.data);
       GodjsonData = Object.entries(MaindataVarible);
 
       minijsonData = Object.entries(MaindataVarible);
@@ -98,7 +48,6 @@ const Mainhomecontent = function () {
     MainfunctionForHandlelingEfect();
   }, []);
 
-  // const GodlistComponent = [];
   let componentList_: any;
 
   let componentList_0: any;
@@ -113,19 +62,10 @@ const Mainhomecontent = function () {
   let datasList_3: any = [];
   let [GodListRender, setGodListRender] = useState<undefined | any>();
 
-  console.log(componentList_0);
-
   const GODListHandler = function () {
-    console.log(minijsonData[0]);
-    console.log(secendrydataorder);
     const render_data: any = [];
     const render_1 = secendrydataorder_1;
-    console.log(render_1);
     const data_1 = secendrydataorder_1.map((g: any) => {
-      // const maindata_1 = Object.entries(g);
-      // console.log(maindata_1);
-      console.log(g);
-
       render_data.push(g[1]);
     });
 
@@ -134,10 +74,6 @@ const Mainhomecontent = function () {
       datasList_1 = Object.entries(render_data[1]);
       datasList_2 = Object.entries(render_data[2]);
       datasList_3 = Object.entries(render_data[3]);
-
-      console.log(datasList_0);
-      console.log(datasList_1 == null);
-      console.log(datasList_1);
     } catch {
       // what up broo :)
     }
@@ -148,7 +84,6 @@ const Mainhomecontent = function () {
     componentList_0 = datasList_0.map((T: any) => {
       return <MainlistClone MaindataH={T}></MainlistClone>;
     });
-    console.log(componentList_0);
     componentList_1 = datasList_1.map((T: any) => {
       return <MainlistClone MaindataH={T}></MainlistClone>;
     });
@@ -158,86 +93,16 @@ const Mainhomecontent = function () {
     componentList_3 = datasList_3.map((T: any) => {
       return <MainlistClone MaindataH={T}></MainlistClone>;
     });
-
-    // render_1.map(() => {
-    //   console.log("ggmennnnnnnnnnnnnnnnnnnnnnnnn");
-    // });
-    // render_1.
-    // const test = render_1[1];
-    // console.log(test);
-
-    // const render_2 = secendrydataorder;
-    // const render_3 = secendrydataorder;
-    // const render_4 = secendrydataorder;
-    // useEffect(() => {
-    //   startoperationhandelr = true;
-    // }, []);
   };
-  // GodListRender = componentList_0
 
   GODListHandler();
 
-  // const firstRenderList = componentList_0;
-
-  // async function handelrListrender() {
-  //   await setGodListRender(componentList_0);
-  // }
-  // handelrListrender();
-
-  // useEffect(() => {
-  //   setGodListRender(componentList_0);
-  // }, [componentList_0]);
-  // useEffect(() => {
-  //   GODListHandler();
-  // }, [Loding_Error_varible]);
-
-  // const mainListComponent = secendrydataorder.map((g: any) => {
-  //   console.log(g);
-
-  //   const RenderHandler = Object.entries(g);
-
-  //   RenderHandler.map((RenderHandler: any) => {
-  //     return <MainlistClone />;
-  //   });
-  // });
-
-  // useEffect(() => {}, [GODListHandler]);
-
-  // if (GodListRender == "") {
-  //   setGodListRender(<div>Cklik On Order</div>);
-  // }
   const [actionOrederHandler, setactionOrederHandler] = useState<
     undefined | any
   >();
   const refDiv: any = useRef<HTMLDivElement | undefined>();
   const listHadlerSelf = function (event: any, value: string) {
-    console.log(refDiv.current);
-
-    // MainlistChildDivElement.innerHTML = "";
-
-    // console.log(MainlistDivElement.children);
-    // console.log(MainlistDivElement.children.length);
-    // // MainlistDivElement.children()
-    // MainlistDivElement.removeChild(MainlistChildDivElement);
-    // if (MainlistDivElement.children.length != 0) {
-    //   console.log(MainlistDivElement.children.length);
-    //   MainlistChildDivElement;
-    //   MainlistDivElement.removeChild(MainlistDivElement.children);
-    // }
-
-    // const targetValue = event.target.childNodes[0].data;
-    console.log(componentList_);
-
-    // setGodListRender(componentList_);
-
-    console.log(event.target);
-
-    const mainOrderTarget = event.targets;
-    // mainOrderTarget.classList.add(".orderAction");
-    // mainOrderTarget.class = "GGmen";
-
     let mainAPIvalue: string[] = [];
-    console.log(value);
     const mainvalue = value.replaceAll(" ", "_");
 
     GodjsonData.forEach((element: any) => {
@@ -251,22 +116,13 @@ const Mainhomecontent = function () {
 
     const mainDataFounder: any = mainAPIvalue.find(founderFunction);
     const DataFounder = mainDataFounder.replaceAll("_", " ");
-    // const mainDataFounder_2 = mainAPIvalue.find(founderFunction);
-
-    console.log(mainDataFounder);
-    console.log(DataFounder);
-
-    // GodListRender = componentList_1;
 
     MainorderAction.forEach((OrderAction) => {
       const OrderActionvalue = OrderAction.textContent;
 
       if (OrderActionvalue == DataFounder) {
         OrderAction.classList.add("orderAction");
-        console.log(OrderActionvalue == DataFounder);
-        console.log(OrderAction);
       }
-      console.log(OrderActionvalue);
     });
 
     if (DataFounder == "Coffe machine") {
@@ -282,8 +138,6 @@ const Mainhomecontent = function () {
       setGodListRender(componentList_3);
       setactionOrederHandler("Tea and Herbal");
     }
-
-    console.log(mainDataFounder);
   };
   const listHadlerSelf_1 = async function (event: any, value: string) {
     const HandelrFunction = function () {
@@ -303,22 +157,7 @@ const Mainhomecontent = function () {
         maindatas={g}
       />
     );
-    // return <div onClick={listHadlerSelf}>GGmen</div>;
   });
-
-  // useEffect(() => {
-  //   if (Bolian == false) {
-  //     setGodListRender(<div className="GodListRender_ety">Chose in order</div>);
-  //   }
-  // });
-
-  // const firstListHandler = async function () {
-  //   await GODListHandler();
-  //   setGodListRender(componentList_0);
-  // };
-  // useEffect(() => {
-  //   firstListHandler();
-  // }, []);
 
   if (GodListRender != undefined) {
     if (GodListRender.length == 0) {
@@ -328,7 +167,6 @@ const Mainhomecontent = function () {
         <div className="GodListRender_emty">... its emty ...</div>
       );
     }
-    console.log(GodListRender.length);
   }
 
   return (
@@ -337,10 +175,6 @@ const Mainhomecontent = function () {
         <div className="homeContent">
           <div className="OrderComponent">
             <div className="GodOrderComponent">
-              {/* <div className="responsive_btn">
-              <AiOutlineMenu size={40} color="#361701"></AiOutlineMenu>
-            </div> */}
-
               {lodingorder && (
                 <div className="Main_order_loding ">{Loding_Error_varible}</div>
               )}

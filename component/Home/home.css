@@ -1,35 +1,3 @@
-.Mainindex {
-  /* height: 120vh;
-  background-attachment: fixed; */
-  /* width: 100%; */
-  /* background-color: red; */
-  /* z-index: -10; */
-  /* position: absolute; */
-  /* overflow: unset; */
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)),
-    url(../../img/Food-Safety-Guide-for-Coffee-Shops.jpg); */
-  /* height: 100vh; */
-  /* background-size: cover; */
-  /* animation-iteration-count: initial;
-  animation: Mainbackgroundanimation 14s infinite; */
-}
-.bodydiv {
-  /* animation: Mainbackground 1.2s; */
-}
-
-/* @keyframes Mainbackgroundanimation {
-  0% {
-    filter: blur(0px) saturate(150%);
-  }
-  50% {
-    filter: blur(0px) saturate(50%);
-  }
-
-  100% {
-    filter: blur(0px) saturate(150%);
-  }
-} */
-
 @keyframes Mainbackground {
   0% {
     opacity: 0.8;
@@ -40,34 +8,15 @@
   }
 }
 
-.bodydiv {
-  /* display: grid; */
-  /* position: static; */
-  /* grid-template-columns: 1fr; */
-  /* background-color: rgb(90, 90, 90); */
-  /* height: 100vh;
-  color: rgb(53, 49, 49);
-  background-color: black; */
-  /* z-index: -100; */
-}
-
 @media only screen and (max-width: 800px) {
   .Mainindex {
-    /* overflow-x: hidden; */
     width: 100%;
-    /* height: 100vh; */
-    /* max-height: max-content; */
-    /* min-height: auto; */
-    /* height: min-content; */
 
     animation: responsive_Mainindex_01 1s;
     animation-iteration-count: inherit;
   }
   @keyframes responsive_Mainindex_01 {
     0% {
-      /* opacity: 0.8; */
-      /* scale: 3; */
-      /* height: 100vh; */
     }
     100% {
       opacity: 1;

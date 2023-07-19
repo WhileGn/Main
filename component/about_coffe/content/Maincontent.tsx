@@ -1,15 +1,8 @@
-import { use, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Maincontent.css";
 import { useIntersectionObserver } from "usehooks-ts";
-import { Transition } from "react-transition-group";
-import { stat } from "fs";
-import { log } from "console";
+
 export function Maincontent() {
-  // const MainObserver: any = new IntersectionObserver((entris) => {
-  //   entris.forEach((entry) => {
-  //     console.log(entry);
-  //   });
-  // });
   const [render_0, setrender_0] = useState(false);
 
   const [render_1, setrender_1] = useState(false);
@@ -21,8 +14,6 @@ export function Maincontent() {
   const ref_1 = useRef<HTMLDivElement | null>(null);
   const entry_1 = useIntersectionObserver(ref_1, {});
   const isVisible_1 = !!entry_1?.isIntersecting;
-
-  const targetelement = ref_1.current;
 
   useEffect(() => {
     if (!isVisible_0) {
@@ -39,21 +30,6 @@ export function Maincontent() {
       setrender_1(true);
     }
   }, [isVisible_1]);
-
-  // const testss = function () {
-  //   console.log(testss);
-  // };
-
-  // console.log(MainObserver);
-  // MainObserver.observe(document.querySelector(".Main_Robosta_arabika_2"));
-
-  // const observer = new window.IntersectionObserver(([entry]) =>
-  //   console.log(entry)
-  // );
-  // const MainRef: any = useRef<HTMLDivElement>();
-  // console.log(MainRef);
-  // const test_2: any = Window;
-  // console.log(test_2);
 
   return (
     <>

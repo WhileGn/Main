@@ -1,26 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import "./MainlistClone.css";
-// import { imgg } from "./../../../img/2389954.jpg";
-import { JsxAttribute } from "typescript";
-import { URL } from "url";
-import { log } from "console";
-import Mainrespons from "./../../../api/Mainrespons";
-// import { Button, Alert } from "rsuite";
-import { ToastContainer, toast } from "react-toastify";
-// import { url } from "inspector";
-// import Mainfechdata from "../../../api/Mainfechdata";
-import { Button } from "rsuite";
-import Notification from "rc-notification";
-// import { Alert } from "react-alert";
-import { Alert } from "@mui/material";
-import { useEffect, useState } from "react";
-import { Turret_Road } from "next/font/google";
-import { type } from "os";
+
+import { useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "@/app/GolobalRedux/store";
 import {
   MainState,
   MainStateNumber,
@@ -41,8 +25,7 @@ export function MainlistClone(props: any) {
   const NumberinsideLocalStorage = useSelector(
     (state: any) => state.counter.numvalue
   );
-  console.log(NumberinsideLocalStorage);
-
+  1;
   const MainVariableimageurl = props.MaindataH[0];
 
   const MainImage = `./../../../img/${MainVariableimageurl}.jpg`;
@@ -65,23 +48,15 @@ export function MainlistClone(props: any) {
   const localStorageData = [];
   const localstorageSelf = localStorage;
   const fetchFromLocalStorage = localStorage.getItem(Data.Name);
-  console.log(fetchFromLocalStorage);
-  // fetchFromLocalStorage.
-
-  // localstorageSelf.foreach((datas: any) => {
-  //   console.log(datas);
-  // });
 
   const mainaddlisthandler = function () {
     dispatch(MainStateNumber(NumberinsideLocalStorage + 1));
     const mainlocalStorageNumbersHadlers = function () {};
     mainlocalStorageNumbersHadlers();
-    console.log(Data.Name);
 
     setMainNumselection(MainNumselection + 1);
     localStorage.setItem(Data.Name, JSON.stringify(Data));
     dispatch(MainState(true));
-    console.log(count);
     setTimeout(() => {
       dispatch(MainState(false));
     }, 200);
@@ -120,8 +95,6 @@ export function MainlistClone(props: any) {
 
   return (
     <div className="MainlistClone">
-      {/* <Alert>"foikashfoiusdafioasdfosjadoij"</Alert> */}
-
       <div className="listClone">
         {!IsShow && LodingContent}
         {IsShow && (
@@ -153,12 +126,6 @@ export function MainlistClone(props: any) {
               </div>
             </div>
             <div className="img_listClone_div">
-              {/* <img
-              className=""
-              src={require("./../../../img/Differences-Between-Arabica-and-Robusta-Coffee-Beans-1.jpg")}
-              alt=""
-            /> */}
-              {/* <Image className="img_listClone" src={imgg} /> */}
               <img
                 className="img_listClone"
                 src={MainImage}
@@ -168,10 +135,6 @@ export function MainlistClone(props: any) {
           </div>
         )}
       </div>
-      {/* <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
-        rel="stylesheet"
-      /> */}
     </div>
   );
 }

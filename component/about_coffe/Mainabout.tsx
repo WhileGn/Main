@@ -16,7 +16,6 @@ export function Mainabout() {
               <Maincontent></Maincontent>
             </div>
           </div>
-          {/* <div className="Main_about_child_borderbetincontent"></div> */}
           <div className="Main_about_child_2">
             <ChildContent></ChildContent>
           </div>

@@ -52,12 +52,8 @@
 }
 
 .navbar_btn:hover {
-  /* box-shadow: 0px 0px 1px 1px; */
-  /* box-shadow: 0px 0px 3px 1px inset; */
-  /* background-color: hsla(210, 9%, 31%, 0.1); */
   scale: 1.11;
   color: white;
-  /* border-bottom: solid blue 1px; */
 }
 .navbar_icon_self {
   margin-top: 17px;
@@ -68,7 +64,6 @@
   padding: 10px;
   justify-content: center;
   font-size: 30px;
-  /* background-color: rgba(255, 255, 255, 0); */
   color: #e9ecef;
   margin-right: 80px;
   transition: all 1s;
@@ -104,8 +99,6 @@
 .SMainPage {
   border-bottom: rgb(255, 255, 255) solid 1px;
   border-radius: 1px;
-
-  /* box-shadow: 1px 1px 0px 0px black; */
 }
 
 @media only screen and (max-width: 900px) {
@@ -119,11 +112,6 @@
     display: grid;
     grid-template-columns: 1fr 1000fr 1fr;
   }
-  /* #navbar_mobileresponsve_icon {
-    display: block;
-    padding: 20px;
-    padding-top: 30px;
-  }  */
 
   .navbar_icon_self {
     font-size: 17px;
@@ -155,14 +143,10 @@
 }
 
 .navbar_btn_animating_click {
-  /* animation: navbar_btn_animating_click__self 0.5s;
-  animation-iteration-count: infinite; */
   scale: 2.3 !important;
   transition: all 0.2;
 }
 
-/* @keyframes navbar_btn_animating_click__self {
-} */
 .navbar_btn_bying {
   display: flex;
   align-items: center;
@@ -170,12 +154,10 @@
 
 .byingnumber {
   margin-left: 1px !important;
-  /* border: 1px black solid; */
   border-radius: 10px;
   padding: 2px;
   padding-top: 10px;
   padding-bottom: 10px;
-  /* box-shadow: 0px 0px 2px 0px black; */
   transition: all 0.2s;
   color: #78d0d0;
 }
@@ -247,7 +229,6 @@
   from,
   to {
     border-color: transparent;
-    /* opacity: 0; */
   }
   50% {
     border-color: orange;

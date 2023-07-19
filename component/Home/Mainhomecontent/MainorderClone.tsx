@@ -13,80 +13,27 @@ const MainorderClone: React.FC<{
   listhadler_1: any;
 }> = function (props: any) {
   const refrens: any = useRef<HTMLDivElement>();
-  // const router = useRouter();
-
-  const [isActive, setisActive] = useState(false);
-  // console.log(props.maindatas[0]);
 
   const mainorderName = props.maindatas[0].replaceAll("_", " ");
-  // console.log(mainorderName);
-
-  // const MainorderHandler = function (e: any) {
-  //   router.push(`/${mainorderName}`);
-  // };
-
-  const Main_actionOrederHandlerVarible = props.actionOrederHandlerVarible;
-  const Main_Name_Main_actionOrederHandlerVarible = props.maindatas[0];
-  const targetDivForaction: any = document.querySelectorAll(".MainorderClone");
-  // useCallback(() => {
-
-  // }, []);
-  // const tergetDivForaction = document.querySelector(".MainorderClone");
-  // console.log();
-  targetDivForaction.forEach((element: any) => {
-    // element.classList.add("big");
-    // element.classList.add("MainorderClone_activeStyle");
-  });
-  console.log(
-    Main_actionOrederHandlerVarible == Main_Name_Main_actionOrederHandlerVarible
-  );
-  // if (
-  //   Main_actionOrederHandlerVarible == Main_Name_Main_actionOrederHandlerVarible
-  // ) {
-  //   // setisActive((current) => !current);
-  //   // setisActive(true);
-  //   targetDivForaction?.classList.add("MainorderClone_activeStyle");
-  // } else {
-  //   targetDivForaction?.classList.remove("MainorderClone_activeStyle");
-  //   // setisActive(false);
-  // }
 
   const orderClickHandler = function () {
-    console.log(Main_actionOrederHandlerVarible);
-    console.log(
-      Main_actionOrederHandlerVarible ==
-        Main_Name_Main_actionOrederHandlerVarible
-    );
-
-    // console.log(isActive);
-
     const MainorderAction = document.querySelectorAll(".MainorderClone");
-    console.log(MainorderAction);
     MainorderAction.forEach((orderAction) => {
       orderAction.classList.remove("orderAction");
     });
   };
 
   const targetDiv = refrens.current;
-  // console.log(refrens.current);
-  // console.log(mainorderName + " YYYYYYYYYYYYYYYYYYYYY");
 
   return (
     <div
       onClick={(e) => {
-        // props.listhadler(e, mainorderName),
         orderClickHandler(), props.listhadler_1(e, mainorderName);
       }}
       className="Main_MainorderClone"
       ref={refrens}
     >
-      <div
-        // className={`${"MainorderClone"} ${
-        //   isActive ? "MainorderClone_activeStyle" : ""
-        // }`}
-        className="MainorderClone "
-        id="actionHandler"
-      >
+      <div className="MainorderClone " id="actionHandler">
         {mainorderName}
       </div>
     </div>

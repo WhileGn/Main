@@ -6,7 +6,6 @@
   position: fixed;
   z-index: 10;
   padding-top: 10px;
-  /* padding-bottom: 100px; */
 }
 
 .navbar_Main_ {
@@ -28,7 +27,6 @@
   display: flex;
   text-decoration: none;
   color: #e9ecef;
-  /* border-radius: 20px; */
   transition: all 0.2s;
   text-align: center;
   justify-content: center;
@@ -50,12 +48,8 @@
 }
 
 .navbar_btn_:hover {
-  /* box-shadow: 0px 0px 1px 1px; */
-  /* box-shadow: 0px 0px 3px 1px inset; */
-  /* background-color: hsla(210, 9%, 31%, 0.1); */
   scale: 1.11;
   color: white;
-  /* border-bottom: solid blue 1px; */
 }
 .navbar_icon_self_ {
   margin-top: 17px;
@@ -66,7 +60,7 @@
   padding: 10px;
   justify-content: center;
   font-size: 30px;
-  /* background-color: rgba(255, 255, 255, 0); */
+
   color: #e9ecef;
   margin-right: 80px;
   transition: all 1s;
@@ -101,8 +95,6 @@
 .SMainPage_ {
   border-bottom: rgb(255, 255, 255) solid 1px;
   border-radius: 1px;
-
-  /* box-shadow: 1px 1px 0px 0px black; */
 }
 
 @media only screen and (max-width: 900px) {
@@ -120,11 +112,6 @@
     padding-top: 0px;
     padding-bottom: 0px;
   }
-  /* #navbar_mobileresponsve_icon {
-    display: block;
-    padding: 20px;
-    padding-top: 30px;
-  }  */
 
   .navbar_icon_self_ {
     font-size: 17px;
@@ -159,17 +146,15 @@
 
 .byingnumber {
   margin-left: 10px;
-  /* border: 1px black solid; */
+
   border-radius: 10px;
   padding: 2px;
   padding-top: 10px;
   padding-bottom: 10px;
-  /* box-shadow: 0px 0px 2px 0px black; */
+
   transition: all 0.2s;
 }
 .navbar_btn_animating_click {
-  /* animation: navbar_btn_animating_click__self 0.5s;
-  animation-iteration-count: infinite; */
   scale: 2.3 !important;
   transition: all 0.2;
 }
@@ -183,7 +168,7 @@
   justify-content: center;
   justify-self: center;
   justify-items: center;
-  /* margin-top: 200px; */
+
   height: 50px;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.01em solid orange; /* The typwriter cursor */
@@ -199,7 +184,6 @@
   0% {
     width: 0%;
     opacity: 0;
-    /* filter: blur(1px); */
   }
   25% {
     width: 100%;
@@ -221,12 +205,10 @@
   }
 }
 
-/* The typewriter cursor effect */
 @keyframes blink-caret {
   from,
   to {
     border-color: transparent;
-    /* opacity: 0; */
   }
   50% {
     border-color: orange;

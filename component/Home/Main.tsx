@@ -1,10 +1,8 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./Main.css";
-// import Navbar from "./component/Navbar";
-// import Header from "./animation-component/Heder";
+
 import { motion } from "framer-motion";
-// import Mainback from "./animation-component/Mainback";
 import { Canvas } from "@react-three/fiber";
 import { Box, OrbitControls, Stars, Tube, useGLTF } from "@react-three/drei";
 

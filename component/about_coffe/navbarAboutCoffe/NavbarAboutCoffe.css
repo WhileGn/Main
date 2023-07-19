@@ -9,9 +9,6 @@
   z-index: 10;
   box-shadow: #130d09 0px 0px 30px 0px;
 }
-/* .Snavbar_Main_2 {
-  background-color: #362a31 !important;
-} */
 
 .Snavbar_Main {
   display: grid;
@@ -33,7 +30,6 @@
   display: flex;
   text-decoration: none;
   color: #e9ecef;
-  /* border-radius: 20px; */
   transition: all 0.2s;
   text-align: center;
   justify-content: center;
@@ -56,12 +52,8 @@
 }
 
 .Snavbar_btn:hover {
-  /* box-shadow: 0px 0px 1px 1px; */
-  /* box-shadow: 0px 0px 3px 1px inset; */
-  /* background-color: hsla(210, 9%, 31%, 0.1); */
   scale: 1.11;
   color: white;
-  /* border-bottom: solid blue 1px; */
 }
 .Snavbar_icon_self {
   margin-top: 17px;
@@ -72,7 +64,7 @@
   padding: 10px;
   justify-content: center;
   font-size: 30px;
-  /* background-color: rgba(255, 255, 255, 0); */
+
   color: #e9ecef;
   margin-right: 80px;
   transition: all 1s;
@@ -106,8 +98,6 @@
 .SMainPage {
   border-bottom: rgb(255, 255, 255) solid 1px;
   border-radius: 1px;
-
-  /* box-shadow: 1px 1px 0px 0px black; */
 }
 @media only screen and (max-width: 900px) {
   .Snavbar_Main {
@@ -125,11 +115,6 @@
     display: grid;
     grid-template-columns: 1fr 1000fr 1fr;
   }
-  /* #navbar_mobileresponsve_icon {
-    display: block;
-    padding: 20px;
-    padding-top: 30px;
-  }  */
 
   .Snavbar_icon_self {
     font-size: 17px;

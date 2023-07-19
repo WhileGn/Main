@@ -19,8 +19,6 @@ const Bycard: React.FC<data> = function (props: any) {
   const [finalAmountState, setfinalAmountState] = useState<any>();
   const ref = useRef<any>();
 
-  // const targetRef = ref.current.vpp
-
   const dispatch = useDispatch();
   const NumberinsideLocalStorage = useSelector(
     (state: any) => state.counter.numvalue
@@ -35,62 +33,42 @@ const Bycard: React.FC<data> = function (props: any) {
   const Maindata = props.data;
 
   const datas = JSON.parse(Maindata);
-  console.log(datas);
 
   const [MainNumber, setMainNumber] = useState<number>(0);
   const data = {
     Name: datas.Name,
-    // about: datas.about,
     amount: datas.amount,
     number: datas.MainNumselection,
   };
-  // console.log(props.state("GG"));
-  // const numberhandlers = props.state();
-  const numberHandlersFunction = function () {};
-  // useEffect(() => {
-  //   const bynum_child = data.amount * MainNumber;
-  //   props.state(bynum_child);
-  // }, [MainNumber]);
-  // const [boolianState, setboolianState] = useState<boolean>(true);
-  // useEffect(() => {
-  //   if (boolianState == true) {
-  //     setMainNumber(data.number);
-  //   }
-  //   setboolianState(false);
-  // }, []);
-  // setMainNumber(data.number);
+
   useEffect(() => {
     const bynum_child = data.amount * MainNumber;
-    console.log(MainNumber);
 
     setMainNumber(data.number);
   }, []);
 
   const childTargetDiv = document.querySelector(".MainbyCard");
+  const [state, setstate] = useState<boolean>(false);
   const MaindeletHandler = function () {
     const nameFood = data.Name;
-    localStorage.removeItem(nameFood);
+
     childTargetDiv?.classList.add("Display__none");
-    // TargetDiv.add.ClassName = "Display_none";
-    // TargetDiv.remove();
-    // TargetDiv.removeChild(childTargetDiv);
-    // console.log(TargetDiv);
+    localStorage.removeItem(nameFood);
   };
-  // useEffect(() => {
-  //   dispatch(numberStateHandlers())
-  // }, [MainNumber]);
 
   if (TargetDiv != undefined) {
     if (MainNumber == 0 || MainNumber < 0) {
       const nameFood = data.Name;
+
+      console.log("imin");
+
+      childTargetDiv?.classList.add("Display__none");
       localStorage.removeItem(nameFood);
-      // TargetDiv.remove();
     }
   }
   useEffect(() => {
-    // const props_varible = prop;
     const finalAmounts = data.amount * data.number;
-    console.log(MainNumber);
+
     props.firstState(finalAmounts);
   }, []);
 
@@ -98,24 +76,9 @@ const Bycard: React.FC<data> = function (props: any) {
     const props_varible = prop;
     const finalAmount = data.amount * MainNumber;
     const Amount = data.amount;
-    console.log(finalAmount);
 
-    // props.state("ggmens");
     props.state(props_varible, Amount, finalAmount);
-    // setfinalAmountState(finalAmount);
-
-    // console.log(finalAmountState);
-
-    // dispatch(MainState(true));
-    // setTimeout(() => {
-    //   dispatch(MainState(false));
-    // }, 200);
   };
-  // onchange;
-  // useEffect(() => {
-  //   console.log("im change ...");
-  //   const idAmount = datas.Name;
-  // }, [MainNumber]);
 
   const [isClicked, setIsClicked] = useState(false);
   const handleClick = () => {
@@ -123,7 +86,6 @@ const Bycard: React.FC<data> = function (props: any) {
     setTimeout(() => {
       dispatch(ckickstate(false));
     }, 500);
-    console.log("im clicked");
 
     setIsClicked(true);
     setTimeout(() => {
@@ -150,8 +112,6 @@ const Bycard: React.FC<data> = function (props: any) {
                 handleClick();
                 setMainNumber(MainNumber + 1);
                 clickHandlers("add");
-
-                // dispatch(MainStateNumber(NumberinsideLocalStorage + 1));
               }}
               className="ByCardBution ByCardBution_Add"
             >
@@ -163,7 +123,6 @@ const Bycard: React.FC<data> = function (props: any) {
                 setMainNumber(MainNumber - 1);
                 clickHandlers("rem");
                 if (NumberinsideLocalStorage > 0) {
-                  // dispatch(MainStateNumber(NumberinsideLocalStorage - 1));
                 }
               }}
               className="ByCardBution ByCardBution_Rem"
@@ -174,7 +133,7 @@ const Bycard: React.FC<data> = function (props: any) {
               onClick={() => {
                 clickHandlers("del");
                 MaindeletHandler();
-                // setMainNumber(MainNumber - 1);
+
                 if (NumberinsideLocalStorage > 0) {
                   dispatch(
                     MainStateNumber(NumberinsideLocalStorage - MainNumber)

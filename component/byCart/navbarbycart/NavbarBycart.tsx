@@ -14,12 +14,7 @@ export function NavbarBycart() {
   const valueRedux = useSelector((state: any) => state.counter.value);
   const clickanimatingTarget = document.querySelector(".byingnumber");
 
-  // useEffect(()=>{
-
-  // },[numberRedux])
   useEffect(() => {
-    // console.log(count);
-
     if (valueRedux) {
       clickanimatingTarget?.classList.add("navbar_btn_animating_click");
     } else if (!valueRedux) {
@@ -27,7 +22,6 @@ export function NavbarBycart() {
     }
   }, [valueRedux]);
 
-  // dispatch(MainStateNumber(numberRedux + 1));
   return (
     <>
       <div className="navbar_Main_">
@@ -45,7 +39,6 @@ export function NavbarBycart() {
           </Link>
           <Link className="navbar_btn_ SMainPage_ " href={"Bycart"}>
             Bying
-            {/* <div className="byingnumber">{numberRedux}</div> */}
           </Link>
         </div>
       </div>

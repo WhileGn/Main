@@ -14,7 +14,6 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.95)),
     url(../../../img/Food-Safety-Guide-for-Coffee-Shops.jpg);
   background-size: cover;
-  /* background-color: black !important; */
   animation-iteration-count: initial;
   animation: Mainbackgroundanimation 8s infinite;
 }

@@ -11,8 +11,6 @@ const Mainbycart = function () {
       <NavbarBycart></NavbarBycart>
       <MainOrderBycard></MainOrderBycard>
       <div className="divbycart">
-        {/* <Navbar></Navbar> */}
-        {/* <Header></Header> */}
         <Canvas>
           <OrbitControls
             enableZoom={false}

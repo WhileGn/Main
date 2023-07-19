@@ -8,13 +8,7 @@ import { useIntersectionObserver } from "usehooks-ts";
 import { BsFacebook, BsInstagram, BsWhatsapp, BsYoutube } from "react-icons/bs";
 import Link from "next/link";
 
-// import Link from "next/link";
-// import { Link } from "react-router-dom";
-
 export function HomeFooter() {
-  // const LinkGG = Link;
-  // const MainImage: any = Image;
-  // const withImages = require("next-images");
   const MaincolorForIcon = {
     fill: "#D2485A",
   };
@@ -23,8 +17,6 @@ export function HomeFooter() {
   const ref_footer = useRef<HTMLDivElement | null>(null);
   const MainFoter_Observer = useIntersectionObserver(ref_footer, {});
   const MainrenderFoter = !!MainFoter_Observer?.isIntersecting;
-
-  console.log(MainrenderFoter);
 
   useEffect(() => {
     setMainFooterState(MainrenderFoter);
@@ -74,17 +66,6 @@ export function HomeFooter() {
                       size={30}
                     />
                   </Link>
-
-                  {/* <img src="/../Icon/instagrm.svg"></img> */}
-                  {/* <Image
-                  style={MaincolorForIcon}
-                  src={icoon_1}
-                  height={30}
-                  width={30}
-                /> */}
-                  {/* <icoon_1 with="100" height="100" /> */}
-                  {/* <img  src="../Icon/instagram.svg" alt="" /> */}
-                  {/* <img src={icoon_1}></img> */}
                 </div>
               </div>
             </div>

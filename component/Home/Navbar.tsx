@@ -2,42 +2,14 @@ import "./Navbar.css";
 import React, { useEffect } from "react";
 // import { Link, NavLink } from "react-router-dom";
 import Link from "next/link";
-import { useDispatch, useSelector } from "react-redux";
-import { MainState } from "@/app/GolobalRedux/features/counter/counterSlice";
+import { useSelector } from "react-redux";
 const Navbar: React.FC = function (props) {
   const count = useSelector((state: any) => state.counter.value);
   const numberRedux = useSelector((state: any) => state.counter.numvalue);
-  // const dispatch = useDispatch();
-  let clickAnimetion;
 
   const clickanimatingTarget = document.querySelector(".byingnumber");
-  // clickanimatingTarget?.classList.add("navbar_btn_animating_click");
-  let LocalstorageData: String;
-  useEffect(() => {
-    const localStorageBugHandlers = localStorage;
-  });
-  useEffect(() => {
-    const mainFetchLocalStorage = localStorage;
-    console.log(mainFetchLocalStorage);
-
-    // let FetchLocalStorage = localStorage;
-    // LocalstorageData.
-    // let MainData = JSON.parse(mainFetchLocalStorage);
-    // console.log(MainData);String
-    // const newSchool = (): any | undefined => {
-    //   const value: Storage = localStorage;
-    //   if (!value) {
-    //     return undefined;
-    //   }
-    //   return JSON.parse(value);
-    // };
-    // const targetLocalstorage = newSchool();
-    // console.log(targetLocalstorage);
-  }, [count]);
 
   useEffect(() => {
-    // console.log(count);
-
     if (count) {
       clickanimatingTarget?.classList.add("navbar_btn_animating_click");
     } else if (!count) {
