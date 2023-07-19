@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   MainState,
   MainStateNumber,
+  ckickstate,
   numberStateHandlers,
 } from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
 
@@ -113,6 +114,20 @@ const Bycard: React.FC<data> = function (props: any) {
   //   const idAmount = datas.Name;
   // }, [MainNumber]);
 
+  const [isClicked, setIsClicked] = useState(false);
+  const handleClick = () => {
+    dispatch(ckickstate(true));
+    setTimeout(() => {
+      dispatch(ckickstate(false));
+    }, 500);
+    console.log("im clicked");
+
+    setIsClicked(true);
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 200);
+  };
+
   return (
     <>
       <div ref={MainDivElement} className="MainbyCard">
@@ -121,12 +136,15 @@ const Bycard: React.FC<data> = function (props: any) {
             <div className="byCard_atribiute byCard_name">{data.Name} </div>
             <div className="byCard_atribiute byCard_amount">{data.amount}$</div>
             <div ref={ref} className="byCard_atribiute byCard_num">
-              {MainNumber}{" "}
+              <div className={isClicked ? "button-clicked" : ""}>
+                {MainNumber}{" "}
+              </div>
             </div>
           </div>
           <div className="byCard_rightSide">
             <button
               onClick={() => {
+                handleClick();
                 setMainNumber(MainNumber + 1);
                 clickHandlers("add");
 
@@ -138,6 +156,7 @@ const Bycard: React.FC<data> = function (props: any) {
             </button>
             <button
               onClick={() => {
+                handleClick();
                 setMainNumber(MainNumber - 1);
                 clickHandlers("rem");
                 if (NumberinsideLocalStorage > 0) {

@@ -32,7 +32,9 @@ export function NavbarBycart() {
     <>
       <div className="navbar_Main_">
         <div className="navbar_icon_">
-          <p className="navbar_icon_self_">Coffee</p>
+          <div className="navbar_icon_self__father">
+            <p className="navbar_icon_self_">Coffee</p>
+          </div>
         </div>
         <div className="navbar_btn_Maindiv_">
           <Link className="navbar_btn_" href={"/"}>

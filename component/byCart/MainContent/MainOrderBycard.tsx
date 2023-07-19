@@ -15,8 +15,12 @@ import {
 let numberReduxVarible: number = 0;
 let BoolianVarible = false;
 const MainOrderBycard = function () {
+  const [emty, setemty] = useState<boolean>(false);
   const dispatch = useDispatch();
   const numberRedux = useSelector((state: any) => state.counter.numvalue);
+  const store_Redux_clickstate = useSelector(
+    (state: any) => state.counter.clickstate
+  );
   const targetData: any = [];
   // let Maindata: any;
   const [data, setData] = useState<JSX.Element[]>();
@@ -117,6 +121,16 @@ const MainOrderBycard = function () {
 
   // numHandlers_varible;
 
+  const [isClicked, setIsClicked] = useState(false);
+  const handleClick = () => {
+    console.log("im clicked");
+
+    setIsClicked(true);
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 200);
+  };
+
   const firstStateHadlers = function (firstRenderAmount: number) {
     console.log(firstRenderAmount);
     setfirstStateHadlersVarible((preveValue) => preveValue + firstRenderAmount);
@@ -157,6 +171,10 @@ const MainOrderBycard = function () {
   useEffect(() => {
     MainfetchdataFunction();
   }, []);
+  console.log(store_Redux_clickstate);
+  useEffect(() => {
+    console.log(store_Redux_clickstate);
+  }, [store_Redux_clickstate]);
 
   return (
     <>
@@ -167,7 +185,12 @@ const MainOrderBycard = function () {
             {data}
             {/* <Bycard data={"childData"}></Bycard> */}
             <div className="Main_by_bution">
-              <button className="NumBtn">${firstStateHadlersVarible}</button>
+              <button className="NumBtn">
+                $
+                <div className={store_Redux_clickstate ? "valueChange" : ""}>
+                  {firstStateHadlersVarible}
+                </div>
+              </button>
               <button
                 className="byBtn"
                 onClick={() => {

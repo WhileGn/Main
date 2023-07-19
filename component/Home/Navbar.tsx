@@ -48,13 +48,15 @@ const Navbar: React.FC = function (props) {
   return (
     <div className="navbar_Main navbar_Main_01">
       <div className="navbar_icon">
-        <p className="navbar_icon_self">Coffee</p>
+        <div className="navbar_icon_self__father">
+          <p className="navbar_icon_self">Coffee</p>
+        </div>
       </div>
       <div className="navbar_btn_Maindiv">
         <Link className="navbar_btn SMainPage" href={"/"}>
           Home
         </Link>
-        <Link className="navbar_btn" href={"About"}>
+        <Link className="navbar_btn test__btn__navbar" href={"About"}>
           AboutCoffe
         </Link>
         <Link className="navbar_btn navbar_btn_bying" href={"Bycart"}>
