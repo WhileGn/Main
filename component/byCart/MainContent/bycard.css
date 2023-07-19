@@ -255,3 +255,8 @@
     scale: 1;
   }
 }
+
+.Display__none {
+  pointer-events: none;
+  display: none;
+}

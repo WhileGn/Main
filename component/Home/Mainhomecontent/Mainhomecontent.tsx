@@ -80,6 +80,7 @@ const Mainhomecontent = function () {
 
     if (MaindataVarible == "error") {
       setLoding_Error_varible("Error when loding plase chek your network !!!");
+      alert("i use firebase for my database please use VPN");
     } else {
       // setLoding_Error_varible("Loding...");
       // console.log(MaindataVarible);

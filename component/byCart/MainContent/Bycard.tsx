@@ -66,11 +66,14 @@ const Bycard: React.FC<data> = function (props: any) {
     setMainNumber(data.number);
   }, []);
 
+  const childTargetDiv = document.querySelector(".MainbyCard");
   const MaindeletHandler = function () {
     const nameFood = data.Name;
     localStorage.removeItem(nameFood);
+    childTargetDiv?.classList.add("Display__none");
     // TargetDiv.add.ClassName = "Display_none";
-    TargetDiv.remove();
+    // TargetDiv.remove();
+    // TargetDiv.removeChild(childTargetDiv);
     // console.log(TargetDiv);
   };
   // useEffect(() => {
@@ -81,7 +84,7 @@ const Bycard: React.FC<data> = function (props: any) {
     if (MainNumber == 0 || MainNumber < 0) {
       const nameFood = data.Name;
       localStorage.removeItem(nameFood);
-      TargetDiv.remove();
+      // TargetDiv.remove();
     }
   }
   useEffect(() => {

@@ -116,6 +116,10 @@
     display: grid;
     grid-template-columns: 1fr 1000fr 1fr;
   }
+  .navbar_icon_self_ {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
   /* #navbar_mobileresponsve_icon {
     display: block;
     padding: 20px;
