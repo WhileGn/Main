@@ -48,12 +48,13 @@ const Bycard: React.FC<data> = function (props: any) {
   }, []);
 
   const childTargetDiv = document.querySelector(".MainbyCard");
-  const [state, setstate] = useState<boolean>(false);
-  const MaindeletHandler = function () {
+  const [Show, setShow] = useState<boolean>(true);
+  const MainDeletHandler = function () {
     const nameFood = data.Name;
 
     childTargetDiv?.classList.add("Display__none");
     localStorage.removeItem(nameFood);
+    setShow(false);
   };
 
   if (TargetDiv != undefined) {
@@ -62,8 +63,9 @@ const Bycard: React.FC<data> = function (props: any) {
 
       console.log("imin");
 
-      childTargetDiv?.classList.add("Display__none");
+      // childTargetDiv?.classList.add("Display__none");
       localStorage.removeItem(nameFood);
+      setShow(false);
     }
   }
   useEffect(() => {
@@ -95,58 +97,62 @@ const Bycard: React.FC<data> = function (props: any) {
 
   return (
     <>
-      <div ref={MainDivElement} className="MainbyCard">
-        <div className="byCard">
-          <div className="byCard_leftSide">
-            <div className="byCard_atribiute byCard_name">{data.Name} </div>
-            <div className="byCard_atribiute byCard_amount">{data.amount}$</div>
-            <div ref={ref} className="byCard_atribiute byCard_num">
-              <div className={isClicked ? "button-clicked" : ""}>
-                {MainNumber}{" "}
+      {Show && (
+        <div ref={MainDivElement} className="MainbyCard">
+          <div className="byCard">
+            <div className="byCard_leftSide">
+              <div className="byCard_atribiute byCard_name">{data.Name} </div>
+              <div className="byCard_atribiute byCard_amount">
+                {data.amount}$
+              </div>
+              <div ref={ref} className="byCard_atribiute byCard_num">
+                <div className={isClicked ? "button-clicked" : ""}>
+                  {MainNumber}{" "}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="byCard_rightSide">
-            <button
-              onClick={() => {
-                handleClick();
-                setMainNumber(MainNumber + 1);
-                clickHandlers("add");
-              }}
-              className="ByCardBution ByCardBution_Add"
-            >
-              +
-            </button>
-            <button
-              onClick={() => {
-                handleClick();
-                setMainNumber(MainNumber - 1);
-                clickHandlers("rem");
-                if (NumberinsideLocalStorage > 0) {
-                }
-              }}
-              className="ByCardBution ByCardBution_Rem"
-            >
-              -
-            </button>
-            <button
-              onClick={() => {
-                clickHandlers("del");
-                MaindeletHandler();
+            <div className="byCard_rightSide">
+              <button
+                onClick={() => {
+                  handleClick();
+                  setMainNumber(MainNumber + 1);
+                  clickHandlers("add");
+                }}
+                className="ByCardBution ByCardBution_Add"
+              >
+                +
+              </button>
+              <button
+                onClick={() => {
+                  handleClick();
+                  setMainNumber(MainNumber - 1);
+                  clickHandlers("rem");
+                  if (NumberinsideLocalStorage > 0) {
+                  }
+                }}
+                className="ByCardBution ByCardBution_Rem"
+              >
+                -
+              </button>
+              <button
+                onClick={() => {
+                  clickHandlers("del");
+                  MainDeletHandler();
 
-                if (NumberinsideLocalStorage > 0) {
-                  dispatch(
-                    MainStateNumber(NumberinsideLocalStorage - MainNumber)
-                  );
-                }
-              }}
-              className="ByCardBution ByCardBution_Delete"
-            >
-              Delete
-            </button>
+                  if (NumberinsideLocalStorage > 0) {
+                    dispatch(
+                      MainStateNumber(NumberinsideLocalStorage - MainNumber)
+                    );
+                  }
+                }}
+                className="ByCardBution ByCardBution_Delete"
+              >
+                Delete
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
