@@ -1,7 +1,7 @@
 
-```bash
-i use the firebase in this project and this in my Country is inaccessible with normal network place use the VPN
-```
+
+## i use the firebase in this project and this in my Country is inaccessible with normal network place use the VPN
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
