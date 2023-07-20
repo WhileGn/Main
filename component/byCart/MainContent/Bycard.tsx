@@ -52,17 +52,14 @@ const Bycard: React.FC<data> = function (props: any) {
   const [Show, setShow] = useState<boolean>(true);
   const MainDeletHandler = function () {
     const nameFood = data.Name;
-    // TargetDiv.remove();
-    // childTargetDiv?.classList.add("Display__none");
+
     TargetDivanimationdelet?.classList.add("animation__deleting");
     setTimeout(() => {
       localStorage.removeItem(nameFood);
       setShow(false);
     }, 200);
   };
-  // useEffect(() => {}, []);
-  // if (state == true) {
-  // }
+
   if (Show == true) {
     if (TargetDiv != undefined) {
       if (MainNumber == 0 || MainNumber < 0) {
