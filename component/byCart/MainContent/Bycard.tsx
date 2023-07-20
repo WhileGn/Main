@@ -5,6 +5,7 @@ type data = {
   data: any;
   state: any;
   firstState: any;
+  finishHandlers: any;
 };
 
 import { useSelector, useDispatch } from "react-redux";
@@ -99,6 +100,20 @@ const Bycard: React.FC<data> = function (props: any) {
       setIsClicked(false);
     }, 200);
   };
+  // const Redux_finishButionhandlers = useSelector(
+  //   (state: any) => state.counter.finishBTNBoolian
+  // );
+  // useEffect(() => {
+  //   if (Redux_finishButionhandlers == true) {
+  //     const Maindata = {
+  //       Name: datas.Name,
+  //       amount: datas.amount,
+  //       number: MainNumber,
+  //     };
+  //     props.finishHandlers(Maindata);
+  //     console.log("im work");
+  //   }
+  // }, [Redux_finishButionhandlers]);
 
   return (
     <>

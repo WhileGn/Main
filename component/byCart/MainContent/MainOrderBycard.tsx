@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   MainState,
   MainStateNumber,
+  finishButionhandlers,
 } from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
 let numberReduxVarible: number = 0;
 
@@ -55,10 +56,13 @@ const MainOrderBycard = function () {
   const firstStateHadlers = function (firstRenderAmount: number) {
     setfirstStateHadlersVarible((preveValue) => preveValue + firstRenderAmount);
   };
-  const ref = useRef();
-  const fetchMaindata = function () {
-    const fetchMaindata_Varible = [];
+  const ref: any = useRef();
+  const finishHandlersFunction = function (value: any) {
+    console.log(value);
   };
+  // const finishHandlersFunction_2 = function () {
+  //   dispatch(finishButionhandlers(true));
+  // };
   function MainfetchdataFunction() {
     const MainFetchDataFromLocalStorage: any = localStorage;
 
@@ -67,6 +71,7 @@ const MainOrderBycard = function () {
     const finalData = MainData.map((childData: any) => {
       return (
         <Bycard
+          finishHandlers={finishHandlersFunction}
           data={childData[1]}
           state={numHandlers}
           firstState={firstStateHadlers}
@@ -99,10 +104,10 @@ const MainOrderBycard = function () {
               <button
                 className="byBtn"
                 onClick={() => {
+                  // finishHandlersFunction_2();
                   localStorage.clear();
                   setfirstStateHadlersVarible(0);
                   MainfetchdataFunction();
-                  fetchMaindata();
                 }}
               >
                 Finish

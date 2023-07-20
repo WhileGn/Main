@@ -7,6 +7,7 @@ export interface CounterState {
   numvalue: number;
   numhandlers: number;
   clickstate: boolean;
+  finishBTNBoolian: Boolean;
 }
 
 const initialState: CounterState = {
@@ -14,6 +15,7 @@ const initialState: CounterState = {
   numvalue: 0,
   numhandlers: 0,
   clickstate: false,
+  finishBTNBoolian: false,
 };
 export const counterSlice = createSlice({
   name: "counter",
@@ -31,10 +33,18 @@ export const counterSlice = createSlice({
     numberStateHandlers: (state, action) => {
       state.numhandlers += action.payload;
     },
+    finishButionhandlers: (state, action) => {
+      state.finishBTNBoolian = action.payload;
+    },
   },
 });
 
-export const { MainState, MainStateNumber, numberStateHandlers, ckickstate } =
-  counterSlice.actions;
+export const {
+  MainState,
+  MainStateNumber,
+  numberStateHandlers,
+  ckickstate,
+  finishButionhandlers,
+} = counterSlice.actions;
 
 export default counterSlice.reducer;
