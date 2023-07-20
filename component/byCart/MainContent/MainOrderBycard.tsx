@@ -3,7 +3,7 @@ import Bycard from "./Bycard";
 import "./MainOrderBycard.css";
 import Fetchbydata from "./../../../api/Fetchbydata";
 import { data } from "autoprefixer";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { log } from "console";
 import { jsx } from "@emotion/react";
 
@@ -55,7 +55,10 @@ const MainOrderBycard = function () {
   const firstStateHadlers = function (firstRenderAmount: number) {
     setfirstStateHadlersVarible((preveValue) => preveValue + firstRenderAmount);
   };
-
+  const ref = useRef();
+  const fetchMaindata = function () {
+    const fetchMaindata_Varible = [];
+  };
   function MainfetchdataFunction() {
     const MainFetchDataFromLocalStorage: any = localStorage;
 
@@ -99,6 +102,7 @@ const MainOrderBycard = function () {
                   localStorage.clear();
                   setfirstStateHadlersVarible(0);
                   MainfetchdataFunction();
+                  fetchMaindata();
                 }}
               >
                 Finish

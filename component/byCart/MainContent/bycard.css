@@ -6,6 +6,7 @@
   border-bottom: 3px solid rgba(0, 0, 0, 0.4);
 
   margin: 0px auto;
+  /* transition: all 0.2s !important; */
 }
 .byCard {
   display: grid;
@@ -242,7 +243,19 @@
   }
 }
 
-.Display__none {
-  pointer-events: none !important;
-  display: none !important;
+.animation__deleting {
+  animation: 0.2s deletcarAnimation;
+  animation-iteration-count: inherit;
+  /* transition: all 0.2s !important;
+  opacity: 0 !important;
+  scale: 0.1 !important; */
+}
+@keyframes deletcarAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 0.1;
+  }
 }

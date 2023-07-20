@@ -14,7 +14,8 @@ import {
   ckickstate,
   numberStateHandlers,
 } from "./../../../src/app/GolobalRedux/features/counter/counterSlice";
-
+import { Tube } from "@react-three/drei";
+let state: boolean = true;
 const Bycard: React.FC<data> = function (props: any) {
   const [finalAmountState, setfinalAmountState] = useState<any>();
   const ref = useRef<any>();
@@ -47,27 +48,34 @@ const Bycard: React.FC<data> = function (props: any) {
     setMainNumber(data.number);
   }, []);
 
-  const childTargetDiv = document.querySelector(".MainbyCard");
+  const TargetDivanimationdelet = document.querySelector(".MainbyCard");
   const [Show, setShow] = useState<boolean>(true);
   const MainDeletHandler = function () {
     const nameFood = data.Name;
-
-    childTargetDiv?.classList.add("Display__none");
-    localStorage.removeItem(nameFood);
-    setShow(false);
-  };
-
-  if (TargetDiv != undefined) {
-    if (MainNumber == 0 || MainNumber < 0) {
-      const nameFood = data.Name;
-
-      console.log("imin");
-
-      // childTargetDiv?.classList.add("Display__none");
+    // TargetDiv.remove();
+    // childTargetDiv?.classList.add("Display__none");
+    TargetDivanimationdelet?.classList.add("animation__deleting");
+    setTimeout(() => {
       localStorage.removeItem(nameFood);
       setShow(false);
+    }, 200);
+  };
+  // useEffect(() => {}, []);
+  // if (state == true) {
+  // }
+  if (Show == true) {
+    if (TargetDiv != undefined) {
+      if (MainNumber == 0 || MainNumber < 0) {
+        const nameFood = data.Name;
+        TargetDivanimationdelet?.classList.add("animation__deleting");
+        setTimeout(() => {
+          localStorage.removeItem(nameFood);
+          setShow(false);
+        }, 200);
+      }
     }
   }
+
   useEffect(() => {
     const finalAmounts = data.amount * data.number;
 
